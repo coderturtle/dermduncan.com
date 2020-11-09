@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>cloud on Derm Duncan</title>
+    <link>https://dermduncan.com/tags/cloud/</link>
+    <description>Recent content in cloud on Derm Duncan</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language><atom:link href="https://dermduncan.com/tags/cloud/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>AWS Solutions Architect Professional</title>
+      <link>https://dermduncan.com/projects/contributions/architect-professional/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://dermduncan.com/projects/contributions/architect-professional/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>AWS DevOps Professional</title>
+      <link>https://dermduncan.com/projects/contributions/devops-professional/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://dermduncan.com/projects/contributions/devops-professional/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>AWS Developer Associate</title>
+      <link>https://dermduncan.com/projects/contributions/developer-associate/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://dermduncan.com/projects/contributions/developer-associate/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>AWS Solutions Architect Associate</title>
+      <link>https://dermduncan.com/projects/contributions/architect-associate/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://dermduncan.com/projects/contributions/architect-associate/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>AWS SysOps Administrator</title>
+      <link>https://dermduncan.com/projects/contributions/sysops-admin/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://dermduncan.com/projects/contributions/sysops-admin/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>AWS Cloud Practitioner</title>
+      <link>https://dermduncan.com/projects/contributions/cloud-practitioner/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://dermduncan.com/projects/contributions/cloud-practitioner/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Coderturtle</title>
+      <link>https://dermduncan.com/projects/creations/coderturtle/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://dermduncan.com/projects/creations/coderturtle/</guid>
+      <description>My personal blog for my musings on tech and life and featuring various projects and mini workshops I create in my spare time.</description>
+    </item>
+    
+    <item>
+      <title>Gremlins</title>
+      <link>https://dermduncan.com/projects/creations/gremlins/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://dermduncan.com/projects/creations/gremlins/</guid>
+      <description>The original concept was based off my frenchie Swayze looking like a gremlin and kind of like the Netflix chaos monkeys, I was going to create a gremlin to do different tasks. At the moment it&amp;rsquo;s centered around my 3 main passions cooking, cloud and fitness. So for example, a cloud gremlin could create a static web site and would be pretty much a push button to create all the infrastructure and pipelines required.</description>
+    </item>
+    
+  </channel>
+</rss>

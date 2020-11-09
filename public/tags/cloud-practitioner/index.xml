@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>cloud practitioner on Derm Duncan</title>
+    <link>https://dermduncan.com/tags/cloud-practitioner/</link>
+    <description>Recent content in cloud practitioner on Derm Duncan</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language><atom:link href="https://dermduncan.com/tags/cloud-practitioner/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>AWS Cloud Practitioner</title>
+      <link>https://dermduncan.com/projects/contributions/cloud-practitioner/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://dermduncan.com/projects/contributions/cloud-practitioner/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

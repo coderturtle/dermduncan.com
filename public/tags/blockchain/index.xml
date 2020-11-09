@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Blockchain on Derm Duncan</title>
+    <link>https://dermduncan.com/tags/blockchain/</link>
+    <description>Recent content in Blockchain on Derm Duncan</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 26 Feb 2018 00:00:00 +0000</lastBuildDate><atom:link href="https://dermduncan.com/tags/blockchain/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Startup Weekend Boston - Blockchain</title>
+      <link>https://dermduncan.com/awards/startupweekendboston/</link>
+      <pubDate>Mon, 26 Feb 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://dermduncan.com/awards/startupweekendboston/</guid>
+      <description>This talk looked at Liberty Mutual’s transformation to Continuous Integration, Continuous Delivery, and DevOps. For a large, heavily regulated industry, this task can not only be daunting, but viewed by many as impossible. Often, organizations try to reduce the friction through micro-fixes, but Eddie’s team asked how to change the culture to reduce the friction and concluded with the following final points:
+ Don’t mandate DevOps. Give employees the chance to master their discipline with examples to set and follow.</description>
+    </item>
+    
+    <item>
+      <title>Blockpaw</title>
+      <link>https://dermduncan.com/projects/creations/blockpaw/</link>
+      <pubDate>Sun, 11 Feb 2018 12:41:05 -0500</pubDate>
+      
+      <guid>https://dermduncan.com/projects/creations/blockpaw/</guid>
+      <description>BlockPaw &amp;ldquo;&amp;hellip;tries to solve the issue of managing our pets lives&amp;rdquo; And it&amp;rsquo;s amazingly powerful.</description>
+    </item>
+    
+  </channel>
+</rss>

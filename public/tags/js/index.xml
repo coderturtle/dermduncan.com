@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>JS on Derm Duncan</title>
+    <link>https://dermduncan.com/tags/js/</link>
+    <description>Recent content in JS on Derm Duncan</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 11 Feb 2018 12:41:05 -0500</lastBuildDate><atom:link href="https://dermduncan.com/tags/js/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Blockpaw</title>
+      <link>https://dermduncan.com/projects/creations/blockpaw/</link>
+      <pubDate>Sun, 11 Feb 2018 12:41:05 -0500</pubDate>
+      
+      <guid>https://dermduncan.com/projects/creations/blockpaw/</guid>
+      <description>BlockPaw &amp;ldquo;&amp;hellip;tries to solve the issue of managing our pets lives&amp;rdquo; And it&amp;rsquo;s amazingly powerful.</description>
+    </item>
+    
+  </channel>
+</rss>

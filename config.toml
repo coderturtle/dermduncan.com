@@ -1,0 +1,51 @@
+title = "Derm Duncan"
+baseURL = "https://dermduncan.com/"
+theme = "hugo-resume"
+languageCode = "en-us"
+PygmentsCodeFences = true
+PygmentsCodeFencesGuessSyntax = true
+PygmentsStyle = "monokai"
+enableGitInfo = false
+
+[params]
+address = "Caversham, UK"
+email = "dermduncan@gmail.com"
+favicon = "/favicon.ico"
+firstName = "Derm"
+lastName = "Duncan"
+phone = "+447-914-633-409"
+profileImage = "img/goatfell.JPG"
+showEducation = true
+showExperience = true
+showOpenSource = true
+showProjects = true
+showPublications = true
+showQr = true
+showSkills = true
+
+[params.google]
+
+[params.google.analytics]
+trackerID = "XX-123446-01"
+
+[[params.handles]]
+link = "https://www.linkedin.com/in/dermotduncan/"
+name = "LinkedIn"
+
+[[params.handles]]
+link = "https://github.com/dermdunc"
+name = "GitHub dermdunc"
+
+[[params.handles]]
+link = "https://github.com/coderturtle"
+name = "Github coderturtle"
+
+[[params.handles]]
+link = "https://www.instagram.com/dermd/"
+name = "Instagram"
+
+[outputs]
+home = ["HTML", "JSON"]
+
+[taxonomies]
+tag = "tags"

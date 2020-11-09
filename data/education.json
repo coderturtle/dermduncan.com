@@ -1,0 +1,26 @@
+[
+    {
+        "school":"[National University of Ireland, Galway](https://www.nuigalway.ie/)",
+        "degree":"Masters of Science",
+        "major":"Software Development",
+        "range":"2008 - 2010"
+    },
+    {
+        "school":"[National University of Ireland, Galway](https://www.nuigalway.ie/)",
+        "degree":"Higher Diploma",
+        "major":"Web Technology",
+        "range":"2007 - 2008"
+    },
+    {
+        "school":"[National University of Ireland, Galway](https://www.nuigalway.ie/)",
+        "degree":"Higher Diploma",
+        "major":"Systems Analysis",
+        "range":"2006 - 2007"
+    },
+    {
+        "school":"[National University of Ireland, Galway](https://www.nuigalway.ie/)",
+        "degree":"Bachelors of Engineering",
+        "major":"Electronics & Computer",
+        "range":"2002 - 2006"
+    }
+]

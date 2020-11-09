@@ -1,0 +1,51 @@
+[
+    {
+        "role":"Director of Architecture",
+        "company":"Fidelity Investments - Personal Investing",
+        "summary":"Led team of 15 staff members to create new cloud native EDA platform, backbone of our digital experience ecosystem. Built a learning dojo using dynamic reference architectures to concurrently upskill staff in multiple global locations & adopted by multiple teams. Involved creating self-contained, cross-platform workshop experiences/katas stepping through full solution development including CD pipelines. Developed COE around Cloud and distributed application development which simplified developer learning curve and bridged knowledge gaps to implement firm’s digital transformation strategy.\n- Designed engineering workshops for development staff to simplify adoption of EDA and cloud technologies.\n- Organized Event Storming and DDD based sessions for business to define out domain boundaries.",
+        "range":"February 2019 - October 2020"
+    },
+    {
+        "role":"Director of Software Architecture",
+        "company":"Fidelity Investments - APS",
+        "summary":"Administered Architecture team to define orgs cloud strategy and guide the utilisation of AWS. Going from tentative discussions and experiments in AWS to a multi-year cloud strategy and multiple live cloud native apps. Involved helping to upskill complementary teams including ISO team. Developed pattern for shared and reusable infrastructure, while reducing time and cost of subsequent projects. Developed live coding workshops on different cloud technologies including serverless & Alexa, building cloud expertise across the org.\n- Defined ROIs for ideas and build MVPs to quickly pilot and evaluate ideas. 1 in 5 POCs were funded.\n- Saved firm 100k+ per project, with 2 - 3 projects per quarter, while helping to drive our product timelines.",
+        "range":"December 2016 - August 2018"
+    },
+    {
+        "role":"Principal Software Architect",
+        "company":"Fidelity Investments - XTRAC LLC",
+        "summary":"Architected migration from full stack Java/Spring REST API to server less NodeJS micro services. Leveraged AWS API Gateway, Lambda, and SQS, while improving support for failed transactions. Re-architected existing file sharing platform (Fidsafe) to cost effectively support 10 million+ users.\n- Developed highly available, distributed, and componentised system by utilising 12 factor principals.\n- Defined CD pipelines for Fidsafe to automate operations, security, and compliance checks, while reducing costs by over 400k in first year.",
+        "range":"June 2014 - December 2016"
+    },
+    {
+        "role":"Senior Software Engineer",
+        "company":"Fidelity Investments - XTRAC LLC",
+        "summary":"Designed and developed java integration engine built natively on AWS using Beanstalk, S3, and DynamoDB, to act as building block for digitisation of services strategy. Automated environment creation in AWS using CloudFormation, custom ruby scripts, and Jenkins pipelines allowing single resource to maintain and operate the platform. Created smart wizard webapp for cavendish pensions to digitise previous pdf for performing changes to pensions.\n- Utilized html5, php, JavaScript, jQuery, and bootstrap to migrate large pdf to digital journey cutting processing time from over a week to under a day.\n- Defined a forms continuum built on top of my custom integration engine, which allowed an acceleration in our digitization of paper forms strategy.",
+        "range":"December 2012 - June 2014"
+    },
+    {
+        "role":"Senior Software Engineer",
+        "company":"Fidelity Investments - FIMT",
+        "summary":"\n Worked on the team which created a system to allow research documents to be auto-published but yet appear identical to documents manually created. Technologies included a RESTful java service, which collected the metadata for the note, along with a small .net application which used Aspose to generate the document based on a pre-defined template.\n- Part of the team who modernized the internal research publishing and retrieval system. Built as an add-in to Microsoft Word 2007, used the .Net 3.5 framework and written in C#. It was designed using the MVVM pattern and incorporated Microsoft’s WPF capabilities, including XAML, and WCF protocol layers.\n- Created a support webapp in Ruby on Rails to automate common support tasks and issues so they could be handled by L1 support.",
+        "range":"June 2011 - December 2012"
+    },
+    {
+        "role":"Software Engineer",
+        "company":"Fidelity Investments - FIMT",
+        "summary":"Worked across peer groups to resolve technical and design issues, support project implementation, and work with production support staff and businesses to resolve production issues.\n- Developed a financial reporting tool in .net 2.0, written in C# and designed using an MVP pattern, allowing analysts to consolidate data from different systems and create research reports in minutes, which previously took up to a week.\n- Consulted on webservice enhancements and designing application enhancements to support a backend database upgrade from Sybase to Oracle.\n- Updated legacy apps, which were originally written for 32 bit machines, to make them compatible with new 64 bit Blade machines.",
+        "range":"September 2008 - December 2011"
+    },
+    {
+        "role":"Associate Software Engineer",
+        "company":"Fidelity Ireland",
+        "summary":"I began working for Fidelity in their GIFT program which is their graduate entry program. This starts with 4 months of comprehensive training which incorporates web development and business presentation skills.\n- Created a 1-click installation application to setup a desktop development environment. Consisted of a flex widget wired to a struts based java project incorporating custom WAS scripts.\n- Developed a decision support system for portfolio managers to help simplify investment choices. Consisted of a javascript API to consolidate data from multiple sources and fronted by a custom Flex application.",
+        "range":"September 2007 - September 2008"
+    },
+    {
+        "role":"Access Networks Operations Engineer - Intern",
+        "company":"02 Ireland",
+        "summary":"\n- Part of the team which successfully upgrade O2s previous spreadsheet based record system to a new software based solution.\n- Wrote scripts to automate the manual data entry of network routes from spreadsheets to the new software system greatly improving efficiency and cutting down on errors.",
+        "range":"September 2007 - September 2008"
+    }
+
+]

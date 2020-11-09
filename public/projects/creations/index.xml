@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Projects on Derm Duncan</title>
+    <link>https://dermduncan.com/projects/creations/</link>
+    <description>Recent content in Projects on Derm Duncan</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 07 Jan 2020 15:00:28 +0000</lastBuildDate><atom:link href="https://dermduncan.com/projects/creations/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Alexa Workshop</title>
+      <link>https://dermduncan.com/projects/creations/alexa_workshop/</link>
+      <pubDate>Sun, 11 Feb 2018 12:41:05 -0500</pubDate>
+      
+      <guid>https://dermduncan.com/projects/creations/alexa_workshop/</guid>
+      <description>A workshop myself and my mate wrote &amp;amp; presented for Simmons College&amp;rsquo;s SharkHack participants to get them up and running with a &amp;lsquo;Hello World&amp;rsquo; Alexa skill!</description>
+    </item>
+    
+    <item>
+      <title>Blockpaw</title>
+      <link>https://dermduncan.com/projects/creations/blockpaw/</link>
+      <pubDate>Sun, 11 Feb 2018 12:41:05 -0500</pubDate>
+      
+      <guid>https://dermduncan.com/projects/creations/blockpaw/</guid>
+      <description>BlockPaw &amp;ldquo;&amp;hellip;tries to solve the issue of managing our pets lives&amp;rdquo; And it&amp;rsquo;s amazingly powerful.</description>
+    </item>
+    
+    <item>
+      <title>Coderturtle</title>
+      <link>https://dermduncan.com/projects/creations/coderturtle/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://dermduncan.com/projects/creations/coderturtle/</guid>
+      <description>My personal blog for my musings on tech and life and featuring various projects and mini workshops I create in my spare time.</description>
+    </item>
+    
+    <item>
+      <title>Gremlins</title>
+      <link>https://dermduncan.com/projects/creations/gremlins/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://dermduncan.com/projects/creations/gremlins/</guid>
+      <description>The original concept was based off my frenchie Swayze looking like a gremlin and kind of like the Netflix chaos monkeys, I was going to create a gremlin to do different tasks. At the moment it&amp;rsquo;s centered around my 3 main passions cooking, cloud and fitness. So for example, a cloud gremlin could create a static web site and would be pretty much a push button to create all the infrastructure and pipelines required.</description>
+    </item>
+    
+  </channel>
+</rss>

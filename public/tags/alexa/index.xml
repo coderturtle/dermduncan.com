@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>alexa on Derm Duncan</title>
+    <link>https://dermduncan.com/tags/alexa/</link>
+    <description>Recent content in alexa on Derm Duncan</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 11 Feb 2018 12:41:05 -0500</lastBuildDate><atom:link href="https://dermduncan.com/tags/alexa/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Alexa Workshop</title>
+      <link>https://dermduncan.com/projects/creations/alexa_workshop/</link>
+      <pubDate>Sun, 11 Feb 2018 12:41:05 -0500</pubDate>
+      
+      <guid>https://dermduncan.com/projects/creations/alexa_workshop/</guid>
+      <description>A workshop myself and my mate wrote &amp;amp; presented for Simmons College&amp;rsquo;s SharkHack participants to get them up and running with a &amp;lsquo;Hello World&amp;rsquo; Alexa skill!</description>
+    </item>
+    
+  </channel>
+</rss>
