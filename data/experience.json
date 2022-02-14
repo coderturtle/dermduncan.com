@@ -1,5 +1,11 @@
 [
     {
+        "role":"Solutions Architect (Director)",
+        "company":"HUB",
+        "summary":"Joined HUB as the first technical hire outside of the CTO and eighth employee of the company. Defined initial resource plans, hiring process and built out the initial autonomous technical teams growing the company to 70+ people. Defined processes around tech radars, architecture principles & development standards. As solutions architect designed the platforms foundational architecture on Azure and built out fully automated environments using a combination of arm, bicep & terraform templates deployed using CD pipelines on Azure DevOps. Defined initial security & infosec posture along with SOC monitoring. As a technical architect worked with Clients & SMEs to design the initial conceptual architecture for parts of the HUB product & worked with development teams to implement these MVPs.",
+        "range":"January 2021 - Present"
+    },
+    {
         "role":"Director of Architecture",
         "company":"Fidelity Investments - Personal Investing",
         "summary":"Led team of 15 staff members to create new cloud native EDA platform, backbone of our digital experience ecosystem. Built a learning dojo using dynamic reference architectures to concurrently upskill staff in multiple global locations & adopted by multiple teams. Involved creating self-contained, cross-platform workshop experiences/katas stepping through full solution development including CD pipelines. Developed COE around Cloud and distributed application development which simplified developer learning curve and bridged knowledge gaps to implement firm’s digital transformation strategy.\n- Designed engineering workshops for development staff to simplify adoption of EDA and cloud technologies.\n- Organized Event Storming and DDD based sessions for business to define out domain boundaries.",
