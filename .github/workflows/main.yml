@@ -73,7 +73,7 @@ jobs:
         with:
           aws-region: ${{ vars.AWS_REGION }}
           role-to-assume: ${{ vars.ROLE_TO_ASSUME }}
-          role-session-name: GithubActions-MyHugoProject
+          role-session-name: ${{ vars.CODE_SESSION_NAME }}
           mask-aws-account-id: true
       - name: Sync to S3
         id: deployment
