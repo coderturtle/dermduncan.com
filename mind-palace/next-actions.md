@@ -10,3 +10,4 @@ Mirror of `docs/next-actions.md` — see the repo copy for the authoritative, up
 - [ ] Human-review whether `old/` should stay in the live repo or move to an archive location.
 - [ ] Add `.env.example` directly (git-contract guardrail blocks agent commits to `.env*`; user approved it).
 - [ ] `governance-check` and `validate-taxonomy` gaps are recorded in the repo copy — pre-existing/expected, not blockers.
+- [ ] **Onboard this site's AWS infra to the Infrastructure Gremlin / Terraform pattern** (`agentic-infra-lab`), same as `coderturtle.io`/`agentic-tekton` — currently hand-created, untracked infra. Needs its own manifest + human-gated apply, not a docs-only change.

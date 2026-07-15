@@ -103,3 +103,33 @@ See `docs/next-actions.md` — added RISK-0005 fix and a possible future hardeni
 ### Mind-Palace Updated
 
 Repo-local mirror re-synced to match corrected docs. Live vault still not touched.
+
+## 2026-07-15 - Track infra onboarding to the Infrastructure Gremlin pattern
+
+### Changed Files
+
+- `docs/next-actions.md`, `docs/decisions.md`, `.hekton/project.yaml`, `mind-palace/next-actions.md`: recorded a tracked next action to onboard dermduncan.com's AWS infra to the same Infrastructure Gremlin / Terraform pattern (`agentic-infra-lab`) already used by `coderturtle.io` and `agentic-tekton`.
+
+### What Changed
+
+User asked (after the PR was opened) whether this site's infra was already managed by the shared Terraform setup, and confirmed they want it tracked toward that goal so all sites are managed the same way. Checked `agentic-infra-lab`'s `workflows/provision-infra-from-manifest.md` and every factory-output repo: only `coderturtle.io` and `agentic-tekton` have a real `infra/aws-static-site/deploy-manifest.yaml` wired to it. dermduncan.com has none — its S3/CloudFront/IAM were hand-created in 2024, before this pattern existed.
+
+### Why It Changed
+
+Explicit user request, scoped deliberately to "track it," not "do it now": importing live production AWS resources into Terraform state is production-sensitive and needs its own manifest, Infrastructure Gremlin preflight/plan, Well-Architected review, and human-owned `terraform apply` — out of scope for a docs-only follow-up commit, and any manifest would reopen the same real-identifier-disclosure question already resolved earlier this session.
+
+### Decisions Made
+
+See `docs/decisions.md` 2026-07-15 "Track (but do not start) onboarding to the Infrastructure Gremlin / Terraform pattern."
+
+### Next Actions
+
+See `docs/next-actions.md` — new infra-onboarding item.
+
+### Validation Status
+
+Docs-only change; no validation commands re-run.
+
+### Mind-Palace Updated
+
+`mind-palace/next-actions.md` updated to match.

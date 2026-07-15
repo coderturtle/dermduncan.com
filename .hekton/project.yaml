@@ -60,7 +60,7 @@ architecture:
   consumes: []
   promotion_candidate: false
   promotion_target: none
-  next_architecture_step: "Repository hygiene pass: add a .gitignore and untrack the committed public/ Hugo build output and stray .DS_Store files in a dedicated follow-up commit (out of scope for the adoption commit itself). Separately, fix the broken certification-PDF links (RISK-0005) by routing docs/*.pdf through Hugo's static/ dir so they land in the deployed public/ output."
+  next_architecture_step: "Repository hygiene pass: add a .gitignore and untrack the committed public/ Hugo build output and stray .DS_Store files in a dedicated follow-up commit (out of scope for the adoption commit itself). Separately, fix the broken certification-PDF links (RISK-0005) by routing docs/*.pdf through Hugo's static/ dir so they land in the deployed public/ output. Highest-value next step: onboard this site's AWS infra (S3/CloudFront/IAM, currently hand-created) to the Infrastructure Gremlin / Terraform pattern already used by coderturtle.io and agentic-tekton (agentic-infra-lab/workflows/provision-infra-from-manifest.md) — needs its own manifest + human-gated apply, not a docs-only change. See docs/decisions.md 2026-07-15."
   last_validated: 2026-07-15
   evidence_links:
     - README.md
