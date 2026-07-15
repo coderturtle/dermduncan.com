@@ -40,7 +40,12 @@ See `docs/next-actions.md`.
 
 ### Validation Status
 
-Recorded once run — see `.hekton/agent-run-log.yaml` and this entry's follow-up validation note below.
+- `./scripts/check-prereqs.sh --dry-run`: **failed** (exit 1) — `hugo` CLI is not installed on this machine. Real, expected signal; not masked.
+- `./scripts/verify-project.sh --dry-run`: passed.
+- `just validate-reproducibility ~/Development/hekton/factory-output/dermduncan.com`: **passed**.
+- `just governance-check ~/Development/hekton/factory-output/dermduncan.com`: crashes during the cross-file vault-mutation-consistency check with exit 1 and no error message. Reproduced the identical crash against the already-adopted `coderturtle.io`, so this is a pre-existing bug in `~/hekton/scripts/governance-check.sh` (a `set -e`/pipefail issue when a `grep | grep | head -1` chain matches nothing), not something introduced by this adoption. All checks that ran before the crash point passed.
+- `just validate-taxonomy`: does not report on this project. It discovers factory-output projects via `index.md` files under the live Obsidian vault (`20-projects/factory-output/<name>/`), and live vault sync was intentionally not performed (see Mind-Palace Updated below). The one real failure in that run's global output (`coderturtle.io — missing 'classification' in frontmatter`) is pre-existing and unrelated to this session.
+- PM Brain Sync and Mirror Gremlin registry `register` commands both succeeded (registry-only writes; `dermduncan.com` project_id used in both).
 
 ### Mind-Palace Updated
 

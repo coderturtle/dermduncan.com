@@ -27,14 +27,14 @@ agent_runs:
       - "mind-palace/"
       - ".env.example"
     validation:
-      - "./scripts/check-prereqs.sh --dry-run passed."
-      - "./scripts/verify-project.sh --dry-run passed."
-      - "just validate-reproducibility /Users/hekton/Development/hekton/factory-output/dermduncan.com"
-      - "just governance-check -- /Users/hekton/Development/hekton/factory-output/dermduncan.com"
-      - "just validate-taxonomy"
+      - "./scripts/check-prereqs.sh --dry-run: failed (hugo CLI not installed on this machine) — expected, real signal."
+      - "./scripts/verify-project.sh --dry-run: passed."
+      - "just validate-reproducibility /Users/hekton/Development/hekton/factory-output/dermduncan.com: passed."
+      - "just governance-check /Users/hekton/Development/hekton/factory-output/dermduncan.com: crashes on a pre-existing set -e/pipefail bug in the shared script's cross-file vault-mutation check; reproduced identically against coderturtle.io, so not specific to this adoption. Checks before the crash point all passed."
+      - "just validate-taxonomy: does not yet report on this project because it discovers factory-output projects via live-vault index.md files, and vault sync was intentionally not performed."
+      - "PM Brain Sync register and Mirror Gremlin register (--flat) both succeeded (registry-only writes)."
     risks:
       - "Live vault mutation is not approved; repo-local mind-palace mirror only."
       - "hugo CLI is not installed on this machine, so a real `hugo --minify` build was not run as part of adoption validation."
     next_actions:
-      - "Run Hekton taxonomy, reproducibility, and governance validation."
-      - "Register the project in both the PM Brain Sync and Mirror Gremlin registries."
+      - "See docs/next-actions.md for the full follow-up list, including the governance-check script bug, .env.example commit, and vault sync."
