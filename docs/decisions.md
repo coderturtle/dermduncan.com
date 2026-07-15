@@ -1,0 +1,39 @@
+# Decisions
+
+Append-only decision log for dermduncan.com.
+
+## 2026-07-15 - Adopt as Hekton factory output
+
+dermduncan.com is classified as a `factory-output` project because it is a public personal CV/portfolio website deliverable maintained by the factory. It is not shared Hekton machinery and does not have a lab-style promotion target.
+
+## 2026-07-15 - Preserve existing Git history
+
+The repo was cloned from GitHub and kept as a normal Git repository rather than being re-created from a new scaffold. Adoption adds Hekton metadata and docs only; product behavior, theme, content, and the existing AWS deployment remain unchanged.
+
+## 2026-07-15 - Keep live vault mutation disabled
+
+The project proposes `20-projects/factory-output/dermduncan.com` as its mind-palace path, but this adoption session does not write to the live Obsidian vault. Repo-local `mind-palace/` files are the draft control plane until the user approves a sync.
+
+## 2026-07-15 - Do not fix repository hygiene during adoption
+
+The repo has no `.gitignore`, and the built `public/` directory plus several `.DS_Store` files are tracked. This is a real issue (see `docs/risks.md` RISK-0001) but adding a `.gitignore` and untracking those paths is a hygiene change, not Hektonization, so it was left for a dedicated follow-up commit rather than bundled into the adoption commit.
+
+## 2026-07-15 - Keep the existing AWS deployment pipeline as-is
+
+The site already has a working production deployment (S3 + CloudFront, OIDC-based GitHub Actions workflow). Adoption documents this pipeline's required repository variables in `docs/reproducibility.md` but does not modify the workflow, infrastructure, or repository variables.
+
+## 2026-07-15 - Read GitHub Actions repository variables, but do not publish their values
+
+`gh variable list -R coderturtle/dermduncan.com` was run read-only to document what the deploy workflow depends on (an explicit adoption-audit item: "Setup: known commands, missing docs, manual steps"). This is outside the adoption agent's originally-documented read-only command list, which is git-only; a first pass committed the actual returned values (AWS account ID via the IAM role ARN, CloudFront distribution ID, OIDC session name, etc.) verbatim into `docs/reproducibility.md`, `.hekton/risk-register.yaml`, `docs/risks.md`, and `.hekton/project.yaml`.
+
+A doubt-driven review before pushing flagged this as a real, if low-severity, disclosure: those variables currently require GitHub repo write access to view (an unauthenticated visitor to the public repo cannot see them via `gh variable list` or the Settings UI), so committing the values makes previously access-gated data fully public. The workflow's own `mask-aws-account-id: true` step is a signal the original owner didn't want the account ID appearing even in build logs. The user was asked and chose to redact: docs now name the required variables (`AWS_REGION`, `BUCKET_NAME`, `CF_DISTRIBUTION_ID`, `HUGO_VERSION`, `ROLE_TO_ASSUME`, `SITE_BASE_URL`, `CODE_SESSION_NAME`) without repeating their current values. A repo admin can re-fetch current values with the same `gh variable list` command.
+
+## 2026-07-15 - Doubt-driven review before push, findings fixed in a follow-up commit
+
+Before pushing/opening a PR, this adoption was run through a doubt-driven-development pass (fresh-context single-model review + Codex cross-model review, both given only the diff and the adoption contract). Real findings — the AWS-value disclosure above, an undercounted `.DS_Store` inventory, a stale `mind-palace/` mirror, a false claim that certification PDFs are served from the site (they 404 in production — pre-existing, not caused by adoption; see `docs/risks.md` RISK-0005), an undocumented Hugo "extended edition" requirement, and a `maturity_level: 3` claim asserted without a recorded live-verification step — were fixed in a follow-up commit rather than by amending the original adoption commit. See `docs/adoption-audit.md`'s "Addendum — Doubt-Driven Review" for the full list.
+
+## 2026-07-15 - Track (but do not start) onboarding to the Infrastructure Gremlin / Terraform pattern
+
+The user wants dermduncan.com's AWS infra managed the same way as the other Hekton-managed sites. Checked: only `coderturtle.io` and `agentic-tekton` currently have a real `infra/aws-static-site/deploy-manifest.yaml` + Terraform module wired to `agentic-infra-lab`'s reusable Infrastructure Gremlin workflow (`workflows/provision-infra-from-manifest.md`, `pattern: hekton/aws-static-site`). dermduncan.com has no `infra/` directory; its S3 bucket, CloudFront distribution, and IAM deploy role were hand-created in 2024, predating that pattern (which only exists since ~2026-07-02), and are driven solely by `.github/workflows/main.yml` — the same "manually-created, out-of-Terraform" shape as `hekton-field-journal`'s role.
+
+Recorded as a tracked next action (`docs/next-actions.md`) rather than started now: importing already-live production AWS resources into Terraform state is itself a production-sensitive change. Per the reusable workflow's own contract, it needs a real manifest, a gremlin preflight/plan pass, a Well-Architected advisory review, and a human-owned `terraform apply` at the approval gate — none of which belongs inside a docs-only adoption PR, and the manifest itself would need the same real-identifier-disclosure judgment call already made above (see the 2026-07-15 AWS-values decision) before anything gets committed to this public repo.
