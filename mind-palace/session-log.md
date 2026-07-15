@@ -13,3 +13,7 @@ Full detail in the repo's `docs/session-log.md` and `docs/adoption-audit.md`'s d
 ## 2026-07-15 - Career-story rebuild (Fable loop)
 
 Rebuilt the site as an interactive career narrative on branch `agent/fable/career-story-rebuild` (unmerged, so nothing deployed): six journey chapters, capability threads, four signature stories, principles, Now section and a conventional career view, driven by `data/career/*.yaml` with root-level layouts replacing the hugo-resume presentation. Claims register + six-perspective critique in `docs/rebuild/`. Build verified on production Hugo 0.123.7 and local 0.164.0; link integrity, leak greps and desktop/mobile screenshots checked. Merge is gated on Dermot confirming flagged claims (HUB/Vanguard titles, dates and metrics).
+
+## 2026-07-15 - Confirmed titles and dates applied
+
+HUB and Vanguard titles/dates confirmed by Dermot and applied; remaining merge gate is HUB outcome metrics, SOC 2, engineer count and Fidelity Labs framing (C13, C18–C21). Detail in `docs/session-log.md`.

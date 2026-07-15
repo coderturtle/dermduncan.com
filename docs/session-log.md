@@ -159,3 +159,7 @@ See `docs/next-actions.md` — new items for claim confirmation and old-build cl
 ### Mind-Palace Updated
 
 Repo-local mirror only (`mind-palace/session-log.md`); live vault untouched per project rules.
+
+## 2026-07-15 — Confirmed titles and dates applied
+
+Dermot confirmed HUB end (May 2024), the MD & Head of Cloud Engineering progression (from May 2022), Vanguard Head of Architecture (Oct 2024) and Head of Architecture & CTO (Feb 2026), and the six-figure POC wording. Applied across the content model, hero, JSON-LD and claims register; career-page date footnote now conditional and gone. Build re-verified on Hugo 0.123.7 (leak grep 0, link check clean, career page screenshot). Remaining merge gate: claims C13, C18–C21.
