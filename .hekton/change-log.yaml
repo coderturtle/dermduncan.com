@@ -1,0 +1,21 @@
+change_log_version: 1
+project_name: dermduncan.com
+created_date: 2026-07-15
+
+changes:
+  - id: CHG-0001
+    date: 2026-07-15
+    title: "Adopt dermduncan.com into Hekton control plane"
+    intent: "Preserve the existing public CV website repository while adding Hekton classification, traceability, reproducibility, and governance artifacts."
+    changed_by: "claude"
+    change_type: adoption
+    risk_level: low
+    validation:
+      - "Temporary intake clone inspected"
+      - "Hekton metadata and docs added"
+    approvals:
+      required: false
+      status: user_requested
+    links:
+      - "docs/session-log.md"
+      - "docs/adoption-audit.md"

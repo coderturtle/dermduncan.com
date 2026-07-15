@@ -1,0 +1,29 @@
+review_log_version: 1
+project_name: dermduncan.com
+created_date: 2026-07-15
+
+reviews:
+  - id: REV-0001
+    date: 2026-07-15
+    reviewer: "claude"
+    review_type: adoption-audit
+    scope:
+      - "README.md"
+      - "LICENSE"
+      - "config.toml"
+      - ".github/workflows/main.yml"
+      - ".gitignore (absent)"
+      - "git remotes and recent history"
+      - "secret-pattern scan"
+    result: passed_with_followups
+    findings:
+      - "Public MIT-licensed Hugo static site (hugo-resume theme) with a GitHub Actions workflow that builds with Hugo and deploys to AWS S3 + CloudFront via OIDC role assumption."
+      - "No tracked .env-style files or obvious committed private keys/AWS credentials found."
+      - "No .gitignore is present; the built public/ directory and .DS_Store files at several levels are tracked in Git."
+      - "config.toml contains the site owner's real email, phone number, and address, and a placeholder-looking Google Analytics tracker ID (XX-123446-01) — expected content for a public CV site."
+      - "Deploy workflow relies on GitHub Actions repository variables (not tracked in-repo) for AWS region, bucket, CloudFront distribution, OIDC role ARN, Hugo version, and base URL; read via `gh variable list` (read-only, values are not secrets)."
+      - "themes/hugo-resume is vendored directly in the tree (no .gitmodules despite the workflow requesting `submodules: recursive`); no recorded upstream version."
+    follow_ups:
+      - "Add a .gitignore and untrack public/ and .DS_Store files in a dedicated hygiene commit, separate from adoption."
+      - "Document the required GitHub Actions repository variables for a blank-machine rebuild."
+      - "Record the hugo-resume theme's upstream source/version if it is ever updated."

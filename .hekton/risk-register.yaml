@@ -1,0 +1,57 @@
+risk_register_version: 1
+project_name: dermduncan.com
+created_date: 2026-07-15
+
+risks:
+  - id: RISK-0001
+    title: "No .gitignore; built public/ output and .DS_Store files are tracked"
+    category: repository-hygiene
+    likelihood: high
+    impact: low
+    status: open
+    owner: hekton
+    mitigation: "Add a .gitignore (public/, .DS_Store, resources/) and untrack already-committed build output in a dedicated hygiene commit after adoption, not inside it."
+    raised_date: 2026-07-15
+    reviewed_date: 2026-07-15
+    links:
+      - "docs/adoption-audit.md"
+      - "docs/risks.md"
+  - id: RISK-0002
+    title: "Personal contact details are committed in config.toml"
+    category: personal-data
+    likelihood: high
+    impact: low
+    status: accepted
+    owner: hekton
+    mitigation: "Email, phone, and address in config.toml are intentional, already-public CV content on the live site. No action required; re-confirm with the owner before adding further personal data during any future content change."
+    raised_date: 2026-07-15
+    reviewed_date: 2026-07-15
+    links:
+      - "config.toml"
+      - "docs/adoption-audit.md"
+  - id: RISK-0003
+    title: "Hugo version and theme provenance are not documented in-repo"
+    category: reproducibility
+    likelihood: medium
+    impact: low
+    status: open
+    owner: hekton
+    mitigation: "Hugo 0.123.7 is pinned via the HUGO_VERSION GitHub Actions repository variable, not documented locally. themes/hugo-resume is vendored directly (no .gitmodules) with no recorded upstream version/commit. Document both in docs/local-assumptions.md; consider recording the vendored theme's upstream source in a follow-up."
+    raised_date: 2026-07-15
+    reviewed_date: 2026-07-15
+    links:
+      - "docs/local-assumptions.md"
+      - "themes/hugo-resume"
+  - id: RISK-0004
+    title: "Deploy workflow depends on undocumented GitHub Actions repository variables"
+    category: deployment
+    likelihood: medium
+    impact: medium
+    status: open
+    owner: hekton
+    mitigation: "AWS_REGION, BUCKET_NAME, CF_DISTRIBUTION_ID, HUGO_VERSION, ROLE_TO_ASSUME, SITE_BASE_URL, and CODE_SESSION_NAME are set as repo variables in GitHub, not in-repo. Documented in docs/reproducibility.md so a blank-machine rebuild knows what must be configured out-of-band; values themselves are not secrets and were read via `gh variable list` (read-only)."
+    raised_date: 2026-07-15
+    reviewed_date: 2026-07-15
+    links:
+      - ".github/workflows/main.yml"
+      - "docs/reproducibility.md"
