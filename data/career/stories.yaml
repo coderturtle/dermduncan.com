@@ -67,8 +67,8 @@
     DevOps, and a security posture with SOC monitoring from the start. Organisation in
     the same motion: hiring process, resource plans and autonomous team structures,
     kept coherent by a tech radar, architecture principles and development standards.
-    As the company grew I progressed into the Head of Cloud Engineering remit with
-    Managing Director responsibilities: owning the technology and cloud roadmap,
+    In May 2022 I became Managing Director and Head of Cloud Engineering: owning the
+    technology and cloud roadmap,
     partnering with product, compliance and executive leadership, leading SOC 2 Type I
     readiness, standing up an Engineering Enablement Platform and centre of
     excellence, and later exploring Azure OpenAI and retrieval-augmented generation
@@ -101,15 +101,16 @@
   environment: >-
     Vanguard's European business: UK Personal Investing and European Financial
     Adviser Services, regulated locally, powered by the technology organisation of a
-    global asset manager.
+    global asset manager. I joined as Head of Architecture in October 2024.
   constraint: >-
     At this scale nothing fails for lack of technology. Things fail when strategy,
     architecture, engineering practice and governance drift apart, or when a European
     business needs something the global platform road map has not prioritised. The
     constraint is coherence across an organisation, under regulation, at pace.
   intervention: >-
-    Leading Architecture and the CTO and platform-engineering function for Europe, I
-    work on the connective tissue: translating technology strategy into executable
+    As Head of Architecture and CTO for Europe (Head of Architecture from October
+    2024, appointed CTO in February 2026), I work on the connective tissue:
+    translating technology strategy into executable
     priorities, driving engineering excellence and clean architecture across both
     business lines, shaping the operating model so European needs connect with global
     capabilities, and leading enterprise AI enablement with responsible AI governance
@@ -129,7 +130,7 @@
     does an enterprise adopt agents without losing the coherence this role exists to
     protect?
   evidence:
-    - label: Remit description
+    - label: Role detail, Head of Architecture & CTO, Vanguard Europe
   capabilities: [architecture, tech-strategy, org-design, governance-risk, ai-agentic, business-product]
 
 - id: hekton-tekton

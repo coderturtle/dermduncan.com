@@ -33,7 +33,9 @@
       </li>
       {{- end }}
     </ol>
-    <p class="evidence-note" id="date-note">* Exact dates for the most recent roles are being finalised; titles here describe remit. The full history with month-level dates is on <a href="https://www.linkedin.com/in/dermotduncan/" rel="noopener">LinkedIn</a>.</p>
+    {{- if $needsNote }}
+    <p class="evidence-note" id="date-note">* Exact dates for the marked roles are being finalised. The full history is on <a href="https://www.linkedin.com/in/dermotduncan/" rel="noopener">LinkedIn</a>.</p>
+    {{- end }}
   </div>
 </section>
 

@@ -10,7 +10,7 @@ disableKinds = ["taxonomy", "term"]
   favicon = "/favicon.ico"
   fullName = "Dermot Duncan"
   positioning = "I build the systems that help organisations change."
-  currentRemit = "Architecture & CTO/platform-engineering leadership, Vanguard Europe"
+  currentRemit = "Head of Architecture & CTO, Vanguard Europe"
 
 [[params.handles]]
   link = "https://www.linkedin.com/in/dermotduncan/"

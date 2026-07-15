@@ -20,7 +20,7 @@
       chapter: scaling-capability
       label: Infrastructure as code as an organisational pattern
       detail: Shared reusable infrastructure patterns cutting cost and time for every subsequent project.
-    - era: "2021 onwards"
+    - era: "2021 – 2024"
       chapter: building-companies
       label: Self-service platforms
       detail: Fully automated Azure environments and an Engineering Enablement Platform, doubling live environments while cutting provisioning time by about 80%.
@@ -43,11 +43,11 @@
       chapter: scaling-capability
       label: Event-driven platform at enterprise scale
       detail: Cloud-native EDA platform, built by a team of fifteen, becoming the backbone of the digital experience ecosystem.
-    - era: "2021 onwards"
+    - era: "2021 – 2024"
       chapter: building-companies
       label: Company platform from zero
       detail: HUB's foundational Azure platform, environments, security posture and enablement platform, built from the first commit.
-    - era: "Current"
+    - era: "Since 2024"
       chapter: shaping-the-organisation
       label: Platform engineering as an executive function
       detail: Leading the platform-engineering function for Vanguard Europe, shaping investment rather than writing the Terraform.
@@ -74,11 +74,11 @@
       chapter: scaling-capability
       label: Architecture as an organisational function
       detail: Director-level architecture leadership; cloud strategy; domain-driven design with the business.
-    - era: "2021 onwards"
+    - era: "2021 – 2024"
       chapter: building-companies
       label: Architecture for a whole company
       detail: HUB's conceptual product architecture with clients and SMEs, plus the standards keeping fast-growing teams coherent.
-    - era: "Current"
+    - era: "Since 2024"
       chapter: shaping-the-organisation
       label: Architecture connecting strategy to execution
       detail: Architecture leadership for Vanguard Europe, translating strategy into executable priorities.
@@ -97,7 +97,7 @@
       chapter: scaling-capability
       label: The learning dojo
       detail: Self-contained cross-platform katas, full solution development including pipelines, upskilling global teams concurrently.
-    - era: "2021 onwards"
+    - era: "2021 – 2024"
       chapter: building-companies
       label: Enablement as company infrastructure
       detail: HUB's Engineering Enablement Platform and centre-of-excellence model.
@@ -116,11 +116,11 @@
       chapter: scaling-capability
       label: Teams around platforms
       detail: Structuring architecture and platform teams, and communities of practice around the cloud strategy.
-    - era: "2021 onwards"
+    - era: "2021 – 2024"
       chapter: building-companies
       label: Building the organisation itself
       detail: Hiring process, resource plans and autonomous team design scaling HUB to 60+ engineers in three countries.
-    - era: "Current"
+    - era: "Since 2024"
       chapter: shaping-the-organisation
       label: Operating-model design
       detail: Shaping how architecture, platform engineering and business lines fit together across Vanguard Europe.
@@ -138,11 +138,11 @@
       chapter: scaling-capability
       label: Divisional cloud strategy
       detail: From tentative AWS experiments to a multi-year strategy with live systems behind it.
-    - era: "2021 onwards"
+    - era: "2021 – 2024"
       chapter: building-companies
       label: Company technology roadmap
       detail: HUB's strategic technology and cloud roadmap, owned end to end with executive leadership.
-    - era: "Current"
+    - era: "Since 2024"
       chapter: shaping-the-organisation
       label: Regional strategy inside a global firm
       detail: European technology strategy connecting local business needs with Vanguard's global capabilities.
@@ -161,11 +161,11 @@
       chapter: reusable-foundations
       label: Compliance in the pipeline
       detail: Fidsafe CD pipelines automated operations, security and compliance checks, enabling daily releases in a regulated firm.
-    - era: "2021 onwards"
+    - era: "2021 – 2024"
       chapter: building-companies
       label: Security posture and SOC 2
       detail: HUB's initial infosec posture, SOC monitoring and SOC 2 Type I readiness.
-    - era: "Current"
+    - era: "Since 2024"
       chapter: shaping-the-organisation
       label: Responsible AI governance
       detail: AI enablement designed with governance built in, appropriate to a regulated financial-services firm.
@@ -183,11 +183,11 @@
       chapter: scaling-capability
       label: Early ML and emerging tech
       detail: Machine-learning workshops and distributed-ledger experimentation in the labs remit.
-    - era: "2021 onwards"
+    - era: "2021 – 2024"
       chapter: building-companies
       label: Applied generative AI
       detail: Azure OpenAI and retrieval-augmented-generation exploration for a fintech product.
-    - era: "Current"
+    - era: "Since 2024"
       chapter: shaping-the-organisation
       label: Enterprise AI enablement
       detail: AI adoption and responsible governance across Vanguard Europe.
@@ -210,11 +210,11 @@
       chapter: scaling-capability
       label: Domain design with the business
       detail: Event Storming and DDD sessions putting business experts at the modelling table.
-    - era: "2021 onwards"
+    - era: "2021 – 2024"
       chapter: building-companies
       label: Client and executive partnership
       detail: Conceptual product architecture with clients and SMEs; partnership with product, compliance and executive leadership at HUB.
-    - era: "Current"
+    - era: "Since 2024"
       chapter: shaping-the-organisation
       label: Strategy alignment at executive level
       detail: Keeping business strategy, architecture and engineering pointed at the same outcomes across Vanguard Europe.

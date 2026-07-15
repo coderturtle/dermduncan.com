@@ -146,7 +146,7 @@
   order: 4
   slug: building-companies
   spine_label: Organisations
-  era: "2021 onwards"
+  era: "2021 – 2024"
   title: Building platforms, teams and companies
   summary: >-
     HUB, joined as the founding technologist alongside the CTO and eighth employee.
@@ -169,17 +169,17 @@
     plus the initial security and infosec posture with SOC monitoring. On the
     organisation side, the resource plans, hiring process and autonomous team
     structures, along with the tech radar, architecture principles and development
-    standards that kept a fast-growing group coherent. As the company scaled I
-    progressed into the Head of Cloud Engineering remit with Managing Director
-    responsibilities, owning the strategic technology and cloud roadmap, partnering
+    standards that kept a fast-growing group coherent. As the company scaled I became
+    Managing Director and Head of Cloud Engineering in May 2022, owning the strategic
+    technology and cloud roadmap, partnering
     with product, compliance and executive leadership, standing up an Engineering
     Enablement Platform and centre-of-excellence model, leading SOC 2 Type I
     readiness, and introducing event-driven automation and infrastructure-as-code as
     default practice. Towards the end of my time there we were exploring Azure OpenAI
     and retrieval-augmented generation workflows for the product.
   notes_internal: >-
-    NEEDS-CONFIRMATION (never rendered): Head of Cloud Engineering / MD titles and
-    progression dates, claims C16, C17.
+    Titles and dates confirmed by Dermot 2026-07-15 (claims C16, C17 resolved).
+    Outcome metrics (C19, C20) remain pending confirmation.
   outcomes:
     - The engineering organisation grew from one technologist to 60+ engineers across Ireland, the UK and India, inside a company that grew to roughly 70 people.
     - Cloud running costs reduced by approximately 40 percent while live environments doubled.
@@ -203,27 +203,26 @@
   order: 5
   slug: shaping-the-organisation
   spine_label: Technology strategy
-  era: "Current"
+  era: "Since 2024"
   title: Shaping the technology organisation
   summary: >-
-    At Vanguard, leading Architecture and the CTO and platform-engineering function
-    for the European business. The unit of design is now the environment in which
-    platforms, teams and investment decisions operate.
+    At Vanguard as Head of Architecture and CTO for Europe. The unit of design is now
+    the environment in which platforms, teams and investment decisions operate.
   context: >-
     Vanguard's European business spans UK Personal Investing and European Financial
     Adviser Services, operating under UK and European regulation while drawing on the
-    technology capabilities of a global firm.
+    technology capabilities of a global firm. I joined in October 2024 as Head of
+    Architecture and was appointed Head of Architecture and CTO in February 2026.
   notes_internal: >-
-    NEEDS-CONFIRMATION (never rendered): formal title and start date, claims C22, C23.
-    Copy deliberately describes the remit and never asserts a formal CTO title.
+    Formal title and dates confirmed by Dermot 2026-07-15 (claims C22, C23 resolved).
   constraint: >-
     In an organisation of this scale the binding constraint is rarely a missing
     technology. It is coherence: keeping business strategy, architecture, engineering
     practice, governance and investment pointed at the same outcomes, and doing it
     within a regulatory environment where trust is the licence to operate.
   intervention: >-
-    I lead Architecture and the CTO and platform-engineering function for the European
-    business. The work is translation in both directions: turning technology strategy
+    As Head of Architecture and CTO I lead architecture and the platform-engineering
+    function for the European business. The work is translation in both directions: turning technology strategy
     into executable priorities for engineering teams, and shaping the operating model,
     organisational design and platform investments so European needs connect cleanly
     with global capabilities. That includes driving engineering excellence and clean

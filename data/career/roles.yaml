@@ -4,19 +4,19 @@
 
 - id: vanguard-current
   org: Vanguard
-  title: "Head of Architecture and CTO Function, Europe"
-  title_confirmed: false
-  # No formal title exists in local sources (claim C22/C23). display_title below is what
-  # actually renders; it describes the remit rather than asserting a formal title.
-  display_title: "Architecture & CTO/Platform Engineering Leadership, Europe"
-  range: "Current role"
-  dates_confirmed: false
+  title: "Head of Architecture & CTO, Europe"
+  title_confirmed: true
+  # Titles and dates confirmed by Dermot, 2026-07-15 (claims C22/C23 resolved).
+  display_title: "Head of Architecture & CTO, Europe"
+  range: "October 2024 – Present"
+  dates_confirmed: true
   current: true
   chapter: shaping-the-organisation
   scope: >-
-    Leads Architecture and the CTO and platform-engineering function for Vanguard's
-    European business, spanning UK Personal Investing and European Financial Adviser
-    Services.
+    Joined as Head of Architecture in October 2024 and appointed Head of Architecture
+    and CTO in February 2026. Leads Architecture and the CTO and platform-engineering
+    function for Vanguard's European business, spanning UK Personal Investing and
+    European Financial Adviser Services.
   achievements:
     - European technology strategy translated into executable engineering priorities.
     - Engineering excellence and clean-architecture programme across European business lines.
@@ -27,17 +27,20 @@
 - id: hub-director
   org: HUB (hubwise fintech)
   org_display: HUB
-  title: "Solutions Architect (Director), progressing to Head of Cloud Engineering / MD remit"
-  title_confirmed: false
-  display_title: "Founding Technologist → Director, Solutions Architecture → Head of Cloud Engineering (MD remit)"
-  range: "January 2021 –"
-  dates_confirmed: false
+  title: "Solutions Architect (Director) → Managing Director & Head of Cloud Engineering"
+  title_confirmed: true
+  # Titles and dates confirmed by Dermot, 2026-07-15 (claims C16/C17 resolved).
+  display_title: "Solutions Architect (Director) → Managing Director & Head of Cloud Engineering"
+  range: "January 2021 – May 2024"
+  dates_confirmed: true
   current: false
   chapter: building-companies
   scope: >-
-    First technical hire outside the CTO and eighth employee. Built the platform,
-    security posture and engineering organisation from the ground up as the company
-    scaled to 60+ engineers across Ireland, the UK and India.
+    First technical hire outside the CTO and eighth employee. Solutions Architect
+    (Director) from January 2021; Managing Director and Head of Cloud Engineering from
+    May 2022. Built the platform, security posture and engineering organisation from
+    the ground up as the company scaled to 60+ engineers across Ireland, the UK and
+    India.
   achievements:
     - Foundational Azure architecture with fully automated environments (ARM, Bicep, Terraform, Azure DevOps).
     - Engineering organisation, hiring process and autonomous team design for a ~70-person company.
@@ -152,7 +155,7 @@
   title: Access Networks Operations Engineer (Intern)
   title_confirmed: true
   range: "Internship, pre-2007"
-  dates_confirmed: false
+  dates_confirmed: true
   current: false
   chapter: automating-the-friction
   scope: >-
