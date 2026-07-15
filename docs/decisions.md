@@ -21,3 +21,13 @@ The repo has no `.gitignore`, and the built `public/` directory plus several `.D
 ## 2026-07-15 - Keep the existing AWS deployment pipeline as-is
 
 The site already has a working production deployment (S3 + CloudFront, OIDC-based GitHub Actions workflow). Adoption documents this pipeline's required repository variables in `docs/reproducibility.md` but does not modify the workflow, infrastructure, or repository variables.
+
+## 2026-07-15 - Read GitHub Actions repository variables, but do not publish their values
+
+`gh variable list -R coderturtle/dermduncan.com` was run read-only to document what the deploy workflow depends on (an explicit adoption-audit item: "Setup: known commands, missing docs, manual steps"). This is outside the adoption agent's originally-documented read-only command list, which is git-only; a first pass committed the actual returned values (AWS account ID via the IAM role ARN, CloudFront distribution ID, OIDC session name, etc.) verbatim into `docs/reproducibility.md`, `.hekton/risk-register.yaml`, `docs/risks.md`, and `.hekton/project.yaml`.
+
+A doubt-driven review before pushing flagged this as a real, if low-severity, disclosure: those variables currently require GitHub repo write access to view (an unauthenticated visitor to the public repo cannot see them via `gh variable list` or the Settings UI), so committing the values makes previously access-gated data fully public. The workflow's own `mask-aws-account-id: true` step is a signal the original owner didn't want the account ID appearing even in build logs. The user was asked and chose to redact: docs now name the required variables (`AWS_REGION`, `BUCKET_NAME`, `CF_DISTRIBUTION_ID`, `HUGO_VERSION`, `ROLE_TO_ASSUME`, `SITE_BASE_URL`, `CODE_SESSION_NAME`) without repeating their current values. A repo admin can re-fetch current values with the same `gh variable list` command.
+
+## 2026-07-15 - Doubt-driven review before push, findings fixed in a follow-up commit
+
+Before pushing/opening a PR, this adoption was run through a doubt-driven-development pass (fresh-context single-model review + Codex cross-model review, both given only the diff and the adoption contract). Real findings — the AWS-value disclosure above, an undercounted `.DS_Store` inventory, a stale `mind-palace/` mirror, a false claim that certification PDFs are served from the site (they 404 in production — pre-existing, not caused by adoption; see `docs/risks.md` RISK-0005), an undocumented Hugo "extended edition" requirement, and a `maturity_level: 3` claim asserted without a recorded live-verification step — were fixed in a follow-up commit rather than by amending the original adoption commit. See `docs/adoption-audit.md`'s "Addendum — Doubt-Driven Review" for the full list.

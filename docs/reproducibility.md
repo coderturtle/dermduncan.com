@@ -28,17 +28,17 @@ cd ~/Development/hekton/factory-output/dermduncan.com
 
 `.github/workflows/main.yml` deploys to AWS on every push to `main`. It depends on these GitHub Actions repository variables, which must be configured in the GitHub repo settings (not in Git) before a fresh deploy will work:
 
-| Variable | Purpose | Value at adoption time |
-|---|---|---|
-| `AWS_REGION` | AWS region for the deploy role/S3 bucket | `us-east-1` |
-| `BUCKET_NAME` | S3 bucket the built site syncs to | `dermduncan.com` |
-| `CF_DISTRIBUTION_ID` | CloudFront distribution to invalidate on deploy | `E1YNDLEZ2TCKQ8` |
-| `HUGO_VERSION` | Hugo CLI version installed in CI | `0.123.7` |
-| `ROLE_TO_ASSUME` | AWS IAM role ARN assumed via OIDC for the deploy | `arn:aws:iam::600059206606:role/dermduncan_hugo_s3deployer` |
-| `SITE_BASE_URL` | Base URL passed to `hugo --baseURL` | `https://dermduncan.com` |
-| `CODE_SESSION_NAME` | OIDC role session name | `GHA-DERMDUNCAN-S3` |
+| Variable | Purpose |
+|---|---|
+| `AWS_REGION` | AWS region for the deploy role/S3 bucket |
+| `BUCKET_NAME` | S3 bucket the built site syncs to |
+| `CF_DISTRIBUTION_ID` | CloudFront distribution to invalidate on deploy |
+| `HUGO_VERSION` | Hugo CLI version installed in CI (extended edition — see `docs/local-assumptions.md`) |
+| `ROLE_TO_ASSUME` | AWS IAM role ARN assumed via OIDC for the deploy |
+| `SITE_BASE_URL` | Base URL passed to `hugo --baseURL` |
+| `CODE_SESSION_NAME` | OIDC role session name |
 
-These were read with `gh variable list -R coderturtle/dermduncan.com` (read-only; these are GitHub Actions variables, not secrets, and were not modified).
+Current values were read with `gh variable list -R coderturtle/dermduncan.com` (read-only; these are GitHub Actions variables, not secrets, so the command itself didn't touch anything) but are deliberately **not** repeated here: this repo is public, and the account ID embedded in the IAM role ARN plus the CloudFront distribution ID are more exposed by sitting in a permanently-tracked doc than by living in GitHub's variables UI, which requires repo write access to view even on a public repo. See `docs/decisions.md`. A repo admin can fetch current values with the same `gh variable list` command.
 
 ## Rules
 

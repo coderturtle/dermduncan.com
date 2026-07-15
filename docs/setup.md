@@ -24,11 +24,13 @@ documented -> scripted -> idempotent-ish -> logged -> reproducible on a blank ma
 git clone git@github.com-coderturtle:coderturtle/dermduncan.com.git ~/Development/hekton/factory-output/dermduncan.com
 ```
 
-3. Install the Hugo CLI (matching `HUGO_VERSION=0.123.7` used in CI), e.g.:
+3. Install the Hugo **extended** CLI (matching `HUGO_VERSION=0.123.7` used in CI — CI installs `hugo_extended_*.deb`; `check-prereqs.sh` does not currently verify version or edition, see `docs/risks.md` RISK-0003):
 
 ```bash
 brew install hugo
 ```
+
+Homebrew's `hugo` formula builds with extended (Sass/SCSS) support by default; run `hugo version` and confirm the output contains `extended` before relying on it.
 
 4. Run the site locally:
 

@@ -8,7 +8,7 @@ The adoption did not change site behavior. It added Hekton control-plane files s
 
 - `content/` — Markdown source for the CV sections (awards, projects, blog), driven by `data/experience.json`, `data/education.json`, and `data/skills.json`.
 - `themes/hugo-resume/` — the vendored theme (not a Git submodule, despite the CI workflow requesting one).
-- `docs/` — certification PDFs served directly from the site.
+- `docs/` — certification PDFs, linked from `content/projects/contributions/*.md` as `/docs/*.pdf`. **These links are currently broken in production** (confirmed live 404, `docs/risks.md` RISK-0005): `docs/` sits outside `static/`, so Hugo never copies it into the deployed `public/` output, and the deploy workflow only syncs `./public/` to S3.
 - `old/` — a preserved copy of an earlier, pre-Hugo version of the site.
 - `public/` — Hugo's build output, checked into Git (see `docs/risks.md` RISK-0001 — there is no `.gitignore`).
 

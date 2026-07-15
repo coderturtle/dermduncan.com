@@ -38,3 +38,41 @@ agent_runs:
       - "hugo CLI is not installed on this machine, so a real `hugo --minify` build was not run as part of adoption validation."
     next_actions:
       - "See docs/next-actions.md for the full follow-up list, including the governance-check script bug, .env.example commit, and vault sync."
+  - id: RUN-0002
+    date: 2026-07-15
+    agent: "claude"
+    role: "Existing Project Adoption Agent (doubt-driven review before push)"
+    intent: "Run doubt-driven-development against the RUN-0001 adoption diff before pushing/opening a PR: fresh-context single-model review + Codex cross-model review, both against ARTIFACT (diff) + CONTRACT (adoption rules) only, then reconcile and fix real findings."
+    autonomy_level: 3
+    approvals:
+      required: true
+      status: user_approved
+    files_touched:
+      - ".hekton/project.yaml"
+      - ".hekton/risk-register.yaml"
+      - ".hekton/agent-run-log.yaml"
+      - "docs/reproducibility.md"
+      - "docs/risks.md"
+      - "docs/adoption-audit.md"
+      - "docs/project-walkthrough.md"
+      - "docs/decisions.md"
+      - "docs/setup.md"
+      - "docs/next-actions.md"
+      - "docs/session-log.md"
+      - "scripts/check-prereqs.sh"
+      - "mind-palace/next-actions.md"
+      - "mind-palace/session-log.md"
+    validation:
+      - "gh repo view coderturtle/dermduncan.com --json isPrivate,visibility: {\"isPrivate\":false,\"visibility\":\"PUBLIC\"} — confirms privacy_boundary: public claim."
+      - "curl https://dermduncan.com/: 200."
+      - "curl https://dermduncan.com/docs/<cert>.pdf for all 7 certification PDFs: 404 (new RISK-0005)."
+      - "git ls-files | grep DS_Store: 10 tracked files, corrected from the RUN-0001 doc claim of 7."
+    risks:
+      - "RISK-0005 added: certification PDF links are broken on the live production site (pre-existing, not caused by adoption)."
+    next_actions:
+      - "See docs/next-actions.md — user still needs to decide on pushing this branch and opening the PR."
+    user_decisions:
+      - question: "Redact real AWS identifiers from tracked docs, or keep as committed?"
+        answer: "Redact values, keep variable names."
+      - question: "Run a Codex cross-model second opinion on the same diff?"
+        answer: "Yes."

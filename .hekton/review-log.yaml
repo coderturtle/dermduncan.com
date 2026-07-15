@@ -27,3 +27,23 @@ reviews:
       - "Add a .gitignore and untrack public/ and .DS_Store files in a dedicated hygiene commit, separate from adoption."
       - "Document the required GitHub Actions repository variables for a blank-machine rebuild."
       - "Record the hugo-resume theme's upstream source/version if it is ever updated."
+  - id: REV-0002
+    date: 2026-07-15
+    reviewer: "general-purpose subagent (fresh context) + codex (cross-model, read-only sandbox)"
+    review_type: doubt-driven-development
+    scope:
+      - "git diff 9fe0342..HEAD (the full CHG-0001 adoption diff, 27 files)"
+      - "adoption contract: existing-project-adoption-workflow.md, existing-project-adoption-agent.md, existing-project-adoption-checklist.md"
+    result: passed_with_followups
+    findings:
+      - "[single-model] Real AWS role ARN/account ID, CloudFront distribution ID, and OIDC session name committed verbatim into docs — fixed (redacted to variable names, user decision)."
+      - "[single-model, verified] docs undercounted tracked .DS_Store files (said 7, actual 10) — fixed."
+      - "[single-model] mind-palace/ mirror went stale after the follow-up commit — fixed."
+      - "[codex, verified live] docs/project-walkthrough.md falsely claimed certification PDFs are served from the site; all 7 /docs/*.pdf return 404 in production, homepage returns 200 — fixed text, added RISK-0005 (pre-existing defect, not caused by adoption)."
+      - "[codex] Hugo 'extended edition' requirement (used in CI) undocumented for local setup and unchecked by check-prereqs.sh — fixed."
+      - "[codex] maturity_level: 3/'validated' asserted without a recorded live-verification step — fixed by performing and recording a real curl check."
+      - "[codex] ~/hekton registry files left uncommitted outside this repo's diff — classified as noise (expected cross-repo behavior, already documented)."
+      - "[codex] repo visibility unverifiable in its sandbox (no network) — classified as noise (independently verified via authenticated gh repo view, both before and after)."
+    follow_ups:
+      - "Fix RISK-0005 (broken certification PDF links) in a dedicated follow-up, not during adoption."
+      - "Decide whether to harden the Hugo-edition check further if it becomes a recurring setup mistake."

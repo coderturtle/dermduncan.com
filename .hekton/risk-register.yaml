@@ -10,7 +10,7 @@ risks:
     impact: low
     status: open
     owner: hekton
-    mitigation: "Add a .gitignore (public/, .DS_Store, resources/) and untrack already-committed build output in a dedicated hygiene commit after adoption, not inside it."
+    mitigation: "Add a .gitignore (public/, .DS_Store, resources/) and untrack all 10 already-committed .DS_Store files (root, content/, docs/, old/, old/docs/, public/, public/img/, static/, static/img/, themes/) plus public/ in a dedicated hygiene commit after adoption, not inside it."
     raised_date: 2026-07-15
     reviewed_date: 2026-07-15
     links:
@@ -36,7 +36,7 @@ risks:
     impact: low
     status: open
     owner: hekton
-    mitigation: "Hugo 0.123.7 is pinned via the HUGO_VERSION GitHub Actions repository variable, not documented locally. themes/hugo-resume is vendored directly (no .gitmodules) with no recorded upstream version/commit. Document both in docs/local-assumptions.md; consider recording the vendored theme's upstream source in a follow-up."
+    mitigation: "Hugo 0.123.7 (extended edition) is pinned via the HUGO_VERSION GitHub Actions repository variable, not enforced locally: docs/setup.md's `brew install hugo` doesn't specify extended, and scripts/check-prereqs.sh only checks that some hugo binary exists, not its version/edition. themes/hugo-resume is vendored directly (no .gitmodules) with no recorded upstream version/commit. Document both in docs/local-assumptions.md; consider recording the vendored theme's upstream source and adding an extended-edition check to check-prereqs.sh in a follow-up."
     raised_date: 2026-07-15
     reviewed_date: 2026-07-15
     links:
@@ -49,9 +49,23 @@ risks:
     impact: medium
     status: open
     owner: hekton
-    mitigation: "AWS_REGION, BUCKET_NAME, CF_DISTRIBUTION_ID, HUGO_VERSION, ROLE_TO_ASSUME, SITE_BASE_URL, and CODE_SESSION_NAME are set as repo variables in GitHub, not in-repo. Documented in docs/reproducibility.md so a blank-machine rebuild knows what must be configured out-of-band; values themselves are not secrets and were read via `gh variable list` (read-only)."
+    mitigation: "AWS_REGION, BUCKET_NAME, CF_DISTRIBUTION_ID, HUGO_VERSION, ROLE_TO_ASSUME, SITE_BASE_URL, and CODE_SESSION_NAME are set as repo variables in GitHub, not in-repo. Variable *names* are documented in docs/reproducibility.md so a blank-machine rebuild knows what must be configured out-of-band. Current *values* were read via `gh variable list` (read-only, not a secret-store operation) but were deliberately not committed anywhere in this public repo — the IAM role ARN and CloudFront distribution ID are more exposed sitting in tracked docs than in GitHub's variables UI, which requires write access to view even on a public repo. See docs/decisions.md."
     raised_date: 2026-07-15
     reviewed_date: 2026-07-15
     links:
       - ".github/workflows/main.yml"
       - "docs/reproducibility.md"
+      - "docs/decisions.md"
+  - id: RISK-0005
+    title: "Certification PDF links are broken on the live production site"
+    category: production-defect
+    likelihood: high
+    impact: low
+    status: open
+    owner: hekton
+    mitigation: "content/projects/contributions/*.md (7 files) link to /docs/*.pdf, but docs/ is a plain repo directory (not under static/), so Hugo never copies those PDFs into the deployed public/ output and the S3 sync only uploads ./public/. Verified live 2026-07-15: homepage returns 200, all 7 /docs/*.pdf links return 404. Pre-existing, not introduced by adoption; left unfixed per the no-refactor-during-adoption rule. Fix in a follow-up by moving the PDFs under static/docs/ (or equivalent) so Hugo includes them in the build."
+    raised_date: 2026-07-15
+    reviewed_date: 2026-07-15
+    links:
+      - "content/projects/contributions/"
+      - "docs/risks.md"

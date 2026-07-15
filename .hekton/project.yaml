@@ -48,7 +48,7 @@ architecture:
   maturity_level: 3
   maturity_label: validated
   maturity_set_by: agent
-  maturity_basis: "Hugo static site (hugo-resume theme) with an existing production deployment already live at dermduncan.com via AWS S3 + CloudFront, deployed on push to main through a GitHub Actions workflow assuming an AWS OIDC role. Adoption did not change app behavior."
+  maturity_basis: "Hugo static site (hugo-resume theme) with an existing production deployment live at dermduncan.com via AWS S3 + CloudFront, deployed on push to main through a GitHub Actions workflow assuming an AWS OIDC role. Adoption did not change app behavior. Verified live 2026-07-15: `curl -o /dev/null -w '%{http_code}' https://dermduncan.com/` returns 200. The same check against all 7 certification PDF links referenced from content/projects/contributions/*.md (e.g. /docs/Cloud_Practitioner.pdf) returns 404 — a real, pre-existing production defect (RISK-0005), not introduced by adoption and not yet fixed."
   maturity_date: 2026-07-15
   target_state_relevance: useful
   depends_on:
@@ -60,19 +60,21 @@ architecture:
   consumes: []
   promotion_candidate: false
   promotion_target: none
-  next_architecture_step: "Repository hygiene pass: add a .gitignore and untrack the committed public/ Hugo build output and stray .DS_Store files in a dedicated follow-up commit (out of scope for the adoption commit itself)."
+  next_architecture_step: "Repository hygiene pass: add a .gitignore and untrack the committed public/ Hugo build output and stray .DS_Store files in a dedicated follow-up commit (out of scope for the adoption commit itself). Separately, fix the broken certification-PDF links (RISK-0005) by routing docs/*.pdf through Hugo's static/ dir so they land in the deployed public/ output."
   last_validated: 2026-07-15
   evidence_links:
     - README.md
     - config.toml
     - .github/workflows/main.yml
     - docs/adoption-audit.md
+    - "live curl check 2026-07-15: https://dermduncan.com/ -> 200"
   risks:
     - "No .gitignore is present; the built public/ directory and .DS_Store files are tracked in Git."
     - "config.toml carries the site owner's real email, phone number, and address as intentional public CV content — expected for this site, recorded as an accepted personal-data item rather than a defect."
-    - "Deploy workflow depends on GitHub Actions repository variables (AWS_REGION, BUCKET_NAME, CF_DISTRIBUTION_ID, HUGO_VERSION, ROLE_TO_ASSUME, SITE_BASE_URL, CODE_SESSION_NAME) that are not documented anywhere in-repo."
+    - "Deploy workflow depends on GitHub Actions repository variables (AWS_REGION, BUCKET_NAME, CF_DISTRIBUTION_ID, HUGO_VERSION, ROLE_TO_ASSUME, SITE_BASE_URL, CODE_SESSION_NAME) that are not documented anywhere in-repo; values are deliberately not repeated here (see docs/decisions.md) since this repo is public."
+    - "All 7 certification PDF links on the live site (/docs/*.pdf) return 404 — docs/ is a plain repo directory, not under static/, so Hugo never copies those PDFs into the deployed public/ output. Confirmed live 2026-07-15."
   owner: hekton
 
 notes:
   - "Personal CV/portfolio site for Derm Duncan (dermduncan.com), built with Hugo and the hugo-resume theme."
-  - "Deploys to AWS S3 + CloudFront via GitHub Actions using OIDC role assumption (arn role: dermduncan_hugo_s3deployer)."
+  - "Deploys to AWS S3 + CloudFront via GitHub Actions using OIDC role assumption. Deploy-time identifiers (account ID, role ARN, distribution ID) are intentionally not repeated in this public repo's docs — see docs/decisions.md."

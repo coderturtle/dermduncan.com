@@ -39,9 +39,13 @@ for cmd in git bash sed date mkdir printf; do
 done
 
 if command -v hugo >/dev/null 2>&1; then
-  log "OK: hugo ($(hugo version 2>/dev/null | head -1))"
+  HUGO_VERSION_OUTPUT="$(hugo version 2>/dev/null | head -1)"
+  log "OK: hugo ($HUGO_VERSION_OUTPUT)"
+  if ! echo "$HUGO_VERSION_OUTPUT" | grep -qi "extended"; then
+    log "WARNING: hugo binary does not report 'extended' — CI uses the extended edition (see docs/local-assumptions.md, docs/risks.md RISK-0003). Non-extended may build fine or may silently fail on Sass/SCSS."
+  fi
 else
-  log "MISSING: hugo (install via 'brew install hugo', matching HUGO_VERSION in docs/reproducibility.md)"
+  log "MISSING: hugo (install the extended edition via 'brew install hugo'; see docs/setup.md)"
   missing=1
 fi
 

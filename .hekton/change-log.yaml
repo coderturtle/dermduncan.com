@@ -19,3 +19,22 @@ changes:
     links:
       - "docs/session-log.md"
       - "docs/adoption-audit.md"
+  - id: CHG-0002
+    date: 2026-07-15
+    title: "Fix doubt-driven-review findings before push"
+    intent: "Redact publicly-disclosed AWS identifiers, correct factual errors (DS_Store count, false PDF-serving claim), sync the stale mind-palace mirror, document the Hugo extended-edition requirement, and add real live-verification evidence for the maturity claim — all found by a single-model + Codex cross-model adversarial review of CHG-0001's diff."
+    changed_by: "claude"
+    change_type: correction
+    risk_level: low
+    validation:
+      - "gh repo view coderturtle/dermduncan.com --json isPrivate,visibility"
+      - "curl https://dermduncan.com/ and all 7 https://dermduncan.com/docs/*.pdf"
+      - "git ls-files | grep DS_Store"
+    approvals:
+      required: true
+      status: user_approved
+    links:
+      - "docs/session-log.md"
+      - "docs/adoption-audit.md"
+      - "docs/decisions.md"
+      - ".hekton/agent-run-log.yaml"

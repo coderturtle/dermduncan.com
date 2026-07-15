@@ -50,3 +50,56 @@ See `docs/next-actions.md`.
 ### Mind-Palace Updated
 
 Proposed (repo-local `mind-palace/` mirror drafted; live vault not touched — requires explicit human sync approval).
+
+## 2026-07-15 - Doubt-driven review before push
+
+### Changed Files
+
+- `.hekton/project.yaml`, `.hekton/risk-register.yaml`, `.hekton/agent-run-log.yaml`: corrected maturity evidence, redacted AWS values, corrected `.DS_Store` count, added RISK-0005, recorded this review pass.
+- `docs/reproducibility.md`, `docs/risks.md`, `docs/adoption-audit.md`, `docs/project-walkthrough.md`, `docs/decisions.md`, `docs/setup.md`, `docs/next-actions.md`: same fixes reflected across docs.
+- `scripts/check-prereqs.sh`: added a soft "hugo extended edition" warning.
+- `mind-palace/next-actions.md`, `mind-palace/session-log.md`: re-synced with the corrected `docs/` versions.
+
+### What Changed
+
+Before pushing/opening a PR, ran the `doubt-driven-development` process against the adoption diff: a fresh-context single-model reviewer (general-purpose subagent) and a Codex cross-model reviewer, both given only the diff (`9fe0342..HEAD`) and the adoption contract, instructed to find issues rather than validate. Both were told to verify claims against the live filesystem/git/production state rather than trust the new docs' own assertions.
+
+### Why It Changed
+
+User explicitly requested a doubt-driven-development pass before pushing and opening the PR.
+
+### Decisions Made
+
+See `docs/decisions.md` 2026-07-15 entries: redact-vs-keep AWS values (user chose redact), and running both reviewers before push. Full finding-by-finding reconciliation:
+
+1. **Real AWS identifiers committed in docs** (role ARN/account ID, CloudFront distribution ID, OIDC session name) — valid, fixed: redacted to variable names only.
+2. **`.DS_Store` count wrong** (said 7, actual 10) — valid, verified via `git ls-files`, fixed.
+3. **`mind-palace/` mirror stale** after the first follow-up commit — valid, fixed.
+4. **`gh variable list` used outside the documented read-only allowlist without recording the scope decision** — valid, folded into #1's fix; decision now recorded in `docs/decisions.md`.
+5. **`project-walkthrough.md` falsely claimed certification PDFs are served from the site** — valid, verified live (all 7 `/docs/*.pdf` return 404, homepage returns 200), fixed text and added RISK-0005.
+6. **Hugo "extended edition" requirement undocumented/unchecked** — valid, fixed docs wording and added a soft check-prereqs.sh warning.
+7. **`maturity_level: 3`/"validated" asserted without a recorded verification step** — valid, fixed by performing and recording a real `curl` check.
+8. **`~/hekton` registry files left uncommitted, diff not self-contained** (Codex) — classified as noise: this is expected cross-repo registry behavior, already transparently documented in `docs/next-actions.md`, not a defect in this repo's diff.
+9. **Repo visibility unverified** (Codex's sandbox had no network) — classified as noise: independently verified both before and after via `gh repo view coderturtle/dermduncan.com` (`isPrivate: false`, `visibility: PUBLIC`).
+
+### Assumptions Made
+
+- The user's "redact values, keep names" decision applies uniformly to all 7 deploy variables, not just the ones judged individually sensitive.
+
+### Risks
+
+Added RISK-0005 (broken certification-PDF links, pre-existing production defect, not caused by adoption). See `.hekton/risk-register.yaml` and `docs/risks.md`.
+
+### Next Actions
+
+See `docs/next-actions.md` — added RISK-0005 fix and a possible future hardening of the Hugo-edition check.
+
+### Validation Status
+
+- Re-verified `gh repo view coderturtle/dermduncan.com --json isPrivate,visibility`: `{"isPrivate":false,"visibility":"PUBLIC"}`.
+- Live-verified via `curl`: `https://dermduncan.com/` → 200; all 7 `https://dermduncan.com/docs/*.pdf` → 404.
+- No further validation commands re-run this pass (reproducibility/governance/taxonomy results from the prior entry stand; nothing in this pass touched required-file presence).
+
+### Mind-Palace Updated
+
+Repo-local mirror re-synced to match corrected docs. Live vault still not touched.
