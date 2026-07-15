@@ -6,12 +6,12 @@
   --paper-raised: #ffffff;
   --ink: #1c2430;
   --ink-soft: #4a5568;
-  --ink-faint: #8b96a5;
+  --ink-faint: #5c6877;
   --line: #d8dde4;
   --accent: #1f5f8b;
   --accent-strong: #174a6d;
   --accent-wash: #eaf1f6;
-  --unlock: #8a5a1f;
+  --unlock: #7a4e18;
   --unlock-wash: #f7f0e4;
   --mono: ui-monospace, "SF Mono", "Cascadia Code", Menlo, Consolas, monospace;
   --sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
@@ -25,7 +25,7 @@
     --paper-raised: #1a2029;
     --ink: #e6eaef;
     --ink-soft: #aab4c0;
-    --ink-faint: #6d7885;
+    --ink-faint: #97a2b0;
     --line: #2c3542;
     --accent: #6aa5cc;
     --accent-strong: #8dbbd9;

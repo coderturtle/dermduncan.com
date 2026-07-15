@@ -53,8 +53,8 @@
   era: "2012 – 2016"
   title: Building reusable foundations
   summary: >-
-    The XTRAC years, where delivering one application became building the platform
-    that let many applications exist.
+    The XTRAC years, where the work shifted from delivering single applications to
+    building the platform that let many applications exist.
   context: >-
     I moved to XTRAC, Fidelity's workflow business, first as a senior engineer on the
     labs team and then as principal architect. The labs remit was explicit: run 8 to 12
@@ -112,20 +112,18 @@
     teach an engineer to think in events, infrastructure as code or serverless
     economics. Every new project paid the same learning tax again.
   intervention: >-
-    I treated capability itself as the system to build. We turned tentative AWS
-    experiments into a multi-year cloud strategy with live cloud-native applications
-    behind it. We built infrastructure-as-code patterns for shared, reusable
-    infrastructure so later projects started from a foundation instead of a blank
-    page. I created live-coding workshops across serverless, Alexa and machine
-    learning, then in Personal Investing scaled that idea into a developer learning
-    dojo: self-contained, cross-platform katas that walked engineers through full
-    solution development, pipelines included, and upskilled teams concurrently across
-    global locations. My team of fifteen built the cloud-native event-driven platform
-    that became the backbone of the digital experience ecosystem, and I ran Event
-    Storming and domain-driven design sessions with the business to define the domain
-    boundaries it was built around. On the innovation side I was tech owner of the
-    labs group, designing experiments and MVPs to evaluate ideas quickly, including
-    early distributed-ledger work.
+    I treated capability itself as the system to build. Tentative AWS experiments
+    were turned into a multi-year cloud strategy with live cloud-native applications
+    behind it, on infrastructure-as-code patterns that let later projects start from
+    a working foundation instead of a blank page. I created live-coding workshops
+    across serverless, Alexa and machine learning, then in Personal Investing scaled
+    the idea into a developer learning dojo: self-contained, cross-platform katas
+    covering full solution development, pipelines included, upskilling teams
+    concurrently across global locations. My team of fifteen built the cloud-native
+    event-driven platform underneath the digital experience ecosystem, with its
+    domain boundaries defined in Event Storming and domain-driven design sessions I
+    ran with the business. As tech owner of the labs group I also kept a hand in
+    experiments and MVPs, including early distributed-ledger work.
   outcomes:
     - Tentative cloud experiments became a funded multi-year cloud strategy with multiple live cloud-native applications.
     - The learning dojo and cloud centre of excellence were adopted by multiple teams across global sites.
@@ -186,7 +184,7 @@
     - The engineering organisation grew from one technologist to 60+ engineers across Ireland, the UK and India, inside a company that grew to roughly 70 people.
     - Cloud running costs reduced by approximately 40 percent while live environments doubled.
     - Environment provisioning time cut by approximately 80 percent.
-    - SOC 2 Type I readiness achieved for a regulated client base.
+    - Led the SOC 2 Type I readiness programme that gave regulated clients the assurance evidence they needed.
     - Client-facing MVPs designed with clients and subject-matter experts and delivered by the teams the process had hired.
   capability_gained: >-
     The bridge from architect to technology executive. Organisational design, hiring,
