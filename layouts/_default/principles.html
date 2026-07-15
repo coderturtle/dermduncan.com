@@ -10,11 +10,16 @@
     <ol class="principle-list">
       {{- range .Site.Data.career.principles }}
       <li class="principle">
-        <h2>{{ .title }}</h2>
-        <p>{{ .body }}</p>
+        <div class="principle-body">
+          <h2>{{ .title }}</h2>
+          <p>{{ .body }}</p>
+        </div>
       </li>
       {{- end }}
     </ol>
+    <blockquote class="signature-quote">
+      <p>Perfection is a road, not a destination.</p>
+    </blockquote>
   </div>
 </section>
 {{ end }}

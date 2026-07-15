@@ -1,4 +1,5 @@
-/* dermduncan.com — restrained systems/blueprint visual language.
+/* dermduncan.com — restrained systems/blueprint visual language, signed with a deep
+   verdigris accent and an editorial serif on the biggest headlines only.
    Hand-written CSS, no framework. Light and dark themes via prefers-color-scheme. */
 
 :root {
@@ -8,13 +9,14 @@
   --ink-soft: #4a5568;
   --ink-faint: #5c6877;
   --line: #d8dde4;
-  --accent: #1f5f8b;
-  --accent-strong: #174a6d;
-  --accent-wash: #eaf1f6;
+  --accent: #1f6f63;
+  --accent-strong: #154f48;
+  --accent-wash: #e4f2ef;
   --unlock: #7a4e18;
   --unlock-wash: #f7f0e4;
   --mono: ui-monospace, "SF Mono", "Cascadia Code", Menlo, Consolas, monospace;
   --sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --serif: Georgia, "Iowan Old Style", "Palatino Linotype", "Book Antiqua", serif;
   --measure: 44rem;
   --wide: 68rem;
 }
@@ -27,9 +29,9 @@
     --ink-soft: #aab4c0;
     --ink-faint: #97a2b0;
     --line: #2c3542;
-    --accent: #6aa5cc;
-    --accent-strong: #8dbbd9;
-    --accent-wash: #1c2733;
+    --accent: #5fbfae;
+    --accent-strong: #7ed6c4;
+    --accent-wash: #14302b;
     --unlock: #d0a763;
     --unlock-wash: #241d12;
   }
@@ -94,7 +96,9 @@ h1, h2, h3 { line-height: 1.2; letter-spacing: -0.01em; }
   gap: 0.5rem;
 }
 .brand {
-  font-weight: 650;
+  font-family: var(--serif);
+  font-weight: 600;
+  font-size: 1.05rem;
   text-decoration: none;
   color: var(--ink);
   display: inline-flex;
@@ -221,6 +225,8 @@ section { padding: 2.5rem 0; }
   margin: 0 0 1rem;
 }
 .hero-title {
+  font-family: var(--serif);
+  font-weight: 600;
   font-size: clamp(2rem, 5.5vw, 3.4rem);
   margin: 0 0 1.25rem;
   max-width: 22ch;
@@ -361,6 +367,7 @@ section { padding: 2.5rem 0; }
 .page-head h1, .chapter-head h1 {
   font-size: clamp(1.8rem, 4.5vw, 2.6rem);
   margin: 0.4rem 0 0.9rem;
+  font-weight: 700;
   max-width: 26ch;
 }
 .chapter-kicker {
@@ -374,6 +381,9 @@ section { padding: 2.5rem 0; }
   text-transform: uppercase;
   letter-spacing: 0.06em;
 }
+/* Narrative pages (chapters, stories) get the serif signature; index/utility
+   pages (Capabilities, Now, Principles, Career, list pages) stay sans for scanning. */
+.chapter-head h1 { font-family: var(--serif); }
 .chapter-summary { font-size: 1.15rem; color: var(--ink-soft); max-width: var(--measure); }
 
 .chapter-body { padding-bottom: 1rem; }
@@ -585,8 +595,21 @@ section { padding: 2.5rem 0; }
   font-size: 1.1rem;
   padding-top: 0.2rem;
 }
-.principle h2 { margin: 0 0 0.5rem; font-size: 1.25rem; }
-.principle p { margin: 0; max-width: var(--measure); color: var(--ink-soft); }
+.principle-body h2 { margin: 0 0 0.5rem; font-size: 1.25rem; }
+.principle-body p { margin: 0; max-width: var(--measure); color: var(--ink-soft); }
+
+.signature-quote {
+  margin: 3rem 0 0.5rem;
+  padding: 0 0 0 1.25rem;
+  border-left: 3px solid var(--accent);
+}
+.signature-quote p {
+  margin: 0;
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 1.4rem;
+  color: var(--ink-soft);
+}
 
 /* ---------- career ---------- */
 
