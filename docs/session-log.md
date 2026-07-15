@@ -133,3 +133,29 @@ Docs-only change; no validation commands re-run.
 ### Mind-Palace Updated
 
 `mind-palace/next-actions.md` updated to match.
+
+## 2026-07-15 — Career-story rebuild (Fable loop)
+
+### What Changed
+
+Full site rebuild on branch `agent/fable/career-story-rebuild` (not merged, not deployed): new homepage, six journey chapters, nine capability threads with client-side filtering, four signature stories, leadership principles, Now section, conventional career view; data model in `data/career/`; root layouts + hand-written CSS/JS replacing the hugo-resume theme presentation; legacy demo-content cleanup and RISK-0005 PDF fix. Loop artefacts in `docs/rebuild/` (repo assessment, claims register, critique).
+
+### Why It Changed
+
+User brief: replace the online-CV experience with an interactive executive career narrative showing capability compounding across six scales.
+
+### Decisions Made
+
+See `docs/decisions.md` 2026-07-15 "Rebuild as an interactive career story".
+
+### Next Actions
+
+See `docs/next-actions.md` — new items for claim confirmation and old-build cleanup.
+
+### Validation Status
+
+`hugo` build passes on production-pinned 0.123.7 and local 0.164.0 (zero errors; only version-skew deprecation warnings on 0.164). Internal-link integrity check over the built output: no missing targets. Rendered-output greps confirm no internal notes (NEEDS-CONFIRMATION/claim refs) or theme demo text leak into HTML. Headless-Chrome screenshots verified desktop (1280px) and mobile (600px) rendering, nav toggle, spine, filters, career view. No test suite exists in this repo; no linter configured.
+
+### Mind-Palace Updated
+
+Repo-local mirror only (`mind-palace/session-log.md`); live vault untouched per project rules.
