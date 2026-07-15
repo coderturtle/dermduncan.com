@@ -1,0 +1,220 @@
+# Capability threads. Each thread traces one capability across chapters, showing how it
+# emerges, develops and is reused at increasing scale. stages[].chapter links to
+# data/career/chapters.yaml ids; the UI uses these links for filtering.
+
+- id: automation
+  name: Automation
+  summary: >-
+    From migration scripts to autonomous agentic loops. The longest-running thread:
+    every stage automates the friction the previous stage exposed.
+  stages:
+    - era: "2006 – 2008"
+      chapter: automating-the-friction
+      label: Network scripting and one-click environments
+      detail: Spreadsheet-to-system migration scripts at O2; one-click dev-environment installer at Fidelity.
+    - era: "2012 – 2016"
+      chapter: reusable-foundations
+      label: CI/CD and environment automation
+      detail: CloudFormation, Ruby and Jenkins pipelines; one engineer could operate the whole platform; daily releases with compliance checks built in.
+    - era: "2016 – 2020"
+      chapter: scaling-capability
+      label: Infrastructure as code as an organisational pattern
+      detail: Shared reusable infrastructure patterns cutting cost and time for every subsequent project.
+    - era: "2021 onwards"
+      chapter: building-companies
+      label: Self-service platforms
+      detail: Fully automated Azure environments and an Engineering Enablement Platform, doubling live environments while cutting provisioning time by about 80%.
+    - era: "Now"
+      chapter: agentic-enterprise
+      label: Autonomous agentic loops
+      detail: Hekton agents that research, build, review and operate software under governance-as-code.
+
+- id: platform-engineering
+  name: Platform engineering
+  summary: >-
+    Building the capability underneath the applications, so one investment enables
+    many teams.
+  stages:
+    - era: "2012 – 2016"
+      chapter: reusable-foundations
+      label: Integration engine and forms platform
+      detail: XTRAC Connect and the forms continuum turned digitisation from bespoke projects into a repeatable capability.
+    - era: "2016 – 2020"
+      chapter: scaling-capability
+      label: Event-driven platform at enterprise scale
+      detail: Cloud-native EDA platform, built by a team of fifteen, becoming the backbone of the digital experience ecosystem.
+    - era: "2021 onwards"
+      chapter: building-companies
+      label: Company platform from zero
+      detail: HUB's foundational Azure platform, environments, security posture and enablement platform, built from the first commit.
+    - era: "Current"
+      chapter: shaping-the-organisation
+      label: Platform engineering as an executive function
+      detail: Leading the platform-engineering function for Vanguard Europe, shaping investment rather than writing the Terraform.
+    - era: "Now"
+      chapter: agentic-enterprise
+      label: The software factory as a platform
+      detail: Hekton treats delivery itself as the platform, with agents as the workload.
+
+- id: architecture
+  name: Architecture
+  summary: >-
+    From application design to enterprise architecture leadership, without ever
+    leaving the whiteboard behind.
+  stages:
+    - era: "2008 – 2012"
+      chapter: automating-the-friction
+      label: Application architecture
+      detail: MVVM, MVP and service design inside fixed-income product systems.
+    - era: "2012 – 2016"
+      chapter: reusable-foundations
+      label: Systems and cloud-native architecture
+      detail: Twelve-factor re-architecture of Fidsafe for 10M+ users; early serverless migration.
+    - era: "2016 – 2020"
+      chapter: scaling-capability
+      label: Architecture as an organisational function
+      detail: Director-level architecture leadership; cloud strategy; domain-driven design with the business.
+    - era: "2021 onwards"
+      chapter: building-companies
+      label: Architecture for a whole company
+      detail: HUB's conceptual product architecture with clients and SMEs, plus the standards keeping fast-growing teams coherent.
+    - era: "Current"
+      chapter: shaping-the-organisation
+      label: Architecture connecting strategy to execution
+      detail: Architecture leadership for Vanguard Europe, translating strategy into executable priorities.
+
+- id: developer-enablement
+  name: Developer enablement
+  summary: >-
+    Treating engineering capability as a product: workshops, dojos, katas and
+    centres of excellence.
+  stages:
+    - era: "2016 – 2018"
+      chapter: scaling-capability
+      label: Live-coding workshops
+      detail: Serverless, Alexa and ML workshops building cloud expertise across the APS organisation.
+    - era: "2019 – 2020"
+      chapter: scaling-capability
+      label: The learning dojo
+      detail: Self-contained cross-platform katas, full solution development including pipelines, upskilling global teams concurrently.
+    - era: "2021 onwards"
+      chapter: building-companies
+      label: Enablement as company infrastructure
+      detail: HUB's Engineering Enablement Platform and centre-of-excellence model.
+    - era: "Now"
+      chapter: agentic-enterprise
+      label: Enabling human-agent teams
+      detail: Workshop and dojo patterns re-emerging as onboarding for teams that include agents.
+
+- id: org-design
+  name: Organisational design
+  summary: >-
+    Designing the teams, roles and operating models that technology strategy needs to
+    become real.
+  stages:
+    - era: "2016 – 2020"
+      chapter: scaling-capability
+      label: Teams around platforms
+      detail: Structuring architecture and platform teams, and communities of practice around the cloud strategy.
+    - era: "2021 onwards"
+      chapter: building-companies
+      label: Building the organisation itself
+      detail: Hiring process, resource plans and autonomous team design scaling HUB to 60+ engineers in three countries.
+    - era: "Current"
+      chapter: shaping-the-organisation
+      label: Operating-model design
+      detail: Shaping how architecture, platform engineering and business lines fit together across Vanguard Europe.
+    - era: "Now"
+      chapter: agentic-enterprise
+      label: Human-agent team design
+      detail: Researching operating models where agents are team members with tiered autonomy.
+
+- id: tech-strategy
+  name: Technology strategy
+  summary: >-
+    Turning technology direction into funded, executable, measurable change.
+  stages:
+    - era: "2016 – 2018"
+      chapter: scaling-capability
+      label: Divisional cloud strategy
+      detail: From tentative AWS experiments to a multi-year strategy with live systems behind it.
+    - era: "2021 onwards"
+      chapter: building-companies
+      label: Company technology roadmap
+      detail: HUB's strategic technology and cloud roadmap, owned end to end with executive leadership.
+    - era: "Current"
+      chapter: shaping-the-organisation
+      label: Regional strategy inside a global firm
+      detail: European technology strategy connecting local business needs with Vanguard's global capabilities.
+    - era: "Now"
+      chapter: agentic-enterprise
+      label: Strategy for the agentic era
+      detail: Public work on how agentic AI changes technology operating models and leadership itself.
+
+- id: governance-risk
+  name: Governance and risk
+  summary: >-
+    Making governance part of the system rather than a gate around it, in
+    regulated environments where trust is the licence to operate.
+  stages:
+    - era: "2014 – 2016"
+      chapter: reusable-foundations
+      label: Compliance in the pipeline
+      detail: Fidsafe CD pipelines automated operations, security and compliance checks, enabling daily releases in a regulated firm.
+    - era: "2021 onwards"
+      chapter: building-companies
+      label: Security posture and SOC 2
+      detail: HUB's initial infosec posture, SOC monitoring and SOC 2 Type I readiness.
+    - era: "Current"
+      chapter: shaping-the-organisation
+      label: Responsible AI governance
+      detail: AI enablement designed with governance built in, appropriate to a regulated financial-services firm.
+    - era: "Now"
+      chapter: agentic-enterprise
+      label: Invisible governance and governance-as-code
+      detail: Hekton's claims registers, risk registers, review gates and approval policies enforced inside the agentic workflow.
+
+- id: ai-agentic
+  name: AI and agentic systems
+  summary: >-
+    From ML workshops and RAG pilots to designing the agentic enterprise.
+  stages:
+    - era: "2016 – 2020"
+      chapter: scaling-capability
+      label: Early ML and emerging tech
+      detail: Machine-learning workshops and distributed-ledger experimentation in the labs remit.
+    - era: "2021 onwards"
+      chapter: building-companies
+      label: Applied generative AI
+      detail: Azure OpenAI and retrieval-augmented-generation exploration for a fintech product.
+    - era: "Current"
+      chapter: shaping-the-organisation
+      label: Enterprise AI enablement
+      detail: AI adoption and responsible governance across Vanguard Europe.
+    - era: "Now"
+      chapter: agentic-enterprise
+      label: Agentic software factories
+      detail: Hekton, Gremlins and The Agentic Tekton as a connected research programme.
+
+- id: business-product
+  name: Business and product leadership
+  summary: >-
+    Working the seam between technology and the business: clients, product,
+    compliance and executives.
+  stages:
+    - era: "2012 – 2018"
+      chapter: reusable-foundations
+      label: Business-case engineering
+      detail: Labs POCs framed as investments; ROI definitions that got one in five ideas funded.
+    - era: "2019 – 2020"
+      chapter: scaling-capability
+      label: Domain design with the business
+      detail: Event Storming and DDD sessions putting business experts at the modelling table.
+    - era: "2021 onwards"
+      chapter: building-companies
+      label: Client and executive partnership
+      detail: Conceptual product architecture with clients and SMEs; partnership with product, compliance and executive leadership at HUB.
+    - era: "Current"
+      chapter: shaping-the-organisation
+      label: Strategy alignment at executive level
+      detail: Keeping business strategy, architecture and engineering pointed at the same outcomes across Vanguard Europe.

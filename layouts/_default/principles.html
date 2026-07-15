@@ -1,0 +1,20 @@
+{{ define "main" }}
+<section class="page-head">
+  <div class="section-inner">
+    <h1>Leadership principles</h1>
+    <div class="page-lede">{{ .Content }}</div>
+  </div>
+</section>
+<section class="principles">
+  <div class="section-inner">
+    <ol class="principle-list">
+      {{- range .Site.Data.career.principles }}
+      <li class="principle">
+        <h2>{{ .title }}</h2>
+        <p>{{ .body }}</p>
+      </li>
+      {{- end }}
+    </ol>
+  </div>
+</section>
+{{ end }}

@@ -1,0 +1,59 @@
+# "What I'm exploring now" — living section. Only link to destinations verified live
+# (checked 2026-07-15): theagentictekton.com, gremlins.io, coderturtle.io.
+
+intro: >-
+  A connected research programme, run hands-on in a private lab, asking one question:
+  how will technology organisations, software delivery and executive technology
+  leadership change when intelligent agents become active participants in the
+  enterprise?
+
+items:
+  - title: Agentic software factories
+    body: >-
+      Hekton is a private software factory where fleets of specialised agents
+      research, design, build, review and operate real production software, this site
+      included. It is the test bench for everything else on this list.
+
+  - title: Invisible governance
+    body: >-
+      Governance-as-code for agentic delivery: claims registers, decision logs, risk
+      registers, review panels and human approval gates enforced inside the workflow,
+      so compliance is a property of the system rather than a stage after it.
+
+  - title: AI FinOps and model routing
+    body: >-
+      Cost-aware agent design: routing work between local and cloud models, matching
+      model capability to task value, and making agent spend as observable as cloud
+      spend.
+
+  - title: Human-agent team design
+    body: >-
+      Operating models where agents are team members with tiered autonomy. Gremlins
+      is the agent-first SDLC concept: which decisions agents own, which humans gate,
+      and how the review boundary moves as trust is earned.
+    link:
+      label: gremlins.io
+      url: https://gremlins.io
+
+  - title: Context and dependency graphs
+    body: >-
+      Agents are only as good as the context they can reach. Modelling organisations,
+      codebases and decisions as connected graphs that both humans and agents can
+      navigate.
+
+  - title: Writing at The Agentic Tekton
+    body: >-
+      The public side of the programme: essays and patterns on agentic operating
+      models, AI-era architecture and technology leadership, published as they survive
+      contact with practice.
+    link:
+      label: theagentictekton.com
+      url: https://theagentictekton.com
+
+  - title: Long-running experiments at Coderturtle
+    body: >-
+      The workshop bench: sample architectures, tools and technical writing going
+      back years, now increasingly built by the factory itself.
+    link:
+      label: coderturtle.io
+      url: https://coderturtle.io

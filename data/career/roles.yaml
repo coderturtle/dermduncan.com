@@ -1,0 +1,163 @@
+# Conventional career view. Reverse-chronological.
+# dates_confirmed: false => end/start not verifiable from local sources; display stays
+# at the stated precision and the page carries a single confirmation footnote.
+
+- id: vanguard-current
+  org: Vanguard
+  title: "Head of Architecture and CTO Function, Europe"
+  title_confirmed: false
+  # No formal title exists in local sources (claim C22/C23). display_title below is what
+  # actually renders; it describes the remit rather than asserting a formal title.
+  display_title: "Architecture & CTO/Platform Engineering Leadership, Europe"
+  range: "Current role"
+  dates_confirmed: false
+  current: true
+  chapter: shaping-the-organisation
+  scope: >-
+    Leads Architecture and the CTO and platform-engineering function for Vanguard's
+    European business, spanning UK Personal Investing and European Financial Adviser
+    Services.
+  achievements:
+    - European technology strategy translated into executable engineering priorities.
+    - Engineering excellence and clean-architecture programme across European business lines.
+    - Enterprise AI enablement with responsible AI governance in a regulated environment.
+    - Operating-model and organisational design connecting European needs with global capabilities.
+  capabilities: [architecture, tech-strategy, org-design, governance-risk, ai-agentic, business-product]
+
+- id: hub-director
+  org: HUB (hubwise fintech)
+  org_display: HUB
+  title: "Solutions Architect (Director), progressing to Head of Cloud Engineering / MD remit"
+  title_confirmed: false
+  display_title: "Founding Technologist → Director, Solutions Architecture → Head of Cloud Engineering (MD remit)"
+  range: "January 2021 –"
+  dates_confirmed: false
+  current: false
+  chapter: building-companies
+  scope: >-
+    First technical hire outside the CTO and eighth employee. Built the platform,
+    security posture and engineering organisation from the ground up as the company
+    scaled to 60+ engineers across Ireland, the UK and India.
+  achievements:
+    - Foundational Azure architecture with fully automated environments (ARM, Bicep, Terraform, Azure DevOps).
+    - Engineering organisation, hiring process and autonomous team design for a ~70-person company.
+    - Initial security and infosec posture, SOC monitoring, and SOC 2 Type I readiness.
+    - Approximately 40% cloud cost reduction, doubled live environments, ~80% faster provisioning.
+    - Engineering Enablement Platform and centre-of-excellence model; Azure OpenAI and RAG exploration.
+  capabilities: [platform-engineering, architecture, org-design, governance-risk, business-product, tech-strategy, ai-agentic]
+
+- id: pi-director
+  org: Fidelity Investments, Personal Investing
+  title: Director of Architecture
+  title_confirmed: true
+  range: "February 2019 – October 2020"
+  dates_confirmed: true
+  current: false
+  chapter: scaling-capability
+  scope: >-
+    Led a fifteen-person team building the cloud-native event-driven platform behind
+    the digital experience ecosystem, alongside a developer learning dojo and cloud
+    centre of excellence.
+  achievements:
+    - Event-driven platform adopted as the backbone of digital experiences.
+    - Learning dojo of cross-platform katas upskilling teams concurrently across global sites.
+    - Event Storming and domain-driven design sessions with the business to define domain boundaries.
+  capabilities: [architecture, platform-engineering, developer-enablement, tech-strategy]
+
+- id: aps-director
+  org: Fidelity Investments, APS
+  title: Director of Software Architecture
+  title_confirmed: true
+  range: "December 2016 – August 2018"
+  dates_confirmed: true
+  current: false
+  chapter: scaling-capability
+  scope: >-
+    Led the cloud architecture team, taking the organisation from tentative AWS
+    experiments to a multi-year cloud strategy with live cloud-native applications.
+  achievements:
+    - Infrastructure-as-code patterns for shared, reusable infrastructure across projects.
+    - Live-coding workshops in serverless, Alexa and machine learning across the organisation.
+    - Tech owner of the labs group; MVP experiments with roughly one in five proofs of concept funded.
+  capabilities: [architecture, tech-strategy, developer-enablement, automation]
+
+- id: xtrac-principal
+  org: Fidelity Investments, XTRAC LLC
+  title: Principal Software Architect
+  title_confirmed: true
+  range: "June 2014 – December 2016"
+  dates_confirmed: true
+  current: false
+  chapter: reusable-foundations
+  scope: >-
+    Platform architecture for Fidelity's workflow business, including large-scale
+    re-architecture and early serverless adoption.
+  achievements:
+    - Fidsafe re-architected to serve 10 million+ users cost-effectively using twelve-factor principles.
+    - CD pipelines automating operations, security and compliance checks; releases moved from monthly to daily, cutting over $400k in year one.
+    - Java/Spring REST monolith migrated to serverless Node.js microservices on API Gateway, Lambda and SQS.
+  capabilities: [architecture, platform-engineering, automation, governance-risk]
+
+- id: xtrac-se
+  org: Fidelity Investments, XTRAC LLC
+  title: Senior Software Engineer (Labs)
+  title_confirmed: true
+  range: "December 2012 – June 2014"
+  dates_confirmed: true
+  current: false
+  chapter: reusable-foundations
+  scope: >-
+    Innovation labs engineer running 8 to 12 week proofs of concept to find the
+    investments that would carry the business forward.
+  achievements:
+    - Designed and built XTRAC Connect, a Java integration engine native on AWS, foundation of the digitisation-of-services strategy.
+    - Automated AWS environment creation so a single engineer could operate the platform.
+    - Digitised a 28-page pensions PDF into a smart digital journey, cutting processing from over a week to under a day.
+  capabilities: [automation, platform-engineering, architecture]
+
+- id: fimt-se
+  org: Fidelity Investments, FIMT Fixed Income
+  title: Software Engineer → Senior Software Engineer
+  title_confirmed: true
+  range: "October 2008 – December 2012"
+  dates_confirmed: true
+  current: false
+  chapter: automating-the-friction
+  scope: >-
+    Product engineering for fixed-income research systems, with a habit of automating
+    the surrounding operational work.
+  achievements:
+    - Modernised the decade-old research publishing and retrieval system (.NET, WPF, MVVM).
+    - Financial reporting tool that cut research-report assembly from about a week to minutes.
+    - Ruby on Rails support app that moved common support tasks to first-line support.
+  capabilities: [automation, architecture]
+
+- id: fidelity-ireland-ase
+  org: Fidelity Ireland (GIFT graduate programme)
+  title: Associate Software Engineer
+  title_confirmed: true
+  range: "September 2007 – October 2008"
+  dates_confirmed: true
+  current: false
+  chapter: automating-the-friction
+  scope: >-
+    Graduate-entry engineering role following four months of intensive training.
+  achievements:
+    - One-click installation application for full desktop development-environment setup.
+    - Decision-support system consolidating multiple data sources for portfolio managers.
+  capabilities: [automation]
+
+- id: o2-intern
+  org: O2 Ireland
+  title: Access Networks Operations Engineer (Intern)
+  title_confirmed: true
+  range: "Internship, pre-2007"
+  dates_confirmed: false
+  current: false
+  chapter: automating-the-friction
+  scope: >-
+    Network operations internship during the upgrade from spreadsheet-based records to
+    a dedicated system.
+  achievements:
+    - Scripts automating migration of network-route data from spreadsheets into the new system, improving speed and cutting errors.
+  capabilities: [automation]

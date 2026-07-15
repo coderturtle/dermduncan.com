@@ -1,0 +1,42 @@
+{{ define "main" }}
+<section class="page-head">
+  <div class="section-inner">
+    <h1>Capability threads</h1>
+    <div class="page-lede">{{ .Content }}</div>
+  </div>
+</section>
+<section class="capabilities">
+  <div class="section-inner">
+    <div class="cap-filter" role="group" aria-label="Filter capability threads" hidden data-cap-filter>
+      <button type="button" class="chip chip-button" data-cap="all" aria-pressed="true">All threads</button>
+      {{- range .Site.Data.career.capabilities }}
+      <button type="button" class="chip chip-button" data-cap="{{ .id }}" aria-pressed="false">{{ .name }}</button>
+      {{- end }}
+    </div>
+    <p class="cap-hint" hidden data-cap-hint aria-live="polite"></p>
+
+    {{- $chapters := sort .Site.Data.career.chapters "order" }}
+    {{- range .Site.Data.career.capabilities }}
+    <section class="cap-thread" id="{{ .id }}" data-cap-thread="{{ .id }}" aria-labelledby="cap-h-{{ .id }}">
+      <h2 id="cap-h-{{ .id }}">{{ .name }}</h2>
+      <p class="cap-summary">{{ .summary }}</p>
+      <ol class="cap-stages">
+        {{- range .stages }}
+        {{- $stageCh := index (where $chapters "id" .chapter) 0 }}
+        <li class="cap-stage">
+          <span class="cap-stage-era">{{ .era }}</span>
+          <span class="cap-stage-body">
+            <span class="cap-stage-label">{{ .label }}</span>
+            <span class="cap-stage-detail">{{ .detail }}</span>
+            {{- if $stageCh }}
+            <a class="cap-stage-chapter" href="{{ printf "/journey/%s/" $stageCh.slug }}">{{ $stageCh.spine_label }} &rarr;</a>
+            {{- end }}
+          </span>
+        </li>
+        {{- end }}
+      </ol>
+    </section>
+    {{- end }}
+  </div>
+</section>
+{{ end }}

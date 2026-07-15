@@ -1,0 +1,183 @@
+# Signature stories. Format: environment, constraint, intervention, result, learned,
+# reappeared, evidence. Claim refs map to docs/rebuild/claims-register.md.
+
+- id: fidelity-capability
+  slug: scaling-cloud-capability-at-fidelity
+  title: Teaching an enterprise to build differently
+  subtitle: Scaling cloud and engineering capability at Fidelity
+  chapter: scaling-capability
+  environment: >-
+    Fidelity between 2016 and 2020: a global asset manager with a digital
+    transformation strategy on paper, deep on-premise habits in practice, and cloud
+    experience concentrated in a handful of enthusiasts.
+  constraint: >-
+    The strategy assumed thousands of engineers could design event-driven,
+    cloud-native systems. They could not, yet. Sending people to certification courses
+    produced badges, not systems, and every project team relearned the same lessons at
+    full price.
+  intervention: >-
+    I stopped treating capability as a training problem and treated it as an
+    engineering problem. In APS we codified reusable infrastructure as code so
+    projects inherited a working foundation, and ran live-coding workshops where
+    engineers built real serverless systems in the room. In Personal Investing I
+    scaled the idea into a learning dojo: self-contained katas using dynamic reference
+    architectures, each one walking through a full solution including its pipeline,
+    designed so teams in different global locations could upskill concurrently.
+    Alongside it, my team built the event-driven platform those skills would be used
+    on, and I ran Event Storming sessions so the business defined the domain
+    boundaries with us.
+  result: >-
+    Tentative AWS experiments became a multi-year cloud strategy with live cloud-native
+    applications. The dojo was adopted by multiple teams across global sites. Reusable
+    infrastructure cut the cost and time of every subsequent project, and the
+    event-driven platform became the backbone of the digital experience ecosystem.
+  learned: >-
+    Capability scales when it ships as a product: versioned, self-service, opinionated
+    and tested. A reference architecture someone can run teaches more than a slide
+    deck someone must believe.
+  reappeared: >-
+    The dojo pattern became HUB's Engineering Enablement Platform and
+    centre-of-excellence model, and it is now re-emerging in Hekton as the onboarding
+    pattern for teams that include agents. Enablement as a product turned out to be a
+    career-long thesis, not a Fidelity tactic.
+  evidence:
+    - label: Role detail, Director of Software Architecture, APS
+    - label: Role detail, Director of Architecture, Personal Investing
+  capabilities: [developer-enablement, platform-engineering, architecture, tech-strategy]
+
+- id: hub-company-building
+  slug: building-hub
+  title: Employee number eight
+  subtitle: Building the platform, teams and technical foundations of HUB
+  chapter: building-companies
+  environment: >-
+    A fintech startup in January 2021: a product vision for regulated
+    financial-services clients, a CTO, seven other employees, and no platform, no
+    engineering organisation and no security posture.
+  constraint: >-
+    Everything had to exist at once, and every choice was permanent in the way early
+    choices are. The product needed a platform; the platform needed engineers; the
+    engineers needed standards, environments and a hiring pipeline; and regulated
+    clients needed evidence they could trust all of it. One person had to sequence
+    that without the luxuries of an enterprise behind them.
+  intervention: >-
+    I joined as the first technical hire outside the CTO and treated the company
+    itself as the system to design. Platform first: foundational architecture on
+    Azure, fully automated environments in ARM, Bicep and Terraform through Azure
+    DevOps, and a security posture with SOC monitoring from the start. Organisation in
+    the same motion: hiring process, resource plans and autonomous team structures,
+    kept coherent by a tech radar, architecture principles and development standards.
+    As the company grew I progressed into the Head of Cloud Engineering remit with
+    Managing Director responsibilities: owning the technology and cloud roadmap,
+    partnering with product, compliance and executive leadership, leading SOC 2 Type I
+    readiness, standing up an Engineering Enablement Platform and centre of
+    excellence, and later exploring Azure OpenAI and retrieval-augmented generation
+    for the product.
+  result: >-
+    The engineering organisation grew from one technologist to more than sixty
+    engineers across Ireland, the UK and India inside a roughly seventy-person
+    company. Cloud running costs fell by approximately 40 percent while live
+    environments doubled, provisioning time dropped by around 80 percent, and SOC 2
+    Type I readiness gave regulated clients the evidence they needed.
+  learned: >-
+    Company building is system design with people in the loop. Architecture, hiring,
+    security, budgets and client trust are one design problem, and the platform
+    decisions and organisational decisions have to be made together or they fight
+    each other later.
+  reappeared: >-
+    The executive range built at HUB, spanning technology, organisation and business,
+    is the foundation of the Vanguard Europe role, where the same convergence plays
+    out at global-firm scale. And HUB's lesson that governance must be built in from
+    the first commit became Hekton's invisible-governance research thread.
+  evidence:
+    - label: Role detail, HUB
+  capabilities: [org-design, platform-engineering, governance-risk, business-product, architecture]
+
+- id: vanguard-europe
+  slug: shaping-vanguard-europe
+  title: Designing the environment, not just the system
+  subtitle: Architecture, platforms and AI enablement at Vanguard Europe
+  chapter: shaping-the-organisation
+  environment: >-
+    Vanguard's European business: UK Personal Investing and European Financial
+    Adviser Services, regulated locally, powered by the technology organisation of a
+    global asset manager.
+  constraint: >-
+    At this scale nothing fails for lack of technology. Things fail when strategy,
+    architecture, engineering practice and governance drift apart, or when a European
+    business needs something the global platform road map has not prioritised. The
+    constraint is coherence across an organisation, under regulation, at pace.
+  intervention: >-
+    Leading Architecture and the CTO and platform-engineering function for Europe, I
+    work on the connective tissue: translating technology strategy into executable
+    priorities, driving engineering excellence and clean architecture across both
+    business lines, shaping the operating model so European needs connect with global
+    capabilities, and leading enterprise AI enablement with responsible AI governance
+    designed in rather than inspected in afterwards.
+  result: >-
+    Architecture, platform engineering and technology strategy operate as one
+    connected function for the European business, with AI adoption progressing inside
+    a governance framework a regulator can respect. This chapter is current, so its
+    fuller results belong to a future update.
+  learned: >-
+    The unit of design keeps expanding. After applications, platforms and companies,
+    the thing being designed now is the environment in which other people's design
+    decisions happen: incentives, operating models, governance and investment.
+  reappeared: >-
+    This is the newest chapter, but it is already feeding the research: the questions
+    Hekton and The Agentic Tekton explore are the ones this role makes urgent. How
+    does an enterprise adopt agents without losing the coherence this role exists to
+    protect?
+  evidence:
+    - label: Remit description
+  capabilities: [architecture, tech-strategy, org-design, governance-risk, ai-agentic, business-product]
+
+- id: hekton-tekton
+  slug: building-hekton-and-the-agentic-tekton
+  title: The factory that built this website
+  subtitle: Hekton, Gremlins and The Agentic Tekton
+  chapter: agentic-enterprise
+  environment: >-
+    Evenings and weekends, a home lab, and a conviction: agentic AI will change how
+    enterprises build software more than anything since the cloud, and the operating
+    models do not exist yet.
+  constraint: >-
+    Executive roles produce opinions about AI faster than evidence. Most agentic
+    thinking is either vendor demos or thought pieces written at a safe distance from
+    a failing pipeline. Testing how agents really behave inside governed delivery
+    requires building the whole system: agents, workflows, governance, cost controls
+    and the software they produce.
+  intervention: >-
+    I built the system. Hekton is a private agentic software factory in which fleets
+    of specialised agents research, design, build, review and operate real production
+    software under governance-as-code: claims registers, decision logs, risk
+    registers, review panels and human approval gates are part of the workflow, not
+    paperwork around it. Gremlins is the agent-first SDLC concept underneath, with
+    tiered agent autonomy and deterministic review gates. The Agentic Tekton is where
+    the patterns that survive get published: agentic operating models, invisible
+    governance, AI FinOps, model routing across local and cloud models, context and
+    dependency graphs, and human-agent team design.
+  result: >-
+    A working multi-project factory operating on real production sites, including the
+    one you are reading. Every claim on this site passed through the factory's claims
+    register; every material decision is in its decision log. The public writing at
+    The Agentic Tekton grows from that same evidence base.
+  learned: >-
+    The lessons of every earlier chapter apply to agents almost unchanged. Agents need
+    platforms, enablement, governance and organisational design, the same things
+    engineers needed. The difference is speed: an agentic organisation compounds
+    capability faster than a human one, and its governance has to be built in from
+    the first commit.
+  reappeared: >-
+    This is the chapter where the pattern points forward: the capability being built
+    here is the one the next scale of role will need, designing enterprises where
+    humans, platforms and agents are one system.
+  evidence:
+    - label: The Agentic Tekton
+      url: https://theagentictekton.com
+    - label: Gremlins
+      url: https://gremlins.io
+    - label: Coderturtle
+      url: https://coderturtle.io
+    - label: This site's build provenance
+  capabilities: [ai-agentic, automation, governance-risk, org-design, platform-engineering]

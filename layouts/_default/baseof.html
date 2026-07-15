@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script>document.documentElement.classList.add("js");</script>
+  {{- $title := cond .IsHome .Site.Title (printf "%s · %s" .Title .Site.Title) }}
+  <title>{{ $title }}</title>
+  {{- $desc := .Params.description | default .Summary | default .Site.Params.description }}
+  <meta name="description" content="{{ $desc | plainify | truncate 300 }}">
+  <link rel="canonical" href="{{ .Permalink }}">
+  <link rel="icon" href="{{ .Site.Params.favicon }}">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="stylesheet" href="{{ (resources.Get "css/site.css").RelPermalink }}">
+  <meta property="og:type" content="{{ cond .IsHome "profile" "article" }}">
+  <meta property="og:title" content="{{ $title }}">
+  <meta property="og:description" content="{{ $desc | plainify | truncate 300 }}">
+  <meta property="og:url" content="{{ .Permalink }}">
+  <meta property="og:site_name" content="{{ .Site.Title }}">
+  <meta property="og:image" content="{{ absURL "android-chrome-512x512.png" }}">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="{{ $title }}">
+  <meta name="twitter:description" content="{{ $desc | plainify | truncate 200 }}">
+  {{- if .IsHome }}
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Dermot Duncan",
+    "url": "https://dermduncan.com/",
+    "jobTitle": "Technology executive: architecture, platform engineering and AI enablement",
+    "alumniOf": "National University of Ireland, Galway",
+    "sameAs": [
+      "https://www.linkedin.com/in/dermotduncan/",
+      "https://github.com/dermdunc",
+      "https://github.com/coderturtle",
+      "https://theagentictekton.com"
+    ]
+  }
+  </script>
+  {{- end }}
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+{{ partial "nav.html" . }}
+<main id="main">
+{{ block "main" . }}{{ end }}
+</main>
+{{ partial "footer.html" . }}
+<script src="{{ (resources.Get "js/site.js").RelPermalink }}" defer></script>
+</body>
+</html>

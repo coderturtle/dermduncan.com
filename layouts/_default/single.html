@@ -1,0 +1,16 @@
+{{ define "main" }}
+<article class="legacy-page">
+  <header class="page-head">
+    <div class="section-inner">
+      <p class="chapter-kicker">Archive</p>
+      <h1>{{ .Title }}</h1>
+    </div>
+  </header>
+  <div class="section-inner chapter-body prose">
+    {{- with .Params.link }}
+    <p><a href="{{ . }}" rel="noopener">{{ . }}</a></p>
+    {{- end }}
+    {{ .Content }}
+  </div>
+</article>
+{{ end }}
