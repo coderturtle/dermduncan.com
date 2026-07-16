@@ -1,0 +1,23 @@
+{{ define "main" }}
+<section class="page-head">
+  <div class="section-inner">
+    <h1>Signature stories</h1>
+    <div class="page-lede">{{ .Content }}</div>
+  </div>
+</section>
+<section class="stories-index">
+  <div class="section-inner">
+    <ul class="story-grid story-grid-large">
+      {{- range .Site.Data.career.stories }}
+      <li class="story-card">
+        <a href="{{ printf "/stories/%s/" .slug }}">
+          <span class="story-card-sub">{{ .subtitle }}</span>
+          <span class="story-card-title">{{ .title }}</span>
+          <span class="story-card-env">{{ .environment | truncate 160 }}</span>
+        </a>
+      </li>
+      {{- end }}
+    </ul>
+  </div>
+</section>
+{{ end }}

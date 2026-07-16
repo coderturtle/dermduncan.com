@@ -1,0 +1,21 @@
+{{ define "main" }}
+<section class="page-head">
+  <div class="section-inner">
+    <p class="chapter-kicker">Archive</p>
+    <h1>{{ .Title }}</h1>
+    <div class="page-lede prose">{{ .Content }}</div>
+  </div>
+</section>
+<section class="legacy-list">
+  <div class="section-inner">
+    <ul class="archive-list">
+      {{- range .Pages }}
+      <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+      {{- end }}
+      {{- range .Sections }}
+      <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+      {{- end }}
+    </ul>
+  </div>
+</section>
+{{ end }}

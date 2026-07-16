@@ -1,0 +1,82 @@
+{{ define "main" }}
+<section class="page-head">
+  <div class="section-inner">
+    <h1>Career record</h1>
+    <div class="page-lede">{{ .Content }}</div>
+  </div>
+</section>
+
+<section class="career" aria-labelledby="career-roles">
+  <div class="section-inner">
+    <h2 id="career-roles">Roles</h2>
+    <ol class="role-list">
+      {{- $needsNote := false }}
+      {{- range .Site.Data.career.roles }}
+      <li class="role">
+        <div class="role-head">
+          <h3>{{ .display_title | default .title }}</h3>
+          <p class="role-meta">
+            <span class="role-org">{{ .org_display | default .org }}</span> ·
+            <span class="role-range">{{ .range }}{{ if not .dates_confirmed }}<a class="date-note-ref" href="#date-note" aria-label="Date pending confirmation">*</a>{{ end }}</span>
+          </p>
+        </div>
+        <p class="role-scope">{{ .scope }}</p>
+        <details class="role-achievements">
+          <summary>Selected achievements</summary>
+          <ul>
+            {{- range .achievements }}
+            <li>{{ . }}</li>
+            {{- end }}
+          </ul>
+        </details>
+        {{- if not .dates_confirmed }}{{ $needsNote = true }}{{ end }}
+      </li>
+      {{- end }}
+    </ol>
+    {{- if $needsNote }}
+    <p class="evidence-note" id="date-note">* Exact dates for the marked roles are being finalised. The full history is on <a href="https://www.linkedin.com/in/dermotduncan/" rel="noopener">LinkedIn</a>.</p>
+    {{- end }}
+  </div>
+</section>
+
+<section class="career" aria-labelledby="career-education">
+  <div class="section-inner">
+    <h2 id="career-education">Education</h2>
+    <ul class="edu-list">
+      {{- range .Site.Data.education }}
+      <li class="edu">
+        <h3>{{ .degree }}, {{ .major }}</h3>
+        <p class="role-meta">{{ .school | markdownify }} · {{ .range }}</p>
+      </li>
+      {{- end }}
+    </ul>
+  </div>
+</section>
+
+<section class="career" aria-labelledby="career-awards">
+  <div class="section-inner">
+    <h2 id="career-awards">Awards</h2>
+    <ul class="award-list">
+      {{- range where .Site.RegularPages "Section" "awards" }}
+      <li class="award">
+        <h3>{{ .Title }}</h3>
+        <p class="role-meta">{{ with .Params.pubtype }}{{ . }} · {{ end }}{{ .Date.Format "2006" }}</p>
+        <p class="role-scope">{{ .Params.description }}</p>
+      </li>
+      {{- end }}
+    </ul>
+  </div>
+</section>
+
+<section class="career career-archive" aria-labelledby="career-certs">
+  <div class="section-inner">
+    <h2 id="career-certs">Credentials archive</h2>
+    <p class="section-lede">AWS certifications earned during the 2016 to 2018 cloud-strategy years, kept here as a historical record of the hands-on depth behind that chapter.</p>
+    <ul class="cert-list">
+      {{- range where .Site.RegularPages ".File.Dir" "projects/contributions/" }}
+      <li><a href="{{ .Params.link | default .RelPermalink }}">{{ .Title }}</a></li>
+      {{- end }}
+    </ul>
+  </div>
+</section>
+{{ end }}

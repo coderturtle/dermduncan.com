@@ -1,0 +1,21 @@
+<footer class="site-footer">
+  <div class="footer-inner">
+    <p class="footer-thesis">Each stage of this career expanded the scale of the system I was able to change. The next one is being designed now.</p>
+    <ul class="footer-links">
+      {{- range .Site.Params.handles }}
+      <li><a href="{{ .link }}" rel="me noopener">{{ .name }}</a></li>
+      {{- end }}
+      <li><a href="mailto:{{ .Site.Params.email }}">Email</a></li>
+    </ul>
+    <p class="footer-meta">
+      &copy; {{ now.Year }} Dermot Duncan · Built with Hugo, delivered by the
+      <a href="/journey/agentic-enterprise/">Hekton agentic software factory</a>.
+    </p>
+    <p class="footer-provenance">
+      This page was generated {{ now.Format "2 January 2006" }}. Every claim on this
+      site passed through the factory&rsquo;s claims register before publication, the
+      same governance-as-code workflow described in
+      <a href="/journey/agentic-enterprise/">chapter six</a>.
+    </p>
+  </div>
+</footer>

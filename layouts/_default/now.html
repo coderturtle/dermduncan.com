@@ -1,0 +1,26 @@
+{{ define "main" }}
+{{- $now := .Site.Data.career.now }}
+<section class="page-head">
+  <div class="section-inner">
+    <h1>What I&rsquo;m exploring now</h1>
+    <p class="page-lede">{{ $now.intro }}</p>
+    <div class="page-lede">{{ .Content }}</div>
+  </div>
+</section>
+<section class="now-grid-wrap">
+  <div class="section-inner">
+    <ul class="now-grid">
+      {{- range $now.items }}
+      <li class="now-card">
+        <h2>{{ .title }}</h2>
+        <p>{{ .body }}</p>
+        {{- with .link }}
+        <p><a class="now-link" href="{{ .url }}" rel="noopener">{{ .label }} &rarr;</a></p>
+        {{- end }}
+      </li>
+      {{- end }}
+    </ul>
+    <p class="evidence-note">This work continues the pattern of the <a href="/journey/agentic-enterprise/">sixth career chapter</a>: hands-on experimentation alongside executive leadership, not instead of it.</p>
+  </div>
+</section>
+{{ end }}

@@ -1,0 +1,29 @@
+{{- /* Command-K jump palette. Real anchors in the results list mean it degrades to a
+       plain (if inert) dialog without JS; JS adds the keyboard trigger, filtering and
+       arrow-key navigation. Data is built once per page from the same career data
+       used everywhere else, so it never drifts from the content it indexes. */ -}}
+{{- $chapters := sort .Site.Data.career.chapters "order" }}
+{{- $items := slice (dict "title" "Home" "subtitle" "Positioning and overview" "url" "/") }}
+{{- $chapterCount := len $chapters }}
+{{- range $chapters }}
+{{- $items = $items | append (dict "title" .title "subtitle" (printf "Chapter %d of %d · %s" .order $chapterCount .spine_label) "url" (printf "/journey/%s/" .slug)) }}
+{{- end }}
+{{- range .Site.Data.career.stories }}
+{{- $items = $items | append (dict "title" .title "subtitle" (printf "Signature story · %s" .subtitle) "url" (printf "/stories/%s/" .slug)) }}
+{{- end }}
+{{- range .Site.Data.career.capabilities }}
+{{- $items = $items | append (dict "title" .name "subtitle" "Capability thread" "url" (printf "/capabilities/#%s" .id)) }}
+{{- end }}
+{{- $items = $items | append (dict "title" "Capabilities" "subtitle" "All nine threads, or the compounding map" "url" "/capabilities/") }}
+{{- $items = $items | append (dict "title" "Signature stories" "subtitle" "Four deeper accounts" "url" "/stories/") }}
+{{- $items = $items | append (dict "title" "What I'm exploring now" "subtitle" "Current research" "url" "/now/") }}
+{{- $items = $items | append (dict "title" "Leadership principles" "subtitle" "" "url" "/principles/") }}
+{{- $items = $items | append (dict "title" "Career record" "subtitle" "Roles, dates, education, credentials" "url" "/career/") }}
+<div class="palette-backdrop" id="palette" hidden role="dialog" aria-modal="true" aria-label="Jump to a page">
+  <div class="palette-panel">
+    <input type="text" class="palette-input" data-palette-input placeholder="Jump to a chapter, story or capability…" aria-label="Search this site" aria-autocomplete="list" aria-controls="palette-results" aria-expanded="true" role="combobox" autocomplete="off" spellcheck="false">
+    <ul class="palette-results" id="palette-results" data-palette-results role="listbox" aria-label="Results"></ul>
+    <p class="palette-hint">&uarr;&darr; to navigate &middot; Enter to go &middot; Esc to close</p>
+  </div>
+</div>
+<script type="application/json" id="palette-data">{{ $items | jsonify | safeJS }}</script>

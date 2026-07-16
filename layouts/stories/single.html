@@ -1,0 +1,48 @@
+{{ define "main" }}
+{{- $id := .Params.story }}
+{{- $s := index (where .Site.Data.career.stories "id" $id) 0 }}
+{{- if not $s }}{{ errorf "No story data found for %q (page %s)" $id .File.Path }}{{ end }}
+{{- $chapters := sort .Site.Data.career.chapters "order" }}
+{{- $ch := index (where $chapters "id" $s.chapter) 0 }}
+<article class="story">
+  <header class="chapter-head">
+    <div class="section-inner">
+      <p class="chapter-kicker"><a href="/stories/">Signature story</a>{{ if $ch }} · from <a href="{{ printf "/journey/%s/" $ch.slug }}">{{ $ch.title }}</a>{{ end }}</p>
+      <h1>{{ $s.title }}</h1>
+      <p class="chapter-summary">{{ $s.subtitle }}</p>
+    </div>
+  </header>
+  <div class="section-inner chapter-body">
+    <section class="grammar"><h2 class="grammar-label">The environment</h2><p>{{ $s.environment }}</p></section>
+    <section class="grammar"><h2 class="grammar-label">The constraint</h2><p>{{ $s.constraint }}</p></section>
+    <section class="grammar"><h2 class="grammar-label">The intervention</h2><p>{{ $s.intervention }}</p></section>
+    <section class="grammar"><h2 class="grammar-label">The result</h2><p>{{ $s.result }}</p></section>
+    <section class="grammar"><h2 class="grammar-label">What I learned</h2><p>{{ $s.learned }}</p></section>
+    <aside class="unlocked">
+      <h2 class="grammar-label">Where it reappeared</h2>
+      <p>{{ $s.reappeared }}</p>
+    </aside>
+    {{- if $s.evidence }}
+    <section class="grammar">
+      <h2 class="grammar-label">Evidence and artefacts</h2>
+      <ul class="evidence-list">
+        {{- range $s.evidence }}
+        <li>{{ if .url }}<a href="{{ .url }}" rel="noopener">{{ .label }}</a>{{ else }}{{ .label }}{{ end }}</li>
+        {{- end }}
+      </ul>
+    </section>
+    {{- end }}
+    {{- if $s.capabilities }}
+    <section class="chapter-caps">
+      <h2 class="grammar-label">Capabilities in this story</h2>
+      <ul class="chip-list">
+        {{- range $s.capabilities }}
+        {{- $cap := index (where $.Site.Data.career.capabilities "id" .) 0 }}
+        {{- if $cap }}<li><a class="chip" href="{{ printf "/capabilities/#%s" $cap.id }}">{{ $cap.name }}</a></li>{{ end }}
+        {{- end }}
+      </ul>
+    </section>
+    {{- end }}
+  </div>
+</article>
+{{ end }}

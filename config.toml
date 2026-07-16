@@ -1,51 +1,61 @@
-title = "Derm Duncan"
+title = "Dermot Duncan"
 baseURL = "https://dermduncan.com/"
-theme = "hugo-resume"
-languageCode = "en-us"
-PygmentsCodeFences = true
-PygmentsCodeFencesGuessSyntax = true
-PygmentsStyle = "monokai"
+languageCode = "en-gb"
 enableGitInfo = false
+disableKinds = ["taxonomy", "term"]
 
 [params]
-address = "Caversham, UK"
-email = "dermduncan@gmail.com"
-favicon = "/favicon.ico"
-firstName = "Derm"
-lastName = "Duncan"
-phone = "+447-914-633-409"
-profileImage = "img/goatfell.JPG"
-showEducation = true
-showExperience = true
-showOpenSource = true
-showProjects = true
-showPublications = true
-showQr = true
-showSkills = true
-
-[params.google]
-
-[params.google.analytics]
-trackerID = "XX-123446-01"
+  description = "Dermot Duncan builds the systems that help organisations change: from code and platforms to engineering capability, technology strategy and the agentic enterprise."
+  email = "dermduncan@gmail.com"
+  favicon = "/favicon.ico"
+  fullName = "Dermot Duncan"
+  positioning = "I build the systems that help organisations change."
+  currentRemit = "Head of Architecture & CTO, Vanguard Europe"
 
 [[params.handles]]
-link = "https://www.linkedin.com/in/dermotduncan/"
-name = "LinkedIn"
+  link = "https://www.linkedin.com/in/dermotduncan/"
+  name = "LinkedIn"
 
 [[params.handles]]
-link = "https://github.com/dermdunc"
-name = "GitHub dermdunc"
+  link = "https://github.com/dermdunc"
+  name = "GitHub (dermdunc)"
 
 [[params.handles]]
-link = "https://github.com/coderturtle"
-name = "Github coderturtle"
+  link = "https://github.com/coderturtle"
+  name = "GitHub (coderturtle)"
 
 [[params.handles]]
-link = "https://www.instagram.com/dermd/"
-name = "Instagram"
+  link = "https://theagentictekton.com"
+  name = "The Agentic Tekton"
+
+[menu]
+  [[menu.main]]
+    name = "Journey"
+    url = "/journey/"
+    weight = 10
+  [[menu.main]]
+    name = "Capabilities"
+    url = "/capabilities/"
+    weight = 20
+  [[menu.main]]
+    name = "Stories"
+    url = "/stories/"
+    weight = 30
+  [[menu.main]]
+    name = "Now"
+    url = "/now/"
+    weight = 40
+  [[menu.main]]
+    name = "Principles"
+    url = "/principles/"
+    weight = 50
+  [[menu.main]]
+    name = "Career"
+    url = "/career/"
+    weight = 60
 
 [outputs]
-home = ["HTML", "JSON"]
+  home = ["HTML"]
 
-[taxonomies]
-tag = "tags"
+[markup.goldmark.renderer]
+  unsafe = true

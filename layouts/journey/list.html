@@ -1,0 +1,13 @@
+{{ define "main" }}
+<section class="page-head">
+  <div class="section-inner">
+    <h1>The journey</h1>
+    <div class="page-lede">{{ .Content }}</div>
+  </div>
+</section>
+<section class="journey-spine">
+  <div class="section-inner">
+    {{ partial "spine.html" . }}
+  </div>
+</section>
+{{ end }}

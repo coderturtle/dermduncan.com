@@ -1,0 +1,125 @@
+{{ define "main" }}
+{{- $chapters := sort .Site.Data.career.chapters "order" }}
+{{- $id := .Params.chapter }}
+{{- $ch := index (where $chapters "id" $id) 0 }}
+{{- if not $ch }}{{ errorf "No chapter data found for %q (page %s)" $id .File.Path }}{{ end }}
+{{- $roles := where .Site.Data.career.roles "chapter" $id }}
+{{- $stories := where .Site.Data.career.stories "chapter" $id }}
+{{- $caps := .Site.Data.career.capabilities }}
+<article class="chapter">
+  <header class="chapter-head">
+    <div class="section-inner">
+      <p class="chapter-kicker">
+        <a href="/journey/">Journey</a> · Chapter {{ $ch.order }} of 6 · <span class="chapter-scale">{{ $ch.spine_label }}</span> · {{ $ch.era }}
+      </p>
+      <h1>{{ $ch.title }}</h1>
+      <p class="chapter-summary">{{ $ch.summary }}</p>
+    </div>
+  </header>
+
+  <div class="section-inner chapter-body">
+    <section class="grammar" aria-labelledby="g-context">
+      <h2 id="g-context" class="grammar-label">Context</h2>
+      <p>{{ $ch.context }}</p>
+    </section>
+    <section class="grammar" aria-labelledby="g-constraint">
+      <h2 id="g-constraint" class="grammar-label">The constraint</h2>
+      <p>{{ $ch.constraint }}</p>
+    </section>
+    <section class="grammar" aria-labelledby="g-intervention">
+      <h2 id="g-intervention" class="grammar-label">The intervention</h2>
+      <p>{{ $ch.intervention }}</p>
+    </section>
+    <section class="grammar" aria-labelledby="g-outcome">
+      <h2 id="g-outcome" class="grammar-label">Outcomes</h2>
+      <ul class="outcome-list">
+        {{- range $ch.outcomes }}
+        <li>{{ . }}</li>
+        {{- end }}
+      </ul>
+    </section>
+    <section class="grammar" aria-labelledby="g-capability">
+      <h2 id="g-capability" class="grammar-label">Capability gained</h2>
+      <p>{{ $ch.capability_gained }}</p>
+    </section>
+
+    <aside class="unlocked" aria-labelledby="g-unlocked">
+      <h2 id="g-unlocked" class="grammar-label">What this unlocked</h2>
+      <p>{{ $ch.unlocked }}</p>
+      {{- if $ch.next }}
+      {{- $next := index (where $chapters "id" $ch.next) 0 }}
+      <p><a class="button button-primary" href="{{ printf "/journey/%s/" $next.slug }}">Next chapter: {{ $next.title }}</a></p>
+      {{- else }}
+      <p><a class="button button-primary" href="/now/">See what I&rsquo;m exploring now</a></p>
+      {{- end }}
+    </aside>
+
+    {{- if $ch.capabilities }}
+    <section class="chapter-caps" aria-labelledby="g-caps">
+      <h2 id="g-caps" class="grammar-label">Capabilities in this chapter</h2>
+      <ul class="chip-list">
+        {{- range $ch.capabilities }}
+        {{- $capId := . }}
+        {{- $cap := index (where $caps "id" $capId) 0 }}
+        {{- if $cap }}
+        <li><a class="chip" href="{{ printf "/capabilities/#%s" $cap.id }}">{{ $cap.name }}</a></li>
+        {{- end }}
+        {{- end }}
+      </ul>
+    </section>
+    {{- end }}
+
+    {{- if $stories }}
+    <section class="chapter-stories" aria-labelledby="g-stories">
+      <h2 id="g-stories" class="grammar-label">Go deeper</h2>
+      <ul class="story-grid">
+        {{- range $stories }}
+        <li class="story-card">
+          <a href="{{ printf "/stories/%s/" .slug }}">
+            <span class="story-card-sub">Signature story</span>
+            <span class="story-card-title">{{ .title }}</span>
+          </a>
+        </li>
+        {{- end }}
+      </ul>
+    </section>
+    {{- end }}
+
+    {{- if $roles }}
+    <section class="chapter-evidence" aria-labelledby="g-evidence">
+      <h2 id="g-evidence" class="grammar-label">Supporting evidence</h2>
+      {{- range $roles }}
+      <details class="evidence-role">
+        <summary>
+          <span class="evidence-title">{{ .display_title | default .title }}</span>
+          <span class="evidence-meta">{{ .org_display | default .org }} · {{ .range }}</span>
+        </summary>
+        <p>{{ .scope }}</p>
+        <ul>
+          {{- range .achievements }}
+          <li>{{ . }}</li>
+          {{- end }}
+        </ul>
+      </details>
+      {{- end }}
+      <p class="evidence-note"><a href="/career/">Full career record, dates and education</a></p>
+    </section>
+    {{- end }}
+  </div>
+
+  <nav class="chapter-pager section-inner" aria-label="Chapter navigation">
+    {{- $prevOrder := sub $ch.order 1 }}
+    {{- $nextOrder := add $ch.order 1 }}
+    {{- range $chapters }}
+    {{- if eq .order $prevOrder }}
+    <a class="pager-prev" href="{{ printf "/journey/%s/" .slug }}">&larr; {{ .title }}</a>
+    {{- end }}
+    {{- end }}
+    {{- range $chapters }}
+    {{- if eq .order $nextOrder }}
+    <a class="pager-next" href="{{ printf "/journey/%s/" .slug }}">{{ .title }} &rarr;</a>
+    {{- end }}
+    {{- end }}
+  </nav>
+</article>
+{{ end }}

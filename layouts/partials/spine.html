@@ -1,0 +1,17 @@
+{{- /* Career compounding spine. Vertical, responsive, keyboard-navigable:
+       a list of links, decorated with a connecting line. */ -}}
+<ol class="spine" aria-label="Career journey: six chapters at increasing scale">
+  {{- range sort .Site.Data.career.chapters "order" }}
+  <li class="spine-node">
+    <a class="spine-link" href="{{ printf "/journey/%s/" .slug }}">
+      <span class="spine-dot" aria-hidden="true"></span>
+      <span class="spine-body">
+        <span class="spine-scale">{{ .spine_label }}</span>
+        <span class="spine-title">{{ .title }}</span>
+        <span class="spine-era">{{ .era }}</span>
+        <span class="spine-summary">{{ .summary }}</span>
+      </span>
+    </a>
+  </li>
+  {{- end }}
+</ol>

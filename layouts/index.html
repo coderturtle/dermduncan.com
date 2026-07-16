@@ -1,0 +1,53 @@
+{{ define "main" }}
+<section class="hero">
+  <div class="hero-inner">
+    <p class="hero-kicker">Dermot Duncan · {{ .Site.Params.currentRemit }}</p>
+    <h1 class="hero-title">{{ .Site.Params.positioning }}</h1>
+    <div class="hero-lede">
+      {{ .Content }}
+    </div>
+    <div class="hero-actions">
+      <a class="button button-primary" href="/journey/">Explore the journey</a>
+      <a class="button button-secondary" href="/now/">See what I&rsquo;m building now</a>
+      <a class="button-plain" href="/career/">Prefer the conventional CV? It&rsquo;s here.</a>
+    </div>
+  </div>
+</section>
+
+<section class="home-spine" aria-labelledby="spine-heading">
+  <div class="section-inner">
+    <h2 id="spine-heading">One pattern, six scales</h2>
+    <p class="section-lede">
+      The pattern repeats at every stage: identify the system constraining progress,
+      build the capability that removes the constraint, then apply that capability at
+      a greater scale. Follow the spine, or jump into any chapter.
+    </p>
+    {{ partial "spine.html" . }}
+  </div>
+</section>
+
+<section class="home-stories" aria-labelledby="stories-heading">
+  <div class="section-inner">
+    <h2 id="stories-heading">Signature stories</h2>
+    <p class="section-lede">Four deeper accounts of the pattern in action: the environment, the constraint, the intervention, and what it unlocked next.</p>
+    <ul class="story-grid">
+      {{- range .Site.Data.career.stories }}
+      <li class="story-card">
+        <a href="{{ printf "/stories/%s/" .slug }}">
+          <span class="story-card-sub">{{ .subtitle }}</span>
+          <span class="story-card-title">{{ .title }}</span>
+        </a>
+      </li>
+      {{- end }}
+    </ul>
+  </div>
+</section>
+
+<section class="home-now" aria-labelledby="now-heading">
+  <div class="section-inner">
+    <h2 id="now-heading">The current frontier</h2>
+    <p class="section-lede">{{ .Site.Data.career.now.intro }}</p>
+    <p><a class="button button-secondary" href="/now/">What I&rsquo;m exploring now</a></p>
+  </div>
+</section>
+{{ end }}

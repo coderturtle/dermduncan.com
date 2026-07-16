@@ -1,0 +1,41 @@
+# Leadership principles. Each pairs a stance with where it was earned.
+
+- title: Build platforms that create leverage, not dependency
+  body: >-
+    A platform succeeds when teams move faster without asking permission, and fails
+    when it becomes the queue everything waits in. XTRAC Connect, the Fidelity EDA
+    platform and HUB's enablement platform were all judged by the same test: does the
+    next team start further ahead?
+
+- title: Treat enablement as a product
+  body: >-
+    Capability does not transfer by mandate. Dojos, katas, reference architectures
+    and self-service environments work because they are versioned, opinionated and
+    runnable. If your enablement cannot be executed, it is a memo.
+
+- title: Make governance part of the system, not a gate around it
+  body: >-
+    The Fidsafe pipelines put compliance checks inside the release path and unlocked
+    daily releases in a regulated firm. The same idea scales from CD pipelines to SOC 2
+    readiness to responsible AI governance to governance-as-code for agents. Gates
+    slow everyone; guardrails built into the road do not.
+
+- title: Use architecture to connect strategy with executable decisions
+  body: >-
+    Architecture that does not change what teams build next quarter is decoration.
+    The job is translation: strategy into priorities, priorities into designs, designs
+    into constraints a team can act on without a meeting.
+
+- title: Design the organisation and the technology together
+  body: >-
+    HUB made this unavoidable: the platform decisions and the hiring decisions were
+    the same decisions. Every operating model implies an architecture and every
+    architecture implies an operating model. Designing one and inheriting the other
+    is how systems fight their own organisations.
+
+- title: Measure transformation in realised capability
+  body: >-
+    Strategy documents and migration counts are inputs. The outputs are what the
+    organisation can now do that it could not do before: release daily, provision in
+    minutes, fund one idea in five with confidence, adopt AI without frightening the
+    regulator.
