@@ -82,6 +82,10 @@
       chapter: shaping-the-organisation
       label: Architecture connecting strategy to execution
       detail: Architecture leadership for Vanguard Europe, translating strategy into executable priorities.
+    - era: "Now"
+      chapter: agentic-enterprise
+      label: Architecting the agentic factory itself
+      detail: Hekton's agent, governance and review-gate design is systems architecture applied to a factory whose workload is agents rather than a product team.
 
 - id: developer-enablement
   name: Developer enablement

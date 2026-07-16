@@ -89,7 +89,7 @@
     The next constraint was not technical at all. It was how fast an organisation of
     engineers could learn a new way of building.
   next: scaling-capability
-  capabilities: [automation, platform-engineering, architecture]
+  capabilities: [automation, platform-engineering, architecture, governance-risk, business-product]
   roles: [xtrac-se, xtrac-principal]
 
 - id: scaling-capability
@@ -139,7 +139,7 @@
     security and funding that already existed. The test I had not taken was building
     all of it from nothing. A startup asked exactly that.
   next: building-companies
-  capabilities: [platform-engineering, architecture, developer-enablement, tech-strategy, ai-agentic]
+  capabilities: [automation, platform-engineering, architecture, developer-enablement, org-design, tech-strategy, business-product, ai-agentic]
   roles: [aps-director, pi-director]
 
 - id: building-companies
@@ -196,7 +196,7 @@
     steering one that already exists inside a global firm, where the hard problems are
     strategy, governance and alignment rather than greenfield construction.
   next: shaping-the-organisation
-  capabilities: [platform-engineering, architecture, org-design, governance-risk, business-product, tech-strategy, ai-agentic]
+  capabilities: [automation, platform-engineering, architecture, developer-enablement, org-design, governance-risk, business-product, tech-strategy, ai-agentic]
   roles: [hub-director]
 
 - id: shaping-the-organisation
@@ -242,7 +242,7 @@
     are about to become active participants in how enterprises build and run
     technology, and somebody has to design what that organisation looks like.
   next: agentic-enterprise
-  capabilities: [architecture, tech-strategy, org-design, governance-risk, ai-agentic, business-product]
+  capabilities: [platform-engineering, architecture, tech-strategy, org-design, governance-risk, ai-agentic, business-product]
   roles: [vanguard-current]
 
 - id: agentic-enterprise

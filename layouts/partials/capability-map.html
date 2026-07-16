@@ -11,9 +11,9 @@
 {{- $chapX := 190 }}
 {{- $capX := 480 }}
 {{- $midX := add $chapX (div (sub $capX $chapX) 2) }}
-{{- $height := add (add $top (mul 8 $capStep)) 40 }}
+{{- $height := add (add $top (mul (sub (len $caps) 1) $capStep)) 40 }}
 <div class="map-wrap">
-  <svg class="capability-map" viewBox="0 0 820 {{ $height }}" role="img" aria-label="Diagram connecting the six career chapters to the nine capability threads. Hover or focus a node to trace its connections; every node is also a link to that chapter or thread.">
+  <svg class="capability-map" viewBox="0 0 820 {{ $height }}" role="group" aria-label="Diagram connecting the six career chapters to the nine capability threads. Hover or focus a node to trace its connections; every node is also a link to that chapter or thread.">
     <g class="map-edges">
       {{- range $i, $ch := $chapters }}
       {{- $y1 := add $top (mul $i $chapStep) }}
@@ -32,7 +32,7 @@
     <g class="map-nodes">
       {{- range $i, $ch := $chapters }}
       {{- $y := add $top (mul $i $chapStep) }}
-      <a href="{{ printf "/journey/%s/" $ch.slug }}" class="map-node" data-node="chapter:{{ $ch.id }}" aria-label="{{ $ch.title }}, chapter {{ $ch.order }} of 6">
+      <a href="{{ printf "/journey/%s/" $ch.slug }}" class="map-node" data-node="chapter:{{ $ch.id }}" aria-label="{{ $ch.title }}, chapter {{ $ch.order }} of {{ len $chapters }}">
         <circle cx="{{ $chapX }}" cy="{{ $y }}" r="9"></circle>
         <text x="{{ sub $chapX 16 }}" y="{{ $y }}" text-anchor="end" dominant-baseline="middle">{{ $ch.spine_label }}</text>
       </a>
