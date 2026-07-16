@@ -48,6 +48,7 @@
 {{ block "main" . }}{{ end }}
 </main>
 {{ partial "footer.html" . }}
+{{ partial "palette.html" . }}
 <script src="{{ (resources.Get "js/site.js").RelPermalink }}" defer></script>
 </body>
 </html>
