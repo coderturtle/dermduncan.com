@@ -17,3 +17,7 @@ Rebuilt the site as an interactive career narrative on branch `agent/fable/caree
 ## 2026-07-15 - Confirmed titles and dates applied
 
 HUB and Vanguard titles/dates confirmed by Dermot and applied; remaining merge gate is HUB outcome metrics, SOC 2, engineer count and Fidelity Labs framing (C13, C18–C21). Detail in `docs/session-log.md`.
+
+## 2026-07-16 - Interactive features, doubt-driven-development, merge and deploy
+
+Added a capability-compounding map, Cmd/Ctrl-K jump palette and build-provenance footer line; rebranded to a distinct verdigris accent + serif signature. Two-cycle doubt-driven-development pass caught and fixed real issues, most notably a genuine data drift between `chapters.yaml` and `capabilities.yaml`. PR #2 merged to `main` (`c5e23fa`) and deployed live via the existing GitHub Actions workflow; verified 200s and new content on dermduncan.com post-deploy. HUB outcome metrics, SOC 2 wording, engineer count and Fidelity Labs framing remain flagged `needs_confirmation`, now live pending Dermot's confirmation. Detail in `docs/session-log.md`.
