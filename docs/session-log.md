@@ -163,3 +163,31 @@ Repo-local mirror only (`mind-palace/session-log.md`); live vault untouched per 
 ## 2026-07-15 — Confirmed titles and dates applied
 
 Dermot confirmed HUB end (May 2024), the MD & Head of Cloud Engineering progression (from May 2022), Vanguard Head of Architecture (Oct 2024) and Head of Architecture & CTO (Feb 2026), and the six-figure POC wording. Applied across the content model, hero, JSON-LD and claims register; career-page date footnote now conditional and gone. Build re-verified on Hugo 0.123.7 (leak grep 0, link check clean, career page screenshot). Remaining merge gate: claims C13, C18–C21.
+
+## 2026-07-16 — Interactive features, rebrand, doubt-driven-development pass, merge and deploy
+
+### What Changed
+
+Fixed a real CSS grid bug on the principles page (paragraph text wrapping one character per line — `.principle` was a 2-column grid with three items instead of two). Rebranded to a distinct verdigris accent and a restrained serif on the hero/chapter headlines, differentiating from coderturtle.io and The Agentic Tekton. Added a "Perfection is a road, not a destination" signature quote. Added three interactive features: a capability-compounding SVG map (list/map toggle on `/capabilities/`, hover/focus traces one thread's connections), a Cmd/Ctrl-K jump palette (fuzzy-filter across chapters/stories/capabilities/pages), and a footer line stating real build provenance. Ran a two-cycle doubt-driven-development pass (fresh-context Explore agent, then Codex cross-model) before pushing — full detail in `docs/decisions.md` 2026-07-15 and 2026-07-16 entries. Real findings fixed: a focus-trap leak via the skip-link, invalid `role="img"` ARIA on the SVG map, a mobile-nav DOM-order regression, a palette keyboard/Escape gap, hardcoded chapter/capability counts, and a genuine data-model drift between `chapters.yaml` and `capabilities.yaml` (8 chapter/capability pairs existed in one file but not the other — the map and the list view literally disagreed with each other). One claimed finding (`</script>` truncation risk in the palette's JSON island) was checked empirically and refuted: Hugo's `jsonify` already HTML-escapes by default.
+
+PR #2 opened and merged to `main` (`c5e23fa`), which triggered the existing GitHub Actions deploy workflow (run 29532983404) automatically. Both build and deploy jobs succeeded.
+
+### Why It Changed
+
+User requested interactivity improvements to emphasise the career-compounding thesis, then requested a doubt-driven-development pass before pushing, then requested commit + PR, then requested merge.
+
+### Decisions Made
+
+See `docs/decisions.md` 2026-07-15 "Rebuild as an interactive career story" (updated), 2026-07-16 "Doubt-driven-development pass on the interactive-features commit".
+
+### Next Actions
+
+See `docs/next-actions.md` — HUB outcome metrics, SOC 2 wording, "60+ engineers" wording, and the Fidelity Labs/venture framing remain flagged `needs_confirmation` in `docs/rebuild/claims-register.md`, now live pending Dermot's confirmation (not blocking further iteration, since dates/titles were already confirmed and merged).
+
+### Validation Status
+
+Clean build on production-pinned Hugo 0.123.7 from a detached worktree at the merge commit (not just the working directory). Zero broken internal links. Zero console errors; all interactive features driven end-to-end via a puppeteer-core script against the real dev server. `chapters.yaml`/`capabilities.yaml` cross-reference reconciled and re-verified with a standalone script. Live production checks post-deploy: homepage, `/journey/`, `/capabilities/`, `/career/` all 200; new hero copy confirmed live; previously-404ing certification PDF confirmed 200 (RISK-0005 fixed in production).
+
+### Mind-Palace Updated
+
+Repo-local mirror only (`mind-palace/session-log.md`); live vault untouched per project rules.
