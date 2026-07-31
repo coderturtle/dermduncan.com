@@ -21,7 +21,7 @@ documented -> scripted -> idempotent-ish -> logged -> reproducible on a blank ma
 2. Clone the repo using the coderturtle SSH host alias:
 
 ```bash
-git clone git@github.com-coderturtle:coderturtle/dermduncan.com.git ~/Development/hekton/factory-output/dermduncan.com
+git clone git@github.com-coderturtle:coderturtle/dermduncan.com.git <hekton>/factory-output/dermduncan.com
 ```
 
 3. Install the Hugo **extended** CLI (matching `HUGO_VERSION=0.123.7` used in CI — CI installs `hugo_extended_*.deb`; `check-prereqs.sh` does not currently verify version or edition, see `docs/risks.md` RISK-0003):

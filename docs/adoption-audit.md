@@ -8,7 +8,7 @@ Date: 2026-07-15
 - GitHub resolution: `coderturtle/dermduncan.com` (direct match, no resolution needed)
 - Source URL: `https://github.com/coderturtle/dermduncan.com`
 - Temporary intake path: `/private/tmp/hekton-adoption/dermduncan.com`
-- Permanent local path: `/Users/hekton/Development/hekton/factory-output/dermduncan.com`
+- Permanent local path: `<hekton>/factory-output/dermduncan.com`
 - Owner/account: `coderturtle`
 - Privacy boundary: public
 - Git history: preserve
