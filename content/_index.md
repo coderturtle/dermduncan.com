@@ -1,13 +1,14 @@
 ---
 title: Home
 description: >-
-  Dermot Duncan builds the systems that help organisations change: from code and
-  platforms to engineering capability, technology strategy and the agentic enterprise.
+  Dermot Duncan leads architecture and the European Chief Technology Office at
+  Vanguard. Engineer turned technology leader: platforms, engineering organisations
+  and technology strategy in regulated financial services.
 ---
 
-For twenty years the job has kept the same shape and changed scale. I find the system
+For nearly twenty years the job has kept the same shape and changed scale. I find the system
 constraining progress, build the capability that removes the constraint, and then
 apply that capability to something bigger. Code became platforms. Platforms became
-engineering capability. Capability became organisations, then technology strategy for
-a global firm's European business. Now I am designing for what comes next: the
-enterprise where intelligent agents are active participants.
+engineering capability. Capability became organisations, and now the technology environment of a global
+firm's European business. Alongside the day job I experiment, hands-on, with what
+comes next: enterprises where intelligent agents do real work.

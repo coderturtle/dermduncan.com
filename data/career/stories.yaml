@@ -1,5 +1,5 @@
 # Signature stories. Format: environment, constraint, intervention, result, learned,
-# reappeared, evidence. Claim refs map to docs/rebuild/claims-register.md.
+# reappeared, evidence. Supporting evidence is maintained privately.
 
 - id: fidelity-capability
   slug: scaling-cloud-capability-at-fidelity
@@ -61,7 +61,7 @@
     clients needed evidence they could trust all of it. One person had to sequence
     that without the luxuries of an enterprise behind them.
   intervention: >-
-    I joined as the first technical hire outside the CTO and treated the company
+    I joined as the first technical hire alongside the CTO and treated the company
     itself as the system to design. Platform first: foundational architecture on
     Azure, fully automated environments in ARM, Bicep and Terraform through Azure
     DevOps, and a security posture with SOC monitoring from the start. Organisation in
@@ -76,9 +76,10 @@
   result: >-
     The engineering organisation grew from one technologist to more than sixty
     engineers across Ireland, the UK and India inside a roughly seventy-person
-    company. Cloud running costs fell by approximately 40 percent while live
-    environments doubled, provisioning time dropped by around 80 percent, and SOC 2
-    Type I readiness gave regulated clients the evidence they needed.
+    company. Cloud running costs came down by approximately 40 percent. Environments
+    were automated from the first commit, so adding one became a pipeline run rather
+    than a project, and provisioning got approximately 80 percent faster. SOC 2 Type I
+    readiness gave regulated clients the evidence they needed.
   learned: >-
     Company building is system design with people in the loop. Architecture, hiring,
     security, budgets and client trust are one design problem, and the platform
@@ -96,41 +97,66 @@
 - id: vanguard-europe
   slug: shaping-vanguard-europe
   title: Designing the environment, not just the system
-  subtitle: Architecture, platforms and AI enablement at Vanguard Europe
+  subtitle: Architecture and the Chief Technology Office at Vanguard Europe
   chapter: shaping-the-organisation
   environment: >-
     Vanguard's European business: UK Personal Investing and European Financial
-    Adviser Services, regulated locally, powered by the technology organisation of a
-    global asset manager. I joined as Head of Architecture in October 2024.
+    Adviser Services, regulated locally and built on the platforms of a global asset
+    manager. I joined as Head of Architecture in October 2024 and now lead
+    European Architecture and the Chief Technology Office: four teams, 22 people. The Chief
+    Technology Office is a function rather than an officer, a distinction best made
+    early, before anyone updates a slide.
   constraint: >-
-    At this scale nothing fails for lack of technology. Things fail when strategy,
-    architecture, engineering practice and governance drift apart, or when a European
-    business needs something the global platform road map has not prioritised. The
-    constraint is coherence across an organisation, under regulation, at pace.
-  intervention: >-
-    As Head of Architecture and CTO for Europe (Head of Architecture from October
-    2024, appointed CTO in February 2026), I work on the connective tissue:
-    translating technology strategy into executable
-    priorities, driving engineering excellence and clean architecture across both
-    business lines, shaping the operating model so European needs connect with global
-    capabilities, and leading enterprise AI enablement with responsible AI governance
-    designed in rather than inspected in afterwards.
+    Nothing at this scale fails for lack of technology. It fails when sensible
+    decisions made in different rooms add up to a system nobody would have designed
+    on purpose: a European requirement the global roadmap has not reached yet, a
+    standard nobody can find, a platform choice that is right globally and awkward
+    locally. Regulation raises the stakes, because every gap between strategy and
+    execution is a risk as well as a cost.
+  intervention: |-
+    Earlier in my career the unit of design was an application, then a platform,
+    then a company. Here it is the environment in which other people make design
+    decisions. I do not own Vanguard's global platforms or its investment decisions,
+    so the work is connective rather than commanding:
+
+    - **Strategy to execution.** Working with the European CIO, business and product leadership so priorities reach engineering as decisions teams can act on.
+    - **Europe and global.** Representing European requirements in global platform strategy, and bringing back what can be built on rather than built around.
+    - **Better decisions.** Making architecture decisions explicit, recorded and revisitable, so quality does not depend on who was in the meeting.
+    - **Autonomy and consistency.** Standards and governance light enough that teams use them, and firm enough that the estate still makes sense in five years.
+    - **Practical AI.** Governed adoption that starts where it demonstrably helps, inside controls a regulator would recognise.
+    - **People.** Growing architects and technical leaders, and an operating model that does not depend on any one of them, including me.
+
+    Most of my best architecture work now happens in conversation rather than in an
+    editor, which my younger, Jenkins-configuring self would have found deeply
+    suspicious.
   result: >-
-    Architecture, platform engineering and technology strategy operate as one
-    connected function for the European business, with AI adoption progressing inside
-    a governance framework a regulator can respect. This chapter is current, so its
-    fuller results belong to a future update.
+    This is the chapter I am still in, so here is an honest status rather than a
+    victory lap. Fuller results belong in a future update, once they have happened.
+  result_status:
+    - status: In place
+      text: Four teams and 22 people across European Architecture and the Chief Technology Office, supporting both European business lines.
+    - status: In progress
+      text: Architecture decision-making, engineering standards and architecture quality across the European business.
+    - status: In progress
+      text: Practical, governed AI enablement, and the technical-leadership capability to sustain it.
+    - status: Direction
+      text: European and global technology priorities shaped together rather than reconciled afterwards.
   learned: >-
-    The unit of design keeps expanding. After applications, platforms and companies,
-    the thing being designed now is the environment in which other people's design
-    decisions happen: incentives, operating models, governance and investment.
+    The unit of design keeps expanding. After applications, platforms and a company,
+    the thing being designed is the environment in which other people's design
+    decisions happen: decision rights, standards, governance, incentives and
+    investment cases. The engineering habits still apply. Find the constraint,
+    shorten the feedback loop, and prefer the thing people can run over the thing
+    they must believe.
   reappeared: >-
-    This is the newest chapter, but it is already feeding the research: the questions
-    Hekton and The Agentic Tekton explore are the ones this role makes urgent. How
-    does an enterprise adopt agents without losing the coherence this role exists to
-    protect?
+    It is also where the research questions come from. How does an enterprise adopt
+    agents without losing the coherence this role exists to protect? Hekton is where
+    I test the parts of that question that can be tested on a home lab's budget.
   evidence:
-    - label: Role detail, Head of Architecture & CTO, Vanguard Europe
+    - label: Role detail, Head of Architecture & Chief Technology Office, Vanguard Europe
+      url: /career/#vanguard-current
+    - label: "Chapter five: Shaping the technology organisation"
+      url: /journey/shaping-the-organisation/
   capabilities: [architecture, tech-strategy, org-design, governance-risk, ai-agentic, business-product]
 
 - id: hekton-tekton
@@ -149,26 +175,27 @@
     requires building the whole system: agents, workflows, governance, cost controls
     and the software they produce.
   intervention: >-
-    I built the system. Hekton is a private agentic software factory in which fleets
-    of specialised agents research, design, build, review and operate real production
-    software under governance-as-code: claims registers, decision logs, risk
-    registers, review panels and human approval gates are part of the workflow, not
-    paperwork around it. Gremlins is the agent-first SDLC concept underneath, with
-    tiered agent autonomy and deterministic review gates. The Agentic Tekton is where
+    I built the system. Hekton is a private, experimental agentic software factory in
+    which specialised agents research, design, build and review real software, with
+    me approving what ships. Its governance is meant to be part of the workflow
+    rather than paperwork around it: claims registers, decision logs, risk registers,
+    agent review passes and human approval gates. Gremlins is the agent-first SDLC
+    concept underneath, exploring tiered agent autonomy and where review gates should
+    sit. The Agentic Tekton is where
     the patterns that survive get published: agentic operating models, invisible
     governance, AI FinOps, model routing across local and cloud models, context and
     dependency graphs, and human-agent team design.
   result: >-
-    A working multi-project factory operating on real production sites, including the
-    one you are reading. Every claim on this site passed through the factory's claims
-    register; every material decision is in its decision log. The public writing at
-    The Agentic Tekton grows from that same evidence base.
+    A small factory in regular use on a handful of real sites, including the one you
+    are reading. Its review steps are working disciplines rather than an independent
+    audit, and they do not catch everything, which is why a human still reads what
+    ships. The writing at The Agentic Tekton grows from the same experiments.
   learned: >-
     The lessons of every earlier chapter apply to agents almost unchanged. Agents need
     platforms, enablement, governance and organisational design, the same things
     engineers needed. The difference is speed: an agentic organisation compounds
     capability faster than a human one, and its governance has to be built in from
-    the first commit.
+    the first commit and still checked by someone who reads the output.
   reappeared: >-
     This is the chapter where the pattern points forward: the capability being built
     here is the one the next scale of role will need, designing enterprises where

@@ -16,3 +16,4 @@
 - [ ] **Dermot: confirm remaining flagged claims before merging `agent/fable/career-story-rebuild`** — HUB outcome metrics (~40% cost, 2x environments, ~80% provisioning), SOC 2 Type I wording, 60+ engineers wording, Fidelity Labs/venture framing. Confirmed 2026-07-15: HUB end May 2024, MD & Head of Cloud Engineering from May 2022, Vanguard Head of Architecture from Oct 2024 and Head of Architecture & CTO from Feb 2026, six-figure POC wording. See `docs/rebuild/claims-register.md`.
 - [ ] After merge: delete the stale tracked `public/` build output (deploy workflow builds fresh; the tracked copy is now misleading) together with the existing `.gitignore` hygiene item, and consider removing the now-unused `themes/hugo-resume/` directory.
 - [ ] Consider redirect handling for dropped `/tags/*` and `/blog/force-ssl/` URLs if analytics ever show inbound traffic.
+- [ ] Review branch `agent/claude/executive-positioning` before push/merge (owner approval required).

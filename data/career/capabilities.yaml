@@ -23,11 +23,11 @@
     - era: "2021 – 2024"
       chapter: building-companies
       label: Self-service platforms
-      detail: Fully automated Azure environments and an Engineering Enablement Platform, doubling live environments while cutting provisioning time by about 80%.
+      detail: Fully automated Azure environments and an Engineering Enablement Platform; environment provisioning approximately 80% faster.
     - era: "Now"
       chapter: agentic-enterprise
-      label: Autonomous agentic loops
-      detail: Hekton agents that research, build, review and operate software under governance-as-code.
+      label: Supervised agentic loops
+      detail: Experimental Hekton agents that research, build and review software under governance-as-code, with a human approving what ships.
 
 - id: platform-engineering
   name: Platform engineering
@@ -46,11 +46,11 @@
     - era: "2021 – 2024"
       chapter: building-companies
       label: Company platform from zero
-      detail: HUB's foundational Azure platform, environments, security posture and enablement platform, built from the first commit.
+      detail: HUB's foundational Azure platform, environments, security posture and enablement platform, built from the first commit, with cloud running costs cut by approximately 40%.
     - era: "Since 2024"
       chapter: shaping-the-organisation
       label: Platform engineering as an executive function
-      detail: Leading the platform-engineering function for Vanguard Europe, shaping investment rather than writing the Terraform.
+      detail: "Leading the European Chief Technology Office and its platform-engineering capability: influencing platform priorities and investment cases rather than writing the Terraform."
     - era: "Now"
       chapter: agentic-enterprise
       label: The software factory as a platform
@@ -69,7 +69,7 @@
     - era: "2012 – 2016"
       chapter: reusable-foundations
       label: Systems and cloud-native architecture
-      detail: Twelve-factor re-architecture of Fidsafe for 10M+ users; early serverless migration.
+      detail: Twelve-factor re-architecture of Fidsafe, designed to support 10M+ users; early serverless migration.
     - era: "2016 – 2020"
       chapter: scaling-capability
       label: Architecture as an organisational function
@@ -81,7 +81,7 @@
     - era: "Since 2024"
       chapter: shaping-the-organisation
       label: Architecture connecting strategy to execution
-      detail: Architecture leadership for Vanguard Europe, translating strategy into executable priorities.
+      detail: Architecture direction and decision-making for Vanguard Europe, connecting business strategy with technology execution.
     - era: "Now"
       chapter: agentic-enterprise
       label: Architecting the agentic factory itself
@@ -127,7 +127,7 @@
     - era: "Since 2024"
       chapter: shaping-the-organisation
       label: Operating-model design
-      detail: Shaping how architecture, platform engineering and business lines fit together across Vanguard Europe.
+      detail: Shaping how architecture, platform engineering and the business lines work together across Vanguard Europe, and developing the technical leaders inside it.
     - era: "Now"
       chapter: agentic-enterprise
       label: Human-agent team design
@@ -149,7 +149,7 @@
     - era: "Since 2024"
       chapter: shaping-the-organisation
       label: Regional strategy inside a global firm
-      detail: European technology strategy connecting local business needs with Vanguard's global capabilities.
+      detail: Helping shape European technology strategy and balance European business needs with Vanguard's global platform strategy.
     - era: "Now"
       chapter: agentic-enterprise
       label: Strategy for the agentic era
@@ -171,12 +171,12 @@
       detail: HUB's initial infosec posture, SOC monitoring and SOC 2 Type I readiness.
     - era: "Since 2024"
       chapter: shaping-the-organisation
-      label: Responsible AI governance
-      detail: AI enablement designed with governance built in, appropriate to a regulated financial-services firm.
+      label: Practical, governed AI adoption
+      detail: Helping AI adoption happen inside controls appropriate to a regulated financial-services firm. In progress.
     - era: "Now"
       chapter: agentic-enterprise
       label: Invisible governance and governance-as-code
-      detail: Hekton's claims registers, risk registers, review gates and approval policies enforced inside the agentic workflow.
+      detail: Hekton's claims registers, risk registers, review gates and approval policies, designed into the agentic workflow. Experimental, not independently assured.
 
 - id: ai-agentic
   name: AI and agentic systems
@@ -194,7 +194,7 @@
     - era: "Since 2024"
       chapter: shaping-the-organisation
       label: Enterprise AI enablement
-      detail: AI adoption and responsible governance across Vanguard Europe.
+      detail: Practical, governed AI enablement across Vanguard Europe. In progress.
     - era: "Now"
       chapter: agentic-enterprise
       label: Agentic software factories
@@ -206,10 +206,10 @@
     Working the seam between technology and the business: clients, product,
     compliance and executives.
   stages:
-    - era: "2012 – 2018"
+    - era: "2012 – 2014"
       chapter: reusable-foundations
       label: Business-case engineering
-      detail: Labs POCs framed as investments; ROI definitions that got one in five ideas funded.
+      detail: XTRAC labs proofs of concept framed as investment cases, roughly one in five funded.
     - era: "2019 – 2020"
       chapter: scaling-capability
       label: Domain design with the business
@@ -221,4 +221,4 @@
     - era: "Since 2024"
       chapter: shaping-the-organisation
       label: Strategy alignment at executive level
-      detail: Keeping business strategy, architecture and engineering pointed at the same outcomes across Vanguard Europe.
+      detail: Working with the European CIO, business and product leadership to keep strategy, architecture and engineering pointed at the same outcomes.

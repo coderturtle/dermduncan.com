@@ -10,15 +10,18 @@ intro: >-
 items:
   - title: Agentic software factories
     body: >-
-      Hekton is a private software factory where fleets of specialised agents
-      research, design, build, review and operate real production software, this site
-      included. It is the test bench for everything else on this list.
+      Hekton is a private, experimental software factory where specialised agents
+      research, design, build and review software for a handful of real sites, this
+      one included, with a human approving what ships. It is the test bench for
+      everything else on this list.
 
   - title: Invisible governance
     body: >-
-      Governance-as-code for agentic delivery: claims registers, decision logs, risk
-      registers, review panels and human approval gates enforced inside the workflow,
-      so compliance is a property of the system rather than a stage after it.
+      The hypothesis: governance works best as part of the delivery system rather
+      than a stage after it. Hekton tests that with claims registers, decision logs,
+      risk registers, agent review passes and human approval gates written into the
+      workflow. Designed and exercised on real work; not yet something I would call
+      an enforceable control at enterprise scale.
 
   - title: AI FinOps and model routing
     body: >-
@@ -29,8 +32,8 @@ items:
   - title: Human-agent team design
     body: >-
       Operating models where agents are team members with tiered autonomy. Gremlins
-      is the agent-first SDLC concept: which decisions agents own, which humans gate,
-      and how the review boundary moves as trust is earned.
+      is the agent-first SDLC concept: which decisions agents could own, which humans
+      should gate, and how that boundary might move as trust is earned.
     link:
       label: gremlins.io
       url: https://gremlins.io

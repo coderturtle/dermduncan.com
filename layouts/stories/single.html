@@ -13,11 +13,21 @@
     </div>
   </header>
   <div class="section-inner chapter-body">
-    <section class="grammar"><h2 class="grammar-label">The environment</h2><p>{{ $s.environment }}</p></section>
-    <section class="grammar"><h2 class="grammar-label">The constraint</h2><p>{{ $s.constraint }}</p></section>
-    <section class="grammar"><h2 class="grammar-label">The intervention</h2><p>{{ $s.intervention }}</p></section>
-    <section class="grammar"><h2 class="grammar-label">The result</h2><p>{{ $s.result }}</p></section>
-    <section class="grammar"><h2 class="grammar-label">What I learned</h2><p>{{ $s.learned }}</p></section>
+    {{- /* Story fields are rendered as Markdown so a field can carry a list or emphasis.
+           Single-paragraph fields render exactly as before (one <p>). */}}
+    <section class="grammar"><h2 class="grammar-label">The environment</h2>{{ $s.environment | $.Page.RenderString (dict "display" "block") }}</section>
+    <section class="grammar"><h2 class="grammar-label">The constraint</h2>{{ $s.constraint | $.Page.RenderString (dict "display" "block") }}</section>
+    <section class="grammar"><h2 class="grammar-label">The intervention</h2>{{ $s.intervention | $.Page.RenderString (dict "display" "block") }}</section>
+    <section class="grammar"><h2 class="grammar-label">The result</h2>{{ $s.result | $.Page.RenderString (dict "display" "block") }}
+      {{- with $s.result_status }}
+      <ul class="outcome-list">
+        {{- range . }}
+        <li><span class="status-tag">{{ .status }}</span> {{ .text }}</li>
+        {{- end }}
+      </ul>
+      {{- end }}
+    </section>
+    <section class="grammar"><h2 class="grammar-label">What I learned</h2>{{ $s.learned | $.Page.RenderString (dict "display" "block") }}</section>
     <aside class="unlocked">
       <h2 class="grammar-label">Where it reappeared</h2>
       <p>{{ $s.reappeared }}</p>

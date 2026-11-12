@@ -67,3 +67,9 @@ Ran the doubt-driven-development skill against the capability map / command-K pa
 - The map's hover/focus handler built a CSS attribute selector by string-concatenating a data-driven id with no escaping; a future id containing a quote or bracket would throw at runtime. Fixed with `CSS.escape()` (with a regex fallback for older engines).
 
 Both cycles' fixes are committed together with the original feature commit's follow-up. Stopped after 2 cycles: cycle 2's findings were fixed and no new issues surfaced on the final re-verification pass (clean build, zero broken links, no console errors, all fixes confirmed via a puppeteer-core-driven dev server rather than static reasoning alone).
+
+## 2026-11-12 - Executive positioning refresh; editorial evidence kept private
+
+Content refresh for executive readers: corrected the current Vanguard title to "Head of Architecture & Chief Technology Office, Europe" across content, metadata and structured data; added a homepage "Selected impact" section; rewrote the Vanguard chapter and story; tied Fidelity results to their specific roles and periods; and labelled the agentic research as experimental. Templates gained optional status tags for chapter outcomes and story results, Markdown rendering for story fields, and career-record anchors and chapter links.
+
+Editorial working documents (claims register, critique, repo assessment) are now maintained privately rather than in this public repository. `scripts/check-public-boundary.sh` guards against their reintroduction. Published history was not rewritten.

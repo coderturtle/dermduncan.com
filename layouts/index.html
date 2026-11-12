@@ -8,11 +8,48 @@
     </div>
     <div class="hero-actions">
       <a class="button button-primary" href="/journey/">Explore the journey</a>
-      <a class="button button-secondary" href="/now/">See what I&rsquo;m building now</a>
-      <a class="button-plain" href="/career/">Prefer the conventional CV? It&rsquo;s here.</a>
+      <a class="button button-secondary" href="/career/">Career record</a>
+      <a class="button-plain" href="/stories/">Or start with the signature stories</a>
     </div>
   </div>
 </section>
+
+{{- with .Site.Data.career.impact }}
+<section class="home-impact" aria-labelledby="impact-heading">
+  <div class="section-inner">
+    <h2 id="impact-heading" class="impact-heading">{{ .heading }}</h2>
+    <p class="impact-lede">{{ .lede }}</p>
+    <ol class="impact-path">
+      {{- range .items }}
+      {{- $item := . }}
+      <li class="impact-point{{ if .current }} is-current{{ end }}">
+        <p class="impact-meta"><span class="impact-kind">{{ .kind }}</span> {{ .org }}{{ with .role }} · {{ . }}{{ end }} · {{ .era }}</p>
+        <div class="impact-body">
+          <h3 class="impact-headline">{{ .headline }}</h3>
+          {{- with .figures }}
+          <dl class="impact-figures">
+            {{- range . }}
+            <div><dt>{{ .value }}</dt><dd>{{ .label }}</dd></div>
+            {{- end }}
+          </dl>
+          {{- end }}
+          <p class="impact-text">{{ .text }}{{ if not .context }} <a class="impact-link" href="{{ .url }}">{{ .link_label }}&nbsp;&rarr;</a>{{ end }}</p>
+          {{- with .context }}
+          <dl class="impact-context">
+            {{- range . }}
+            <div><dt>{{ .role }} · {{ .era }}</dt><dd>{{ .text }}</dd></div>
+            {{- end }}
+          </dl>
+          <p class="impact-text"><a class="impact-link" href="{{ $item.url }}">{{ $item.link_label }}&nbsp;&rarr;</a></p>
+          {{- end }}
+        </div>
+      </li>
+      {{- end }}
+    </ol>
+    <p class="impact-handson">{{ .hands_on }} <a href="/now/">The research, labelled as research &rarr;</a></p>
+  </div>
+</section>
+{{- end }}
 
 <section class="home-spine" aria-labelledby="spine-heading">
   <div class="section-inner">
@@ -45,7 +82,7 @@
 
 <section class="home-now" aria-labelledby="now-heading">
   <div class="section-inner">
-    <h2 id="now-heading">The current frontier</h2>
+    <h2 id="now-heading">Outside the day job</h2>
     <p class="section-lede">{{ .Site.Data.career.now.intro }}</p>
     <p><a class="button button-secondary" href="/now/">What I&rsquo;m exploring now</a></p>
   </div>

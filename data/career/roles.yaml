@@ -4,24 +4,28 @@
 
 - id: vanguard-current
   org: Vanguard
-  title: "Head of Architecture & CTO, Europe"
+  title: "Head of Architecture & Chief Technology Office, Europe"
   title_confirmed: true
-  # Titles and dates confirmed by Dermot, 2026-07-15 (claims C22/C23 resolved).
-  display_title: "Head of Architecture & CTO, Europe"
+  display_title: "Head of Architecture & Chief Technology Office, Europe"
   range: "October 2024 – Present"
   dates_confirmed: true
   current: true
   chapter: shaping-the-organisation
   scope: >-
-    Joined as Head of Architecture in October 2024 and appointed Head of Architecture
-    and CTO in February 2026. Leads Architecture and the CTO and platform-engineering
-    function for Vanguard's European business, spanning UK Personal Investing and
-    European Financial Adviser Services.
+    Leads European Architecture and the Chief Technology Office: four teams and 22
+    people covering architecture and platform-engineering capability, for Vanguard's
+    European business: UK Personal Investing and European Financial Adviser Services.
+    Works closely with the European CIO, business and product leadership, and
+    Vanguard's global technology organisation. Joined as Head of Architecture in
+    October 2024. ("Chief Technology Office" names the function; it is not a Chief
+    Technology Officer appointment.)
+  achievements_label: Focus areas
   achievements:
-    - European technology strategy translated into executable engineering priorities.
-    - Engineering excellence and clean-architecture programme across European business lines.
-    - Enterprise AI enablement with responsible AI governance in a regulated environment.
-    - Operating-model and organisational design connecting European needs with global capabilities.
+    - Technology strategy and architecture direction for the European business, balanced against global platform strategy.
+    - Architecture quality, engineering standards and how architecture decisions get made across both European business lines.
+    - Operating models that balance team autonomy, enterprise consistency and governance.
+    - Practical, governed AI enablement in a regulated environment.
+    - Developing architects, technical leaders and organisational capability.
   capabilities: [architecture, tech-strategy, org-design, governance-risk, ai-agentic, business-product]
 
 - id: hub-director
@@ -29,14 +33,13 @@
   org_display: HUB
   title: "Solutions Architect (Director) → Managing Director & Head of Cloud Engineering"
   title_confirmed: true
-  # Titles and dates confirmed by Dermot, 2026-07-15 (claims C16/C17 resolved).
   display_title: "Solutions Architect (Director) → Managing Director & Head of Cloud Engineering"
   range: "January 2021 – May 2024"
   dates_confirmed: true
   current: false
   chapter: building-companies
   scope: >-
-    First technical hire outside the CTO and eighth employee. Solutions Architect
+    First technical hire alongside the CTO and eighth employee. Solutions Architect
     (Director) from January 2021; Managing Director and Head of Cloud Engineering from
     May 2022. Built the platform, security posture and engineering organisation from
     the ground up as the company scaled to 60+ engineers across Ireland, the UK and
@@ -45,7 +48,7 @@
     - Foundational Azure architecture with fully automated environments (ARM, Bicep, Terraform, Azure DevOps).
     - Engineering organisation, hiring process and autonomous team design for a ~70-person company.
     - Initial security and infosec posture, SOC monitoring, and SOC 2 Type I readiness.
-    - Approximately 40% cloud cost reduction, doubled live environments, ~80% faster provisioning.
+    - Approximately 40% lower cloud running costs and approximately 80% faster environment provisioning.
     - Engineering Enablement Platform and centre-of-excellence model; Azure OpenAI and RAG exploration.
   capabilities: [platform-engineering, architecture, org-design, governance-risk, business-product, tech-strategy, ai-agentic]
 
@@ -96,8 +99,8 @@
     Platform architecture for Fidelity's workflow business, including large-scale
     re-architecture and early serverless adoption.
   achievements:
-    - Fidsafe re-architected to serve 10 million+ users cost-effectively using twelve-factor principles.
-    - CD pipelines automating operations, security and compliance checks; releases moved from monthly to daily, cutting over $400k in year one.
+    - Fidsafe re-architected to support 10 million+ users cost-effectively using twelve-factor principles.
+    - CD pipelines automating operations, security and compliance checks took Fidsafe releases from monthly to daily; costs fell by over 400k in the first year.
     - Java/Spring REST monolith migrated to serverless Node.js microservices on API Gateway, Lambda and SQS.
   capabilities: [architecture, platform-engineering, automation, governance-risk]
 

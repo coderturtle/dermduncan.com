@@ -1,0 +1,79 @@
+# Homepage "Selected impact": four editorial proof points in career order, so they
+# read as a progression: Fidelity -> HUB -> HUB -> Vanguard. Each item is a different
+# kind of evidence, not a KPI tile. Never merge results from different Fidelity roles
+# into one period: each context line carries its own role and era.
+
+heading: Selected impact
+lede: >-
+  In the order they happened. The scope widened from one enterprise platform, to a
+  company's whole technology organisation, to architecture for a European business,
+  and the commercial stakes widened with it.
+
+items:
+  - org: Fidelity Investments, XTRAC
+    era: 2014 – 2016
+    role: Principal Software Architect
+    kind: Commercial impact
+    headline: Monthly releases to daily, and over 400k saved in year one
+    text: >-
+      Re-architected the Fidsafe file-sharing platform to scale from 10,000 active
+      users to a design capacity of 10 million+, with delivery pipelines that built
+      operations, security and compliance checks into every release.
+    context:
+      - role: Senior Software Engineer, XTRAC Labs
+        era: 2012 – 2014
+        text: Digitised a 28-page pension-change form into a web journey, cutting processing from over a week to under a day.
+      - role: Director of Software Architecture, APS
+        era: 2016 – 2018
+        text: Took the division from AWS experiments to a multi-year cloud strategy; labs MVPs saved six figures per project.
+      - role: Director of Architecture, Personal Investing
+        era: 2019 – 2020
+        text: Led a team of 15 building the event-driven platform behind the digital experience ecosystem, and a learning dojo adopted across global locations.
+    url: /journey/reusable-foundations/
+    link_label: The platform years, 2012 – 2016
+
+  - org: HUB
+    era: 2021 – 2024
+    kind: Building the organisation
+    headline: From employee eight to 60+ engineers
+    text: >-
+      Joined as the first technical hire alongside the CTO and helped scale the
+      engineering organisation to 60+ engineers across three countries, designing
+      the hiring process, team structures and engineering standards on the way. Managing Director & Head of Cloud
+      Engineering from 2022.
+    url: /stories/building-hub/
+    link_label: The HUB story
+
+  - org: HUB
+    era: 2021 – 2024
+    kind: Running the platform
+    headline: Cheaper to run, faster to change
+    figures:
+      - value: "~40%"
+        label: lower cloud running costs
+      - value: "~80%"
+        label: faster environment provisioning
+    text: >-
+      The platform side of the same job: Azure foundations with fully automated
+      environments from the first commit, and an engineering enablement platform
+      teams could build on.
+    url: /journey/building-companies/
+    link_label: Chapter four
+
+  - org: Vanguard
+    era: Since 2024
+    kind: Now
+    current: true
+    headline: Four teams, 22 people, two European businesses
+    text: >-
+      Leading European Architecture and the Chief Technology Office for UK Personal
+      Investing and European Financial Adviser Services, working with the European CIO, business leadership and
+      Vanguard's global technology organisation. The unit of design is now the
+      environment the systems get built in.
+    url: /stories/shaping-vanguard-europe/
+    link_label: How I approach the role
+
+hands_on: >-
+  Still an engineer underneath. I started by automating friction in code, and I
+  still build: currently an experimental agentic software factory, run in my own
+  time, that built this site.
