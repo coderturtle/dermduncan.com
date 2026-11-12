@@ -19,3 +19,10 @@ AGENTS.md
 CLAUDE.md
 CODEX.md
 .env.example
+
+# --- Private editorial evidence (boundary: never ship in a public repo) ---
+# Claims register, critique and assessment moved to a private location 2026-11-12.
+docs/rebuild/
+docs/private/
+*.private.md
+.hugo_build.lock
