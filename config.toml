@@ -8,6 +8,7 @@ disableKinds = ["taxonomy", "term"]
   description = "Dermot Duncan leads architecture and the European Chief Technology Office at Vanguard. An engineer turned technology leader, he builds the systems that help organisations change: platforms, engineering organisations and technology strategy in regulated financial services."
   email = "dermduncan@gmail.com"
   favicon = "/favicon.ico"
+  iconVersion = "2026-11-13"  # bump when favicons change (cache-busts browser favicon caches)
   fullName = "Dermot Duncan"
   positioning = "I build the systems that help organisations change."
   # Formal title. "Chief Technology Office" is the function, not a CTO appointment.

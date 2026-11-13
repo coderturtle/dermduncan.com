@@ -112,3 +112,7 @@ Editorial working documents are now maintained privately rather than in this pub
 
 - `layouts/_default/baseof.html` links the stylesheet and script through Hugo's `fingerprint "sha256"` (with Subresource Integrity), so their URLs change with their content and they use the immutable cache class.
 - The plain `/css/site.css` and `/js/site.js` are still published (`.Publish`) for pages that browsers cached under the old one-year policy; remove after 2027-11 (`docs/next-actions.md`).
+
+## 2026-11-13 — Versioned favicon URLs
+
+- Icon links in `layouts/_default/baseof.html` carry `?v=<iconVersion>` (`config.toml`), because browsers cache favicons separately by URL and the old icons were served with a one-year cache header. CloudFront ignores the query string, so the same files are served. Bump `iconVersion` whenever the icons change.
