@@ -79,3 +79,13 @@ Editorial working documents (claims register, critique, repo assessment) are now
 - The Vanguard signature story gains an "architecture decision" vignette (a streaming-architecture direction for backend systems), rendered from an optional `decision` block in `data/career/stories.yaml`. It separates the decision and intended outcomes from demonstrated results. Chapter five and the homepage reference it briefly rather than repeating it.
 - Homepage "Selected impact" is now one proof point per employer, in career order: Fidelity (transforming enterprise engineering), HUB (building and scaling), Vanguard (shaping enterprise technology direction).
 - New visual identity: a four-part symbol from the owner-supplied mark artwork (four rounded modules around an open centre, one copper module), recoloured to the brand palette with a horizontal "Dermot Duncan" wordmark. Palette: petrol `#102e35`, teal `#237875` (now the site accent, AA on all light surfaces), sea glass `#88afa5`, copper `#bd7953` (graphic accent only; it does not meet text contrast on light backgrounds). SVG sources and PNG exports in `static/brand/`; favicons drawn on a 16-pixel grid for crisp 16px and 32px rendering; adaptive `favicon.svg` for dark browser chrome; 1200×630 social card. Generator scripts in `scripts/brand/` (stdlib Python; the wordmark is outlined from the site's Georgia Bold).
+
+## 2026-11-13 — Copy hygiene and accuracy pass
+
+- Focused cleanup after a multi-perspective wording review; no general rewrite. Kept in its own commit, separate from positioning and brand work.
+- The Chief Technology Office / Chief Technology Officer distinction is stated once, on the career page (`title_note` on the role). Vanguard is described as October 2024 – present.
+- HUB introduction standardised ("the eighth employee and first technical hire alongside the CTO"); outcome figures shown as ~40% / ~80% everywhere.
+- Fidsafe's 10 million+ is described as design capacity.
+- Streaming wording clarified: looser coupling through published event contracts, not the disappearance of dependencies. Direction, progress and outcomes remain separate.
+- Chapter six is presented as personal research within the six-part narrative, distinct from professional roles.
+- Older archive pages (awards, projects, certifications, education) given light factual and editorial corrections only.

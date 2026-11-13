@@ -16,4 +16,4 @@ This page represents the landing page for "publications" section. It is also sho
 
 \-->
 
-Being a keen participant in tech events and hackathons in my spare time below are some awards I've won in events I've participated in ;)
+Awards from hackathons and tech events, kept as an archive.

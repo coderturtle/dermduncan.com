@@ -1,7 +1,7 @@
 ---
-title: 'Startup Weekend Boston - Blockchain'
+title: 'Startup Weekend Boston – Blockchain'
 date: 2018-02-26
-pubtype: 'StartUp Weekend'
+pubtype: 'Startup Weekend'
 featured: true
 description: ''
 tags: ['Hackathon', 'Blockchain', 'agile', 'Culture']

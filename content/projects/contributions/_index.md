@@ -18,4 +18,4 @@ This page represents the landing page for "contributions" section. It is also sh
 
 -->
 
-<p>A collection of certs I currently hold!</p>
+<p>AWS certifications earned between 2016 and 2018, kept as a historical record.</p>

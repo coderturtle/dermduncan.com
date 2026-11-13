@@ -26,6 +26,7 @@
         <p class="impact-meta"><span class="impact-kind">{{ .kind }}</span> {{ .org }}{{ with .role }} · {{ . }}{{ end }} · {{ .era }}</p>
         <div class="impact-body">
           <h3 class="impact-headline">{{ .headline }}</h3>
+          {{- with .span }}<p class="impact-span">{{ . }}</p>{{ end }}
           {{- with .figures }}
           <dl class="impact-figures">
             {{- range . }}
@@ -46,7 +47,7 @@
       </li>
       {{- end }}
     </ol>
-    <p class="impact-handson">{{ .hands_on }} <a href="/now/">The research, labelled as research &rarr;</a></p>
+    <p class="impact-handson">{{ .hands_on }} <a href="/now/">Read about the research &rarr;</a></p>
   </div>
 </section>
 {{- end }}

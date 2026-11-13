@@ -11,7 +11,7 @@ disableKinds = ["taxonomy", "term"]
   fullName = "Dermot Duncan"
   positioning = "I build the systems that help organisations change."
   # Formal title. "Chief Technology Office" is the function, not a CTO appointment.
-  currentRemit = "Head of Architecture & Chief Technology Office, Vanguard Europe"
+  currentRemit = "Head of Architecture & Chief Technology Office, Europe · Vanguard"
 
 [[params.handles]]
   link = "https://www.linkedin.com/in/dermotduncan/"

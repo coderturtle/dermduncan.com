@@ -13,6 +13,7 @@ items:
   - org: Fidelity Investments, XTRAC
     era: 2014 – 2016
     role: Principal Software Architect
+    span: Thirteen years at Fidelity, from graduate engineer to Director of Architecture.
     kind: Transforming enterprise engineering
     headline: Over $400k saved in year one, and releases from monthly to daily
     text: >-
@@ -25,7 +26,7 @@ items:
         text: Digitised a 28-page pension-change form into a web journey, cutting processing from over a week to under a day.
       - role: Director of Software Architecture, APS
         era: 2016 – 2018
-        text: Took the division from AWS experiments to a multi-year cloud strategy; labs MVPs saved six figures per project.
+        text: Took the division from AWS experiments to a multi-year cloud strategy; six-figure savings per funded labs project.
       - role: Director of Architecture, Personal Investing
         era: 2019 – 2020
         text: Led a team of 15 building the event-driven platform behind the digital experience ecosystem, and a learning dojo adopted across global locations.
@@ -42,7 +43,7 @@ items:
       - value: "~80%"
         label: faster environment provisioning
     text: >-
-      Joined as the first technical hire alongside the CTO, then helped build the
+      Joined as the eighth employee and first technical hire alongside the CTO, then helped build the
       platform and scale the engineering organisation to 60+ engineers across three
       countries: hiring, team design and standards on one side, Azure foundations
       automated from the first commit on the other. Managing Director & Head of

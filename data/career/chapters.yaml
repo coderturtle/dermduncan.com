@@ -70,13 +70,13 @@
     continuum on top of it so paper forms could be converted into digital journeys
     repeatably. I automated environment creation with CloudFormation, Ruby and Jenkins
     until a single person could operate the platform. As principal architect I
-    re-architected the Fidsafe file-sharing platform for a thousand-fold scale increase
+    re-architected the Fidsafe file-sharing platform for a thousand-fold increase in design capacity
     and led the migration of a Java/Spring monolith to serverless Node.js services on
     API Gateway, Lambda and SQS.
   outcomes:
     - XTRAC Connect became the foundation for the digitisation-of-services strategy.
     - A 28-page pensions PDF became a digital journey, cutting processing from over a week to under a day.
-    - Fidsafe was redesigned to support 10 million+ users cost-effectively, with CD pipelines that took releases from monthly to daily; costs fell by over $400k in its first year.
+    - Fidsafe was redesigned for a design capacity of 10 million+ users, cost-effectively, with CD pipelines that took releases from monthly to daily; costs fell by over $400k in its first year.
     - Environment provisioning was fully automated; one engineer could run the platform.
   capability_gained: >-
     Platform thinking. The unit of work stopped being the application and became the
@@ -103,8 +103,8 @@
   context: >-
     As Director of Software Architecture for Fidelity's APS division, and later
     Director of Architecture in Personal Investing, I inherited organisations at the
-    start of their cloud journey: tentative AWS experiments, deep on-prem habits, and a
-    digital transformation strategy that assumed engineering capability the org did not
+    start of their cloud journey: tentative AWS experiments, deep on-premises habits, and a
+    digital transformation strategy that assumed engineering capability the organisation did not
     yet have.
   constraint: >-
     Cloud adoption was gated on people, not technology. A strategy document does not
@@ -127,7 +127,7 @@
     - Tentative cloud experiments became a funded multi-year cloud strategy with multiple live cloud-native applications.
     - The learning dojo and cloud centre of excellence were adopted by multiple teams across global sites.
     - Reusable infrastructure patterns cut the time and cost of every subsequent project.
-    - Labs MVPs were evaluated fast enough that roughly one in five proofs of concept earned funding, with six-figure savings per funded project.
+    - Labs MVP experiments fed funding decisions, with six-figure savings per funded project.
     - An event-driven platform became the backbone of the digital experience ecosystem.
   capability_gained: >-
     Developer enablement as a discipline: dojos, katas, reference architectures,
@@ -148,14 +148,14 @@
   era: "2021 – 2024"
   title: Building platforms, teams and companies
   summary: >-
-    HUB, joined as the founding technologist alongside the CTO and eighth employee.
+    HUB, joined as the eighth employee and first technical hire alongside the CTO.
     Architecture, engineering, hiring, security, operations and company building
     converged in one role.
   context: >-
     HUB was a fintech with a product vision, a CTO, and almost nothing else technical:
     no platform, no engineering organisation, no security posture, no hiring pipeline.
-    I joined in January 2021 as the first technical hire alongside the CTO and the
-    company's eighth employee.
+    I joined in January 2021 as the eighth employee and first technical hire
+    alongside the CTO.
   constraint: >-
     Everything was the constraint, and everything competed for the same small team's
     attention. The company needed a product for regulated financial-services clients,
@@ -177,9 +177,9 @@
     default practice. Towards the end of my time there we were exploring Azure OpenAI
     and retrieval-augmented generation workflows for the product.
   outcomes:
-    - The engineering organisation grew from one technologist to 60+ engineers across Ireland, the UK and India, inside a company that grew to roughly 70 people.
-    - Cloud running costs reduced by approximately 40 percent.
-    - Environment provisioning approximately 80 percent faster, with environments automated from the first commit so a new one was a pipeline run rather than a project.
+    - The engineering organisation grew from its first technical hires to 60+ engineers across Ireland, the UK and India, inside a company that grew to roughly 70 people.
+    - Cloud running costs reduced by approximately 40%.
+    - Environment provisioning approximately 80% faster, with environments automated from the first commit so a new one was a pipeline run rather than a project.
     - Led the SOC 2 Type I readiness programme that gave regulated clients the assurance evidence they needed.
     - Client-facing MVPs designed with clients and subject-matter experts and delivered by the teams the process had hired.
   capability_gained: >-
@@ -203,12 +203,12 @@
   title: Shaping the technology organisation
   summary: >-
     Vanguard Europe, leading architecture and the Chief Technology Office. The unit of
-    design is now the environment in which business priorities, platforms, teams and
-    investment decisions come together.
+    design is now the decision environment: decision rights, standards, governance
+    and investment cases across two European business lines.
   context: >-
     Vanguard's European business spans UK Personal Investing and European Financial
     Adviser Services: regulated locally, and built on the platforms and technology
-    organisation of a global firm. I joined in October 2024 as Head of Architecture.
+    organisation of a global firm. I joined Vanguard in October 2024.
     Today I lead four teams and 22 people across European Architecture and Chief
     Technology Office capabilities, working closely with the European CIO, business
     and product leadership, and Vanguard's global technology organisation.
@@ -227,8 +227,8 @@
     explicit, recorded and revisitable; balancing team autonomy against enterprise
     consistency with governance a delivery team can act on without a meeting;
     building architecture and platform-engineering capability in the team; and making
-    AI adoption practical and governed rather than performative. Occasionally it means
-    making a large technical call well. The clearest so far is the decision to move
+    AI adoption practical and governed rather than performative. It also means making the
+    large technical calls. The most significant so far is the decision to move
     backend systems towards a streaming architecture, for two horizons: reducing
     the backend coupling that slows change today, so capabilities can evolve
     independently, and establishing near-real-time operational and analytical data
@@ -237,8 +237,10 @@
   outcomes:
     - status: In place
       text: Four teams and 22 people across European Architecture and Chief Technology Office capabilities, supporting UK Personal Investing and European Financial Adviser Services.
+    - status: Direction
+      text: Streaming architecture set as the backend direction; the reasoning is in the signature story.
     - status: In progress
-      text: Streaming architecture set as the backend direction, and migration has started. It is not complete, and its benefits are intended, not yet demonstrated; the reasoning is in the signature story.
+      text: Migration has started. It is not complete, and its benefits are intended, not yet demonstrated.
     - status: In progress
       text: Architecture quality, engineering standards and architecture decision-making across both European business lines.
     - status: In progress
@@ -249,7 +251,7 @@
       text: European priorities and global platform strategy shaped together, rather than reconciled afterwards.
   outcomes_note: >-
     This is the chapter I am still in, so it reports scope and direction rather than
-    results. Results get written up once they have happened, ideally with numbers.
+    results. Results get written up once they have happened.
   capability_gained: >-
     Technology leadership at organisational scale: operating-model design, influencing
     investment without owning it, and making governance something teams use rather
@@ -274,10 +276,10 @@
     agents become active participants in the enterprise.
   context: >-
     Every previous chapter automated friction at one scale and then met the same
-    friction one level up. Agentic AI is the first technology that can operate at all
-    of those levels at once: writing the code, running the pipeline, applying the
-    governance, even proposing the roadmap. That raises a question worth a research
-    programme rather than a hot take.
+    friction one level up. Agentic AI is the first technology that plausibly touches
+    all of those levels at once: writing the code, running the pipeline, applying the
+    governance, even proposing the roadmap. Whether it does so reliably is the open
+    question, and one worth a research programme rather than a hot take.
   constraint: >-
     Enterprises cannot adopt agents by bolting a chatbot onto the existing operating
     model. The constraints are structural: how work is decomposed, how governance is
@@ -310,8 +312,7 @@
   capability_gained: >-
     First-hand, current, hands-on knowledge of what agentic delivery actually breaks
     and what it makes possible, including how often it needs a human to read the
-    output. The executive perspective and the practitioner
-    perspective on the same frontier, at the same time.
+    output.
   unlocked: >-
     This chapter is still being written. The pattern says the capability being built
     here gets applied at the next scale up: the enterprise that designs humans,

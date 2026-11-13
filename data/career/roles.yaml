@@ -16,14 +16,15 @@
     Technology Office capabilities, including platform engineering, for Vanguard's
     European business: UK Personal Investing and European Financial Adviser Services.
     Works closely with the European CIO, business and product leadership, and
-    Vanguard's global technology organisation. Joined as Head of Architecture in
-    October 2024. ("Chief Technology Office" names the function; it is not a Chief
-    Technology Officer appointment.)
+    Vanguard's global technology organisation.
+  title_note: >-
+    The Chief Technology Office is a function, led alongside architecture; it is not a
+    Chief Technology Officer appointment.
   achievements_label: Focus areas
   achievements:
     - European technology strategy and architecture direction, balanced against global platform strategy.
     - Architecture leadership across UK Personal Investing and European Financial Adviser Services, including setting a streaming-architecture direction for backend systems.
-    - Engineering excellence, architectural quality, technology standards and reusable capabilities, with pragmatic governance.
+    - Engineering standards, architecture quality and reusable capabilities, with governance teams can act on.
     - Architecture and technology operating-model improvements.
     - AI enablement and engineering adoption, with practical governance in a regulated environment.
     - Developing technical leaders and strengthening the capabilities of the teams.
@@ -40,7 +41,8 @@
   current: false
   chapter: building-companies
   scope: >-
-    First technical hire alongside the CTO and eighth employee. Solutions Architect
+    Joined HUB, a fintech serving regulated financial-services clients, as the eighth
+    employee and first technical hire alongside the CTO. Solutions Architect
     (Director) from January 2021; Managing Director and Head of Cloud Engineering from
     May 2022. Built the platform, security posture and engineering organisation from
     the ground up as the company scaled to 60+ engineers across Ireland, the UK and
@@ -85,7 +87,7 @@
   achievements:
     - Infrastructure-as-code patterns for shared, reusable infrastructure across projects.
     - Live-coding workshops in serverless, Alexa and machine learning across the organisation.
-    - Tech owner of the labs group; MVP experiments with roughly one in five proofs of concept funded.
+    - Tech owner of the labs group, running MVP experiments to inform funding decisions.
   capabilities: [architecture, tech-strategy, developer-enablement, automation]
 
 - id: xtrac-principal
@@ -100,7 +102,7 @@
     Platform architecture for Fidelity's workflow business, including large-scale
     re-architecture and early serverless adoption.
   achievements:
-    - Fidsafe re-architected to support 10 million+ users cost-effectively using twelve-factor principles.
+    - Fidsafe re-architected on twelve-factor principles to scale cost-effectively from 10,000 active users to a design capacity of 10 million+.
     - CD pipelines automating operations, security and compliance checks took Fidsafe releases from monthly to daily; costs fell by over $400k in the first year.
     - Java/Spring REST monolith migrated to serverless Node.js microservices on API Gateway, Lambda and SQS.
   capabilities: [architecture, platform-engineering, automation, governance-risk]
@@ -115,7 +117,7 @@
   chapter: reusable-foundations
   scope: >-
     Innovation labs engineer running 8 to 12 week proofs of concept to find the
-    investments that would carry the business forward.
+    investments that would carry the business forward. Roughly one in five was funded.
   achievements:
     - Designed and built XTRAC Connect, a Java integration engine native on AWS, foundation of the digitisation-of-services strategy.
     - Automated AWS environment creation so a single engineer could operate the platform.

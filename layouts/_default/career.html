@@ -21,6 +21,9 @@
           </p>
         </div>
         <p class="role-scope">{{ .scope }}</p>
+        {{- with .title_note }}
+        <p class="role-scope role-note">{{ . }}</p>
+        {{- end }}
         <details class="role-achievements"{{ if .current }} open{{ end }}>
           <summary>{{ .achievements_label | default "Selected achievements" }}</summary>
           <ul>

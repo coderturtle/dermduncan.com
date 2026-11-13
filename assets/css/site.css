@@ -681,6 +681,7 @@ section { padding: 2.5rem 0; }
 .role h3, .edu h3, .award h3 { margin: 0 0 0.2rem; font-size: 1.08rem; }
 .role-meta { margin: 0; font-family: var(--mono); font-size: 0.82rem; color: var(--ink-faint); }
 .role-scope { margin: 0.5rem 0; max-width: var(--measure); color: var(--ink-soft); }
+.impact-span { margin: 0.25rem 0 0.5rem; color: var(--ink-soft); font-size: 0.95rem; }
 .role-achievements summary {
   cursor: pointer;
   font-size: 0.92rem;

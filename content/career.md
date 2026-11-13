@@ -9,8 +9,8 @@ description: >-
   education and credentials for Dermot Duncan.
 ---
 
-The recruiter-friendly version. Roles, dates, scope and selected achievements, with
-education and historical credentials below.
+Roles, dates, scope and selected achievements, with education and historical
+credentials below.
 
 **In short:** Head of Architecture & Chief Technology Office for Vanguard Europe since
 October 2024, leading four teams and 22 people across European Architecture and
