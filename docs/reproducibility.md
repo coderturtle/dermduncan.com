@@ -40,6 +40,50 @@ cd <hekton>/factory-output/dermduncan.com
 
 Current values were read with `gh variable list -R coderturtle/dermduncan.com` (read-only; these are GitHub Actions variables, not secrets, so the command itself didn't touch anything) but are deliberately **not** repeated here: this repo is public, and the account ID embedded in the IAM role ARN plus the CloudFront distribution ID are more exposed by sitting in a permanently-tracked doc than by living in GitHub's variables UI, which requires repo write access to view even on a public repo. See `docs/decisions.md`. A repo admin can fetch current values with the same `gh variable list` command.
 
+### How the upload works
+
+The deploy job calls `scripts/deploy-site.sh ./public "$BUCKET_NAME"`:
+
+1. `aws s3 sync ./public/ s3://<bucket> --delete` removes objects that are no longer built and uploads new files. The earlier `--size-only` flag is gone: it skipped edited pages whose byte length did not change.
+2. Every file is then re-uploaded with `aws s3 cp --recursive`, one pass per cache class, so object metadata (including `Cache-Control`) is rewritten on every deploy, not only for files whose content changed. HTML is uploaded last.
+
+CloudFront is then invalidated for `/*`, as before. Content types are guessed by the AWS CLI from file extensions, as before.
+
+### Cache policy
+
+Defined once in `scripts/cache-policy.sh`:
+
+| Files | Cache-Control |
+|---|---|
+| HTML | `no-cache, max-age=0, must-revalidate` |
+| Feeds, sitemap, `*.txt`, `*.json`, `*.webmanifest` | `public, max-age=300, must-revalidate` |
+| Content-hashed assets (`name.<16+ hex>.ext`) | `public, max-age=31536000, immutable` |
+| Non-versioned CSS and JS | `public, max-age=3600` |
+| Other non-versioned assets (images, icons, fonts, PDFs) | `public, max-age=86400` |
+
+CloudFront (checked 2026-11-13) uses legacy cache settings with MinTTL 0, DefaultTTL 86400 and MaxTTL 31536000, no response-headers policy and no edge functions, so it honours these origin headers. Query strings are not part of the cache key.
+
+### Tests
+
+`scripts/test-deploy-site.sh` runs in the PR build check with no AWS credentials or network access: a stub `aws` emulates S3 against a local directory. Starting from a bucket in the old state (everything `max-age=31536000`), it reproduces the old same-length skip, then checks that `deploy-site.sh` publishes the edit, deletes removed pages, and gives every object the policy's `Cache-Control`, including unchanged HTML. It also checks that `main.yml` keeps its bucket variable and `/*` invalidation.
+
+### Post-deployment smoke check
+
+After a deploy, build the deployed commit with the production Hugo version and compare with the live site:
+
+```sh
+hugo --minify -d /tmp/dd-site
+scripts/smoke-check-live.sh /tmp/dd-site / /career/ /path/you/changed/
+```
+
+For each path it checks the delivered bytes and the `Cache-Control` header against the policy, retrying for up to `SMOKE_TIMEOUT` seconds (default 600) while the CloudFront invalidation completes. It prints `x-cache` and `age` so a stale edge is visible.
+
+### Known limitation: browsers that cached the old site
+
+Before this change every file, HTML included, was served with `max-age=31536000`. A browser that visited before the fix may reuse its copy of a page or stylesheet for up to a year without asking the server, and nothing on the server side can recall it. A normal reload usually revalidates the page itself, but not always its stylesheet. Once a browser has fetched a page under the new policy, later changes appear on the next visit.
+
+To give someone a guaranteed-fresh view (for example when announcing the updated profile), share a URL their browser has never fetched, such as `https://dermduncan.com/?ref=profile-2026`. The query string is ignored by CloudFront's cache key, so it serves the current page, while the browser treats it as a new URL. That refreshes the HTML only: a stylesheet cached under the old policy can still be stale, which fingerprinted asset URLs (see `docs/next-actions.md`) would fix.
+
 ## Rules
 
 - Keep local-only files out of Git going forward — a `.gitignore` is a recorded follow-up (`docs/next-actions.md`), not added during adoption.

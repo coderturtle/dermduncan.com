@@ -101,3 +101,9 @@ Editorial working documents are now maintained privately rather than in this pub
 
 - `.github/workflows/pr-build.yml` builds every pull request to `main` with the production Hugo version and edition (`vars.HUGO_VERSION`, falling back to 0.123.7 extended), production environment and flags, then runs `scripts/check-links.py` and `scripts/check-public-boundary.sh`.
 - It triggers only on `pull_request` (never `pull_request_target` or `workflow_dispatch`), has `contents: read` permission only, no `id-token`, no secrets and no publication steps. Deployment stays solely in `main.yml`.
+
+## 2026-11-13 — Reliable S3 upload and per-type caching
+
+- The deploy's `aws s3 sync --size-only` treated an edited file with an unchanged byte length as unchanged, and every file (HTML included) was served with `Cache-Control: max-age=31536000`. The upload now lives in `scripts/deploy-site.sh`: `sync --delete`, then a re-upload of every file per cache class from `scripts/cache-policy.sh` (HTML revalidates on every request; feeds 5 minutes; non-versioned CSS/JS 1 hour; other non-versioned assets 1 day; content-hashed assets 1 year, immutable). Metadata is rewritten on every deploy. Bucket variable, deletion behaviour, content-type handling and the CloudFront `/*` invalidation are unchanged.
+- CloudFront's legacy cache settings (MinTTL 0) honour these headers; no CloudFront change is needed.
+- `scripts/test-deploy-site.sh` (credential-free, in the PR check) and `scripts/smoke-check-live.sh` (content and `Cache-Control` after deploy) cover the change. Browsers that cached pages under the old one-year policy are a documented limitation (`docs/reproducibility.md`).
