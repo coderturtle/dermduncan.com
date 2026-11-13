@@ -12,8 +12,8 @@
   current: true
   chapter: shaping-the-organisation
   scope: >-
-    Leads European Architecture and the Chief Technology Office: four teams and 22
-    people covering architecture and platform-engineering capability, for Vanguard's
+    Leading four teams and 22 people across European Architecture and Chief
+    Technology Office capabilities, including platform engineering, for Vanguard's
     European business: UK Personal Investing and European Financial Adviser Services.
     Works closely with the European CIO, business and product leadership, and
     Vanguard's global technology organisation. Joined as Head of Architecture in
@@ -21,11 +21,12 @@
     Technology Officer appointment.)
   achievements_label: Focus areas
   achievements:
-    - Technology strategy and architecture direction for the European business, balanced against global platform strategy.
-    - Architecture quality, engineering standards and how architecture decisions get made across both European business lines.
-    - Operating models that balance team autonomy, enterprise consistency and governance.
-    - Practical, governed AI enablement in a regulated environment.
-    - Developing architects, technical leaders and organisational capability.
+    - European technology strategy and architecture direction, balanced against global platform strategy.
+    - Architecture leadership across UK Personal Investing and European Financial Adviser Services, including setting a streaming-architecture direction for backend systems.
+    - Engineering excellence, architectural quality, technology standards and reusable capabilities, with pragmatic governance.
+    - Architecture and technology operating-model improvements.
+    - AI enablement and engineering adoption, with practical governance in a regulated environment.
+    - Developing technical leaders and strengthening the capabilities of the teams.
   capabilities: [architecture, tech-strategy, org-design, governance-risk, ai-agentic, business-product]
 
 - id: hub-director
@@ -100,7 +101,7 @@
     re-architecture and early serverless adoption.
   achievements:
     - Fidsafe re-architected to support 10 million+ users cost-effectively using twelve-factor principles.
-    - CD pipelines automating operations, security and compliance checks took Fidsafe releases from monthly to daily; costs fell by over 400k in the first year.
+    - CD pipelines automating operations, security and compliance checks took Fidsafe releases from monthly to daily; costs fell by over $400k in the first year.
     - Java/Spring REST monolith migrated to serverless Node.js microservices on API Gateway, Lambda and SQS.
   capabilities: [architecture, platform-engineering, automation, governance-risk]
 

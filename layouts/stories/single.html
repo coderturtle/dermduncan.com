@@ -18,6 +18,22 @@
     <section class="grammar"><h2 class="grammar-label">The environment</h2>{{ $s.environment | $.Page.RenderString (dict "display" "block") }}</section>
     <section class="grammar"><h2 class="grammar-label">The constraint</h2>{{ $s.constraint | $.Page.RenderString (dict "display" "block") }}</section>
     <section class="grammar"><h2 class="grammar-label">The intervention</h2>{{ $s.intervention | $.Page.RenderString (dict "display" "block") }}</section>
+    {{- with $s.decision }}
+    {{- /* Optional architecture-decision vignette: one concrete call, with intended
+           outcomes kept visibly separate from demonstrated ones. */}}
+    <aside class="decision"{{ with .id }} id="{{ . }}"{{ end }} aria-labelledby="decision-title">
+      <p class="decision-kicker">{{ .kicker }}</p>
+      <h2 class="decision-title" id="decision-title">{{ .title }}</h2>
+      <div class="decision-body">{{ .body | $.Page.RenderString (dict "display" "block") }}</div>
+      {{- with .status }}
+      <ul class="outcome-list decision-status">
+        {{- range . }}
+        <li><span class="status-tag">{{ .status }}</span> {{ .text }}</li>
+        {{- end }}
+      </ul>
+      {{- end }}
+    </aside>
+    {{- end }}
     <section class="grammar"><h2 class="grammar-label">The result</h2>{{ $s.result | $.Page.RenderString (dict "display" "block") }}
       {{- with $s.result_status }}
       <ul class="outcome-list">

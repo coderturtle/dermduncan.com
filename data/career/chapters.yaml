@@ -76,7 +76,7 @@
   outcomes:
     - XTRAC Connect became the foundation for the digitisation-of-services strategy.
     - A 28-page pensions PDF became a digital journey, cutting processing from over a week to under a day.
-    - Fidsafe was redesigned to support 10 million+ users cost-effectively, with CD pipelines that took releases from monthly to daily; costs fell by over 400k in its first year.
+    - Fidsafe was redesigned to support 10 million+ users cost-effectively, with CD pipelines that took releases from monthly to daily; costs fell by over $400k in its first year.
     - Environment provisioning was fully automated; one engineer could run the platform.
   capability_gained: >-
     Platform thinking. The unit of work stopped being the application and became the
@@ -209,10 +209,9 @@
     Vanguard's European business spans UK Personal Investing and European Financial
     Adviser Services: regulated locally, and built on the platforms and technology
     organisation of a global firm. I joined in October 2024 as Head of Architecture.
-    Today I lead European Architecture and the Chief Technology Office, four teams
-    and 22 people,
-    working closely with the European CIO, business and product leadership, and
-    Vanguard's global technology organisation.
+    Today I lead four teams and 22 people across European Architecture and Chief
+    Technology Office capabilities, working closely with the European CIO, business
+    and product leadership, and Vanguard's global technology organisation.
   constraint: >-
     At this scale the binding constraint is rarely a missing technology. It is
     coherence. European business priorities, global platform roadmaps, architecture
@@ -228,11 +227,18 @@
     explicit, recorded and revisitable; balancing team autonomy against enterprise
     consistency with governance a delivery team can act on without a meeting;
     building architecture and platform-engineering capability in the team; and making
-    AI adoption practical and governed rather than performative.
+    AI adoption practical and governed rather than performative. Occasionally it means
+    making a large technical call well. The clearest so far is the decision to move
+    backend systems towards a streaming architecture, for two horizons: reducing
+    the backend coupling that slows change today, so capabilities can evolve
+    independently, and establishing near-real-time operational and analytical data
+    foundations for future AI and agentic applications.
   outcomes_label: Where it stands
   outcomes:
     - status: In place
-      text: Four teams and 22 people across European Architecture and the Chief Technology Office, supporting UK Personal Investing and European Financial Adviser Services.
+      text: Four teams and 22 people across European Architecture and Chief Technology Office capabilities, supporting UK Personal Investing and European Financial Adviser Services.
+    - status: In progress
+      text: Streaming architecture set as the backend direction, and migration has started. It is not complete, and its benefits are intended, not yet demonstrated; the reasoning is in the signature story.
     - status: In progress
       text: Architecture quality, engineering standards and architecture decision-making across both European business lines.
     - status: In progress
