@@ -9,11 +9,14 @@
   {{- $desc := .Params.description | default .Summary | default .Site.Params.description }}
   <meta name="description" content="{{ $desc | plainify | truncate 300 }}">
   <link rel="canonical" href="{{ .Permalink }}">
-  <link rel="icon" href="{{ .Site.Params.favicon }}" sizes="16x16 32x32 48x48">
-  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
-  <link rel="icon" href="/favicon-32x32.png" type="image/png" sizes="32x32">
-  <link rel="icon" href="/favicon-16x16.png" type="image/png" sizes="16x16">
-  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  {{- /* Bump iconVersion whenever the icons change: browsers keep favicons in a
+       separate cache keyed by URL. CloudFront ignores the query string. */}}
+  {{- $iv := printf "?v=%s" (.Site.Params.iconVersion | default "1") }}
+  <link rel="icon" href="{{ .Site.Params.favicon }}{{ $iv }}" sizes="16x16 32x32 48x48">
+  <link rel="icon" href="/favicon.svg{{ $iv }}" type="image/svg+xml">
+  <link rel="icon" href="/favicon-32x32.png{{ $iv }}" type="image/png" sizes="32x32">
+  <link rel="icon" href="/favicon-16x16.png{{ $iv }}" type="image/png" sizes="16x16">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png{{ $iv }}">
   <meta name="theme-color" content="#fafaf7" media="(prefers-color-scheme: light)">
   <meta name="theme-color" content="#12161c" media="(prefers-color-scheme: dark)">
   {{- /* Content-hashed URLs (cache class "immutable" in scripts/cache-policy.sh).
