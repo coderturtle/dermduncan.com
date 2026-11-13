@@ -30,3 +30,7 @@ docs/private/
 # Personal source documents are kept privately, outside this repository.
 old/docs/*.pdf
 data/experience.json
+
+# Hugo build output (the deploy workflow builds it fresh).
+/public/
+/resources/_gen/
