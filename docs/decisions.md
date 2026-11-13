@@ -96,3 +96,8 @@ Editorial working documents are now maintained privately rather than in this pub
 - Vanguard remit described by responsibilities first, with organisational boundaries stated once in the signature story.
 - The streaming-architecture narrative stays at the level of direction, intended benefits and status.
 - `old/docs/dermscv.pdf` and `data/experience.json` (legacy, unused by the site) removed from tracking and ignored. They remain in earlier published history.
+
+## 2026-11-13 — Build-only pull-request check
+
+- `.github/workflows/pr-build.yml` builds every pull request to `main` with the production Hugo version and edition (`vars.HUGO_VERSION`, falling back to 0.123.7 extended), production environment and flags, then runs `scripts/check-links.py` and `scripts/check-public-boundary.sh`.
+- It triggers only on `pull_request` (never `pull_request_target` or `workflow_dispatch`), has `contents: read` permission only, no `id-token`, no secrets and no publication steps. Deployment stays solely in `main.yml`.
