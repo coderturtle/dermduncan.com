@@ -16,7 +16,14 @@
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
   <meta name="theme-color" content="#fafaf7" media="(prefers-color-scheme: light)">
   <meta name="theme-color" content="#12161c" media="(prefers-color-scheme: dark)">
-  <link rel="stylesheet" href="{{ (resources.Get "css/site.css").RelPermalink }}">
+  {{- /* Content-hashed URLs (cache class "immutable" in scripts/cache-policy.sh).
+       The plain /css/site.css and /js/site.js are still published so pages that
+       browsers cached under the old one-year policy keep their styles; drop the
+       two .Publish calls after 2027-11. */}}
+  {{- $css := resources.Get "css/site.css" }}
+  {{- $css.Publish }}
+  {{- $cssHashed := $css | fingerprint "sha256" }}
+  <link rel="stylesheet" href="{{ $cssHashed.RelPermalink }}" integrity="{{ $cssHashed.Data.Integrity }}">
   <meta property="og:type" content="{{ cond .IsHome "profile" "article" }}">
   <meta property="og:title" content="{{ $title }}">
   <meta property="og:description" content="{{ $desc | plainify | truncate 300 }}">
@@ -59,6 +66,9 @@
 </main>
 {{ partial "footer.html" . }}
 {{ partial "palette.html" . }}
-<script src="{{ (resources.Get "js/site.js").RelPermalink }}" defer></script>
+{{- $js := resources.Get "js/site.js" }}
+{{- $js.Publish }}
+{{- $jsHashed := $js | fingerprint "sha256" }}
+<script src="{{ $jsHashed.RelPermalink }}" integrity="{{ $jsHashed.Data.Integrity }}" defer></script>
 </body>
 </html>

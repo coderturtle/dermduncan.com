@@ -5,7 +5,7 @@
 #
 # Usage: scripts/smoke-check-live.sh <public-dir> [path ...]
 #   e.g. hugo --minify -d /tmp/dd-site && scripts/smoke-check-live.sh /tmp/dd-site / /career/
-# Defaults: home page, career page, sitemap, stylesheet and favicon.
+# Defaults: home, career, sitemap, favicon, plain and fingerprinted CSS/JS.
 #
 # CloudFront caching: the deploy invalidates /*, but edges can serve the old
 # copy until the invalidation completes (usually a few minutes). Each path is
@@ -22,7 +22,13 @@ TIMEOUT="${SMOKE_TIMEOUT:-600}"
 INTERVAL="${SMOKE_INTERVAL:-20}"
 # shellcheck source=scripts/cache-policy.sh
 source "$(dirname "$0")/cache-policy.sh"
-[ $# -gt 0 ] || set -- / /career/ /sitemap.xml /css/site.css /favicon.ico
+if [ $# -eq 0 ]; then
+  # Home, career, sitemap, favicon, the fingerprinted CSS/JS the home page links
+  # to, and the plain /css/site.css kept for pages cached under the old policy.
+  hashed=$(grep -o -E '(href|src)="?/(css|js)/site\.[0-9a-f]{16,}\.(css|js)' "$SRC/index.html" | sed -E 's/^(href|src)="?//' | sort -u)
+  # shellcheck disable=SC2086
+  set -- / /career/ /sitemap.xml /favicon.ico /css/site.css $hashed
+fi
 
 norm() { tr -d '\r' | tr 'A-Z' 'a-z' | sed -E 's/[[:space:]]*,[[:space:]]*/, /g; s/^[[:space:]]+|[[:space:]]+$//g'; }
 

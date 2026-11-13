@@ -107,3 +107,8 @@ Editorial working documents are now maintained privately rather than in this pub
 - The deploy's `aws s3 sync --size-only` treated an edited file with an unchanged byte length as unchanged, and every file (HTML included) was served with `Cache-Control: max-age=31536000`. The upload now lives in `scripts/deploy-site.sh`: `sync --delete`, then a re-upload of every file per cache class from `scripts/cache-policy.sh` (HTML revalidates on every request; feeds 5 minutes; non-versioned CSS/JS 1 hour; other non-versioned assets 1 day; content-hashed assets 1 year, immutable). Metadata is rewritten on every deploy. Bucket variable, deletion behaviour, content-type handling and the CloudFront `/*` invalidation are unchanged.
 - CloudFront's legacy cache settings (MinTTL 0) honour these headers; no CloudFront change is needed.
 - `scripts/test-deploy-site.sh` (credential-free, in the PR check) and `scripts/smoke-check-live.sh` (content and `Cache-Control` after deploy) cover the change. Browsers that cached pages under the old one-year policy are a documented limitation (`docs/reproducibility.md`).
+
+## 2026-11-13 — Fingerprinted CSS and JS
+
+- `layouts/_default/baseof.html` links the stylesheet and script through Hugo's `fingerprint "sha256"` (with Subresource Integrity), so their URLs change with their content and they use the immutable cache class.
+- The plain `/css/site.css` and `/js/site.js` are still published (`.Publish`) for pages that browsers cached under the old one-year policy; remove after 2027-11 (`docs/next-actions.md`).
