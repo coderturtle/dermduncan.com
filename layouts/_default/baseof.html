@@ -9,16 +9,25 @@
   {{- $desc := .Params.description | default .Summary | default .Site.Params.description }}
   <meta name="description" content="{{ $desc | plainify | truncate 300 }}">
   <link rel="canonical" href="{{ .Permalink }}">
-  <link rel="icon" href="{{ .Site.Params.favicon }}">
+  <link rel="icon" href="{{ .Site.Params.favicon }}" sizes="16x16 32x32 48x48">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/favicon-32x32.png" type="image/png" sizes="32x32">
+  <link rel="icon" href="/favicon-16x16.png" type="image/png" sizes="16x16">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <meta name="theme-color" content="#fafaf7" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#12161c" media="(prefers-color-scheme: dark)">
   <link rel="stylesheet" href="{{ (resources.Get "css/site.css").RelPermalink }}">
   <meta property="og:type" content="{{ cond .IsHome "profile" "article" }}">
   <meta property="og:title" content="{{ $title }}">
   <meta property="og:description" content="{{ $desc | plainify | truncate 300 }}">
   <meta property="og:url" content="{{ .Permalink }}">
   <meta property="og:site_name" content="{{ .Site.Title }}">
-  <meta property="og:image" content="{{ absURL "android-chrome-512x512.png" }}">
-  <meta name="twitter:card" content="summary">
+  <meta property="og:image" content="{{ absURL "og-image.png" }}">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Dermot Duncan: Head of Architecture &amp; Chief Technology Office, Vanguard Europe. I build the systems that help organisations change.">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="{{ absURL "og-image.png" }}">
   <meta name="twitter:title" content="{{ $title }}">
   <meta name="twitter:description" content="{{ $desc | plainify | truncate 200 }}">
   {{- if .IsHome }}

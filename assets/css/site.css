@@ -9,8 +9,18 @@
   --ink-soft: #4a5568;
   --ink-faint: #5c6877;
   --line: #d8dde4;
-  --accent: #1f6f63;
-  --accent-strong: #154f48;
+  /* Brand palette: deep petrol, teal, sea glass, muted copper. Copper is a graphic
+     accent only (mark, timeline marker): it does not meet text contrast on paper. */
+  --petrol: #102e35;
+  --teal: #237875;
+  --seaglass: #88afa5;
+  --copper: #bd7953;
+  --mark-a: var(--petrol);
+  --mark-b: var(--copper);
+  --mark-c: var(--seaglass);
+  --mark-d: var(--teal);
+  --accent: var(--teal);
+  --accent-strong: var(--petrol);
   --accent-wash: #e4f2ef;
   --unlock: #7a4e18;
   --unlock-wash: #f7f0e4;
@@ -34,6 +44,10 @@
     --accent-wash: #14302b;
     --unlock: #d0a763;
     --unlock-wash: #241d12;
+    --copper: #cf8c66;
+    --mark-a: #d7e6e1;
+    --mark-c: #6e9c92;
+    --mark-d: #3fa39c;
   }
 }
 
@@ -106,12 +120,15 @@ h1, h2, h3 { line-height: 1.2; letter-spacing: -0.01em; }
   gap: 0.5rem;
 }
 .brand-mark {
-  width: 0.65rem;
-  height: 0.65rem;
-  border: 2px solid var(--accent);
-  border-radius: 50%;
-  display: inline-block;
+  width: 1.45rem;
+  height: 1.45rem;
+  flex: 0 0 auto;
+  display: block;
 }
+.brand-mark .ma { fill: var(--mark-a); }
+.brand-mark .mb { fill: var(--mark-b); }
+.brand-mark .mc { fill: var(--mark-c); }
+.brand-mark .md { fill: var(--mark-d); }
 .nav-right {
   display: flex;
   align-items: center;
@@ -882,7 +899,7 @@ body.palette-open { overflow: hidden; }
   border: 2px solid var(--accent);
   background: var(--paper);
 }
-.impact-point.is-current::before { background: var(--accent); }
+.impact-point.is-current::before { background: var(--copper); border-color: var(--copper); }
 .impact-point:last-child { padding-bottom: 0.25rem; }
 .impact-meta {
   margin: 0 0 0.25rem;
