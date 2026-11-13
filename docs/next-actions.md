@@ -16,4 +16,4 @@
 - [ ] After merge: delete the stale tracked `public/` build output (deploy workflow builds fresh; the tracked copy is now misleading) together with the existing `.gitignore` hygiene item, and consider removing the now-unused `themes/hugo-resume/` directory.
 - [ ] Consider redirect handling for dropped `/tags/*` and `/blog/force-ssl/` URLs if analytics ever show inbound traffic.
 - [ ] Review branch `agent/claude/executive-positioning` before push/merge (owner approval required).
-- [ ] Fingerprint the stylesheet and scripts (`resources.Fingerprint` in `layouts/_default/baseof.html`) so they can use the immutable cache class, and so browsers that cached `/css/site.css` under the old one-year policy pick up new styles.
+- [ ] After 2027-11 (one year after the cache-policy change), remove the two `.Publish` calls in `layouts/_default/baseof.html` that keep the plain `/css/site.css` and `/js/site.js` published for pages cached under the old policy.

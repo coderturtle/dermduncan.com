@@ -57,8 +57,8 @@ Defined once in `scripts/cache-policy.sh`:
 |---|---|
 | HTML | `no-cache, max-age=0, must-revalidate` |
 | Feeds, sitemap, `*.txt`, `*.json`, `*.webmanifest` | `public, max-age=300, must-revalidate` |
-| Content-hashed assets (`name.<16+ hex>.ext`) | `public, max-age=31536000, immutable` |
-| Non-versioned CSS and JS | `public, max-age=3600` |
+| Content-hashed assets (`name.<16+ hex>.ext`, e.g. the fingerprinted CSS and JS) | `public, max-age=31536000, immutable` |
+| Non-versioned CSS and JS (the plain `site.css` / `site.js` kept for old cached pages) | `public, max-age=3600` |
 | Other non-versioned assets (images, icons, fonts, PDFs) | `public, max-age=86400` |
 
 CloudFront (checked 2026-11-13) uses legacy cache settings with MinTTL 0, DefaultTTL 86400 and MaxTTL 31536000, no response-headers policy and no edge functions, so it honours these origin headers. Query strings are not part of the cache key.
@@ -82,7 +82,7 @@ For each path it checks the delivered bytes and the `Cache-Control` header again
 
 Before this change every file, HTML included, was served with `max-age=31536000`. A browser that visited before the fix may reuse its copy of a page or stylesheet for up to a year without asking the server, and nothing on the server side can recall it. A normal reload usually revalidates the page itself, but not always its stylesheet. Once a browser has fetched a page under the new policy, later changes appear on the next visit.
 
-To give someone a guaranteed-fresh view (for example when announcing the updated profile), share a URL their browser has never fetched, such as `https://dermduncan.com/?ref=profile-2026`. The query string is ignored by CloudFront's cache key, so it serves the current page, while the browser treats it as a new URL. That refreshes the HTML only: a stylesheet cached under the old policy can still be stale, which fingerprinted asset URLs (see `docs/next-actions.md`) would fix.
+To give someone a guaranteed-fresh view (for example when announcing the updated profile), share a URL their browser has never fetched, such as `https://dermduncan.com/?ref=profile-2026`. The query string is ignored by CloudFront's cache key, so it serves the current page, while the browser treats it as a new URL. Since the CSS and JS are now fingerprinted (`/css/site.<sha256>.css`, `/js/site.<sha256>.js`), a page fetched fresh always loads the matching styles and script, even in a browser holding an old `/css/site.css`. The plain `/css/site.css` and `/js/site.js` are still published, so pages cached under the old policy keep working until they expire.
 
 ## Rules
 
