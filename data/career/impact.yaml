@@ -1,0 +1,66 @@
+# Homepage "Selected impact": one editorial proof point per employer: current role
+# first, then Fidelity, then HUB. Each item is a different kind of evidence,
+# not a KPI tile. Never merge results from different Fidelity roles into one period:
+# each context line carries its own role and era.
+
+heading: Selected impact
+lede: >-
+  One proof point per employer: shaping enterprise technology direction at Vanguard,
+  transforming enterprise engineering at Fidelity, and building and scaling a
+  technology organisation at HUB.
+
+items:
+  - org: Vanguard
+    era: Since 2024
+    kind: Shaping enterprise technology direction
+    current: true
+    headline: Four teams, 22 people, two European businesses
+    text: >-
+      Leading four teams and 22 people across European Architecture and Chief
+      Technology Office capabilities for UK Personal Investing and European
+      Financial Adviser Services. One concrete example: a streaming-architecture direction
+      for backend systems, with migration under way, to reduce coupling today and build
+      near-real-time data foundations for future AI and agentic applications.
+    url: /stories/shaping-vanguard-europe/#streaming-decision
+    link_label: The streaming-architecture decision
+
+  - org: Fidelity Investments, XTRAC
+    era: 2014 – 2016
+    role: Principal Software Architect
+    span: Thirteen years at Fidelity, from graduate engineer to Director of Architecture.
+    kind: Transforming enterprise engineering
+    headline: Over $400k saved in year one, and releases from monthly to daily
+    text: >-
+      Re-architected the Fidsafe file-sharing platform to scale from 10,000 active
+      users to a design capacity of 10 million+, with delivery pipelines that built
+      operations, security and compliance checks into every release.
+    context:
+      - role: Senior Software Engineer, XTRAC Labs
+        era: 2012 – 2014
+        text: Digitised a 28-page pension-change form into a web journey, cutting processing from over a week to under a day.
+      - role: Director of Software Architecture, APS
+        era: 2016 – 2018
+        text: Took the division from AWS experiments to a multi-year cloud strategy, with a labs group that piloted ideas as MVPs before funding.
+      - role: Director of Architecture, Personal Investing
+        era: 2019 – 2020
+        text: Led a team of 15 building the event-driven platform behind the digital experience ecosystem, and a learning dojo adopted across global locations.
+    url: /journey/reusable-foundations/
+    link_label: The platform years, 2012 – 2016
+
+  - org: HUB
+    era: 2021 – 2024
+    kind: Building and scaling
+    headline: From employee eight to 60+ engineers
+    figures:
+      - value: "~40%"
+        label: lower cloud costs
+      - value: "~80%"
+        label: faster environment provisioning
+    text: >-
+      Joined as the eighth employee and first technical hire alongside the CTO, then helped build the
+      platform and scale the engineering organisation to 60+ engineers across three
+      countries: hiring, team design and standards on one side, Azure foundations
+      automated from the first commit on the other. Managing Director & Head of
+      Cloud Engineering from 2022.
+    url: /stories/building-hub/
+    link_label: The HUB story

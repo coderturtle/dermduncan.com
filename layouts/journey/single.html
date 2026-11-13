@@ -31,12 +31,17 @@
       <p>{{ $ch.intervention }}</p>
     </section>
     <section class="grammar" aria-labelledby="g-outcome">
-      <h2 id="g-outcome" class="grammar-label">Outcomes</h2>
+      <h2 id="g-outcome" class="grammar-label">{{ $ch.outcomes_label | default "Outcomes" }}</h2>
+      {{- /* Outcome items are plain strings, or {status, text} maps for chapters
+             where delivered work, work in progress and direction must be told apart. */}}
       <ul class="outcome-list">
         {{- range $ch.outcomes }}
-        <li>{{ . }}</li>
+        <li>{{- if reflect.IsMap . }}<span class="status-tag">{{ .status }}</span> {{ .text }}{{ else }}{{ . }}{{ end }}</li>
         {{- end }}
       </ul>
+      {{- with $ch.outcomes_note }}
+      <p class="evidence-note">{{ . }}</p>
+      {{- end }}
     </section>
     <section class="grammar" aria-labelledby="g-capability">
       <h2 id="g-capability" class="grammar-label">Capability gained</h2>
@@ -89,12 +94,13 @@
     <section class="chapter-evidence" aria-labelledby="g-evidence">
       <h2 id="g-evidence" class="grammar-label">Supporting evidence</h2>
       {{- range $roles }}
-      <details class="evidence-role">
+      <details class="evidence-role"{{ if .current }} open{{ end }}>
         <summary>
           <span class="evidence-title">{{ .display_title | default .title }}</span>
           <span class="evidence-meta">{{ .org_display | default .org }} · {{ .range }}</span>
         </summary>
         <p>{{ .scope }}</p>
+        {{- with .achievements_label }}<p class="evidence-sub">{{ . }}</p>{{ end }}
         <ul>
           {{- range .achievements }}
           <li>{{ . }}</li>

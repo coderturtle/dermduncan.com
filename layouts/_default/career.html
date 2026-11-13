@@ -12,7 +12,7 @@
     <ol class="role-list">
       {{- $needsNote := false }}
       {{- range .Site.Data.career.roles }}
-      <li class="role">
+      <li class="role" id="{{ .id }}">
         <div class="role-head">
           <h3>{{ .display_title | default .title }}</h3>
           <p class="role-meta">
@@ -21,14 +21,21 @@
           </p>
         </div>
         <p class="role-scope">{{ .scope }}</p>
-        <details class="role-achievements">
-          <summary>Selected achievements</summary>
+        {{- with .title_note }}
+        <p class="role-scope role-note">{{ . }}</p>
+        {{- end }}
+        <details class="role-achievements"{{ if .current }} open{{ end }}>
+          <summary>{{ .achievements_label | default "Selected achievements" }}</summary>
           <ul>
             {{- range .achievements }}
             <li>{{ . }}</li>
             {{- end }}
           </ul>
         </details>
+        {{- $chId := .chapter }}
+        {{- with index (where $.Site.Data.career.chapters "id" $chId) 0 }}
+        <p class="role-context"><a href="{{ printf "/journey/%s/" .slug }}">In the journey: {{ .title }} &rarr;</a></p>
+        {{- end }}
         {{- if not .dates_confirmed }}{{ $needsNote = true }}{{ end }}
       </li>
       {{- end }}

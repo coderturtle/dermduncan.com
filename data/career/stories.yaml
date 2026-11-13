@@ -1,5 +1,5 @@
 # Signature stories. Format: environment, constraint, intervention, result, learned,
-# reappeared, evidence. Claim refs map to docs/rebuild/claims-register.md.
+# reappeared, evidence. Supporting evidence is maintained privately.
 
 - id: fidelity-capability
   slug: scaling-cloud-capability-at-fidelity
@@ -8,7 +8,7 @@
   chapter: scaling-capability
   environment: >-
     Fidelity between 2016 and 2020: a global asset manager with a digital
-    transformation strategy on paper, deep on-premise habits in practice, and cloud
+    transformation strategy on paper, deep on-premises habits in practice, and cloud
     experience concentrated in a handful of enthusiasts.
   constraint: >-
     The strategy assumed thousands of engineers could design event-driven,
@@ -58,10 +58,11 @@
     Everything had to exist at once, and every choice was permanent in the way early
     choices are. The product needed a platform; the platform needed engineers; the
     engineers needed standards, environments and a hiring pipeline; and regulated
-    clients needed evidence they could trust all of it. One person had to sequence
-    that without the luxuries of an enterprise behind them.
+    clients needed evidence they could trust all of it. The CTO and I had to
+    sequence that without the luxuries of an enterprise behind us.
   intervention: >-
-    I joined as the first technical hire outside the CTO and treated the company
+    I joined as the eighth employee and first technical hire alongside the CTO, and
+    treated the company
     itself as the system to design. Platform first: foundational architecture on
     Azure, fully automated environments in ARM, Bicep and Terraform through Azure
     DevOps, and a security posture with SOC monitoring from the start. Organisation in
@@ -74,11 +75,12 @@
     excellence, and later exploring Azure OpenAI and retrieval-augmented generation
     for the product.
   result: >-
-    The engineering organisation grew from one technologist to more than sixty
+    The engineering organisation grew from its first technical hires to more than sixty
     engineers across Ireland, the UK and India inside a roughly seventy-person
-    company. Cloud running costs fell by approximately 40 percent while live
-    environments doubled, provisioning time dropped by around 80 percent, and SOC 2
-    Type I readiness gave regulated clients the evidence they needed.
+    company. Cloud running costs came down by approximately 40%. Environments
+    were automated from the first commit, so adding one became a pipeline run rather
+    than a project, and provisioning got approximately 80% faster. SOC 2 Type I
+    readiness gave regulated clients the evidence they needed.
   learned: >-
     Company building is system design with people in the loop. Architecture, hiring,
     security, budgets and client trust are one design problem, and the platform
@@ -96,41 +98,123 @@
 - id: vanguard-europe
   slug: shaping-vanguard-europe
   title: Designing the environment, not just the system
-  subtitle: Architecture, platforms and AI enablement at Vanguard Europe
+  subtitle: Architecture and the Chief Technology Office at Vanguard Europe
   chapter: shaping-the-organisation
   environment: >-
     Vanguard's European business: UK Personal Investing and European Financial
-    Adviser Services, regulated locally, powered by the technology organisation of a
-    global asset manager. I joined as Head of Architecture in October 2024.
+    Adviser Services, regulated locally and built on the platforms of a global asset
+    manager. I joined Vanguard in October 2024 and lead four teams
+    and 22 people across European Architecture and Chief Technology Office
+    capabilities.
   constraint: >-
-    At this scale nothing fails for lack of technology. Things fail when strategy,
-    architecture, engineering practice and governance drift apart, or when a European
-    business needs something the global platform road map has not prioritised. The
-    constraint is coherence across an organisation, under regulation, at pace.
-  intervention: >-
-    As Head of Architecture and CTO for Europe (Head of Architecture from October
-    2024, appointed CTO in February 2026), I work on the connective tissue:
-    translating technology strategy into executable
-    priorities, driving engineering excellence and clean architecture across both
-    business lines, shaping the operating model so European needs connect with global
-    capabilities, and leading enterprise AI enablement with responsible AI governance
-    designed in rather than inspected in afterwards.
+    Nothing at this scale fails for lack of technology. It fails when sensible
+    decisions made in different rooms do not add up. Much of the challenge is making
+    enterprise platform strategy work for Europe's business and regulatory needs,
+    while ensuring that what we learn locally helps shape the wider technology
+    direction. Regulation raises the stakes, because every gap between strategy and
+    execution is a risk as well as a cost.
+  intervention: |-
+    Earlier in my career the unit of design was an application, then a platform,
+    then a company. Here it is the environment in which other people make design
+    decisions. I am accountable for architecture direction, engineering standards
+    and the Chief Technology Office capabilities for the European business. Global
+    platforms and investment decisions sit with the wider firm, so much of the work
+    is connective:
+
+    - **Strategy to execution.** Working with the European CIO, business and product leadership so priorities reach engineering as decisions teams can act on.
+    - **Europe and global.** Representing European requirements in global platform strategy, and bringing back what can be built on rather than built around.
+    - **Better decisions.** Making architecture decisions explicit, recorded and revisitable, so quality does not depend on who was in the meeting.
+    - **Autonomy and consistency.** Standards and governance light enough that teams use them, and firm enough that the estate still makes sense in five years.
+    - **Practical AI.** Governed adoption that starts where it demonstrably helps, inside controls a regulator would recognise.
+    - **People.** Growing architects and technical leaders, and an operating model that does not depend on any one of them, including me.
+
+    Most of my best architecture work now happens in conversation rather than in an
+    editor, which my younger, Jenkins-configuring self would have found deeply
+    suspicious. It also means making the large technical calls.
+  decision:
+    id: streaming-decision
+    kicker: An architecture decision
+    title: Decoupling today's platforms, enabling tomorrow's capabilities
+    body: |-
+      **The decision.** Move Vanguard Europe's backend systems towards a streaming
+      architecture. Instead of asking each other for things, services publish what
+      has happened as a continuous stream, and other capabilities consume it in
+      their own time. The technology choice is the means; the decision is about
+      which dependencies we are willing to keep. It is made for two horizons.
+
+      **Horizon one: independence today.** Like most estates that have grown over
+      decades, backend systems can depend on each other more directly than is
+      ideal. When services call one another
+      point to point, changing one capability means coordinating with several
+      others, so teams move at the speed of their most-connected neighbour. That is
+      a business agility problem wearing a technical costume. Streaming replaces
+      some of that runtime, point-to-point coupling with looser coupling through
+      published event contracts. The dependencies do not disappear, but they become
+      explicit and versioned, so capabilities can evolve, release and scale more
+      independently.
+
+      **Horizon two: data foundations for tomorrow.** The same streams become the
+      foundation for near-real-time operational and analytical data. As AI
+      applications become part of everyday operations, and agents become more
+      capable, they will need timely context about what is happening in the
+      business, and streams with clear ownership are a better starting point for
+      making that context trustworthy. We do not have to predict which agentic use cases will matter
+      to know they will need that. The decision buys optionality rather than
+      betting on one use case.
+
+      **The trade-off.** Streaming is not free. It swaps tidy request-and-response
+      calls for eventual consistency, event contracts that need real ownership and
+      versioning, and a platform that has to be run well. Debugging moves from
+      following a call to following a flow. The case for paying that cost is that
+      point-to-point dependencies get more expensive to unwind every year they are
+      left alone.
+
+      **What it asks of the organisation.** Teams treat what their capability
+      publishes as a product other teams can rely on, which takes shared standards
+      and platform-engineering support. The organisational change is at least as
+      large as the technical one.
+    status:
+      - status: Direction
+        text: Streaming architecture set as the direction for backend systems.
+      - status: In progress
+        text: Migration has started. It is not complete.
+      - status: Intended
+        text: "Horizon one: less backend coupling, so capabilities can evolve independently."
+      - status: Intended
+        text: "Horizon two: near-real-time operational and analytical data foundations for AI and agentic applications."
+      - status: Not yet shown
+        text: Measured outcomes.
   result: >-
-    Architecture, platform engineering and technology strategy operate as one
-    connected function for the European business, with AI adoption progressing inside
-    a governance framework a regulator can respect. This chapter is current, so its
-    fuller results belong to a future update.
+    This is the chapter I am still in. The organisation is in place, the backend
+    direction is set and migration is under way; measured outcomes will follow as it
+    lands.
+  result_status:
+    - status: In place
+      text: Four teams and 22 people across European Architecture and Chief Technology Office capabilities, supporting both European business lines.
+    - status: In progress
+      text: Migration of backend systems to a streaming architecture, as set out above.
+    - status: In progress
+      text: Architecture decision-making, engineering standards and architecture quality across the European business.
+    - status: In progress
+      text: Practical, governed AI enablement, and the technical-leadership capability to sustain it.
+    - status: Direction
+      text: European and global technology priorities shaped together rather than reconciled afterwards.
   learned: >-
-    The unit of design keeps expanding. After applications, platforms and companies,
-    the thing being designed now is the environment in which other people's design
-    decisions happen: incentives, operating models, governance and investment.
+    The unit of design keeps expanding. After applications, platforms and a company,
+    the thing being designed is the environment in which other people's design
+    decisions happen: decision rights, standards, governance, incentives and
+    investment cases. The engineering habits still apply. Find the constraint,
+    shorten the feedback loop, and prefer the thing people can run over the thing
+    they must believe.
   reappeared: >-
-    This is the newest chapter, but it is already feeding the research: the questions
-    Hekton and The Agentic Tekton explore are the ones this role makes urgent. How
-    does an enterprise adopt agents without losing the coherence this role exists to
-    protect?
+    It is also where the research questions come from. How does an enterprise adopt
+    agents without losing the coherence this role exists to protect? Hekton is where
+    I test the parts of that question that can be tested on a home lab's budget.
   evidence:
-    - label: Role detail, Head of Architecture & CTO, Vanguard Europe
+    - label: "Role detail: Head of Architecture & Chief Technology Office, Europe"
+      url: /career/#vanguard-current
+    - label: "Chapter five: Shaping the technology organisation"
+      url: /journey/shaping-the-organisation/
   capabilities: [architecture, tech-strategy, org-design, governance-risk, ai-agentic, business-product]
 
 - id: hekton-tekton
@@ -143,36 +227,35 @@
     enterprises build software more than anything since the cloud, and the operating
     models do not exist yet.
   constraint: >-
-    Executive roles produce opinions about AI faster than evidence. Most agentic
-    thinking is either vendor demos or thought pieces written at a safe distance from
-    a failing pipeline. Testing how agents really behave inside governed delivery
-    requires building the whole system: agents, workflows, governance, cost controls
+    Opinions about agentic AI are easy to form and hard to test. Testing how agents
+    really behave inside governed delivery requires building the whole system: agents, workflows, governance, cost controls
     and the software they produce.
   intervention: >-
-    I built the system. Hekton is a private agentic software factory in which fleets
-    of specialised agents research, design, build, review and operate real production
-    software under governance-as-code: claims registers, decision logs, risk
-    registers, review panels and human approval gates are part of the workflow, not
-    paperwork around it. Gremlins is the agent-first SDLC concept underneath, with
-    tiered agent autonomy and deterministic review gates. The Agentic Tekton is where
+    I built the system. Hekton is a private, experimental agentic software factory in
+    which specialised agents research, design, build and review real software, with
+    me approving what ships. Its governance is meant to be part of the workflow
+    rather than paperwork around it: claims registers, decision logs, risk registers,
+    agent review passes and human approval gates. Gremlins is the agent-first SDLC
+    concept underneath, exploring tiered agent autonomy and where review gates should
+    sit. The Agentic Tekton is where
     the patterns that survive get published: agentic operating models, invisible
     governance, AI FinOps, model routing across local and cloud models, context and
     dependency graphs, and human-agent team design.
   result: >-
-    A working multi-project factory operating on real production sites, including the
-    one you are reading. Every claim on this site passed through the factory's claims
-    register; every material decision is in its decision log. The public writing at
-    The Agentic Tekton grows from that same evidence base.
+    A small factory in regular use on a handful of real sites, including the one you
+    are reading. Its review steps are working disciplines rather than an independent
+    audit, and they do not catch everything, which is why a human still reads what
+    ships. The writing at The Agentic Tekton grows from the same experiments.
   learned: >-
     The lessons of every earlier chapter apply to agents almost unchanged. Agents need
     platforms, enablement, governance and organisational design, the same things
-    engineers needed. The difference is speed: an agentic organisation compounds
-    capability faster than a human one, and its governance has to be built in from
-    the first commit.
+    engineers needed. The difference, so far, is speed: agents produce change
+    faster than a person can review it, so governance has to be built in from the
+    first commit and still checked by someone who reads the output.
   reappeared: >-
-    This is the chapter where the pattern points forward: the capability being built
-    here is the one the next scale of role will need, designing enterprises where
-    humans, platforms and agents are one system.
+    This is the chapter where the pattern points forward, to a question rather than a
+    role: what enterprises will need as agents join them, when humans, platforms and
+    agents have to be designed as one system.
   evidence:
     - label: The Agentic Tekton
       url: https://theagentictekton.com

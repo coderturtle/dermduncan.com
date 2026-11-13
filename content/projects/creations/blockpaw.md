@@ -4,10 +4,10 @@
 "image": "/img/blockpaw.png",
 "link": "https://blockpaw.com",
 "image": "/img/blockpaw.png",
-"description": "Our pets bring us joy, and a mountain of documentation! We need to refer back to adoption papers, vacination certificates, even doggy day care notices! And each time we need to call up to verify its real. Lets bring trust to this system. Lets bring the blockchain!",
+"description": "Our pets bring us joy, and a mountain of documentation! We need to refer back to adoption papers, vaccination certificates, even doggy day care notices! And each time we need to call up to verify it's real. Let's bring trust to this system. Let's bring the blockchain!",
 "tags": ["DevOps","blockchain", "JS", "AWS", "REST APIs"],
 "fact": "",
 "featured":true
 }
 
-BlockPaw "...<em> tries to solve the issue of managing our pets lives</em>" And it's amazingly powerful.
+BlockPaw "...<em> tries to solve the issue of managing our pets lives</em>"

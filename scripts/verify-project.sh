@@ -49,6 +49,10 @@ for path in \
   check_file "$path"
 done
 
+if ! "$ROOT_DIR/scripts/check-public-boundary.sh"; then
+  failures=$((failures + 1))
+fi
+
 if [ "$failures" -ne 0 ]; then
   log "Verification failed with $failures issue(s)"
   exit 1

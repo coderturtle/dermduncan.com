@@ -19,3 +19,18 @@ AGENTS.md
 CLAUDE.md
 CODEX.md
 .env.example
+
+# --- Private editorial evidence (boundary: never ship in a public repo) ---
+# Editorial working documents are kept privately (since 2026-11-12).
+docs/rebuild/
+docs/private/
+*.private.md
+.hugo_build.lock
+
+# Personal source documents are kept privately, outside this repository.
+old/docs/*.pdf
+data/experience.json
+
+# Hugo build output (the deploy workflow builds it fresh).
+/public/
+/resources/_gen/

@@ -5,12 +5,13 @@ enableGitInfo = false
 disableKinds = ["taxonomy", "term"]
 
 [params]
-  description = "Dermot Duncan builds the systems that help organisations change: from code and platforms to engineering capability, technology strategy and the agentic enterprise."
+  description = "Dermot Duncan leads architecture and the European Chief Technology Office at Vanguard. An engineer turned technology leader, he builds the systems that help organisations change: platforms, engineering organisations and technology strategy in regulated financial services."
   email = "dermduncan@gmail.com"
   favicon = "/favicon.ico"
   fullName = "Dermot Duncan"
   positioning = "I build the systems that help organisations change."
-  currentRemit = "Head of Architecture & CTO, Vanguard Europe"
+  # Formal title. "Chief Technology Office" is the function, not a CTO appointment.
+  currentRemit = "Head of Architecture & Chief Technology Office, Europe · Vanguard"
 
 [[params.handles]]
   link = "https://www.linkedin.com/in/dermotduncan/"
@@ -34,24 +35,24 @@ disableKinds = ["taxonomy", "term"]
     url = "/journey/"
     weight = 10
   [[menu.main]]
-    name = "Capabilities"
-    url = "/capabilities/"
-    weight = 20
-  [[menu.main]]
     name = "Stories"
     url = "/stories/"
+    weight = 20
+  [[menu.main]]
+    name = "Career"
+    url = "/career/"
     weight = 30
   [[menu.main]]
-    name = "Now"
-    url = "/now/"
+    name = "Capabilities"
+    url = "/capabilities/"
     weight = 40
   [[menu.main]]
     name = "Principles"
     url = "/principles/"
     weight = 50
   [[menu.main]]
-    name = "Career"
-    url = "/career/"
+    name = "Now"
+    url = "/now/"
     weight = 60
 
 [outputs]

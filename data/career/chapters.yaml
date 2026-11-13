@@ -1,7 +1,6 @@
 # Career chapters. Each chapter follows the same narrative grammar:
 # context -> constraint -> intervention -> outcome -> capability gained -> what this unlocked.
-# Evidence references map to claims in docs/rebuild/claims-register.md (claim: Cxx).
-# needs_confirmation flags mark copy that must not ship to production until Dermot confirms it.
+# Supporting evidence is maintained privately, outside this repository.
 
 - id: automating-the-friction
   order: 1
@@ -71,13 +70,13 @@
     continuum on top of it so paper forms could be converted into digital journeys
     repeatably. I automated environment creation with CloudFormation, Ruby and Jenkins
     until a single person could operate the platform. As principal architect I
-    re-architected the Fidsafe file-sharing platform for a thousand-fold scale increase
+    re-architected the Fidsafe file-sharing platform for a thousand-fold increase in design capacity
     and led the migration of a Java/Spring monolith to serverless Node.js services on
     API Gateway, Lambda and SQS.
   outcomes:
     - XTRAC Connect became the foundation for the digitisation-of-services strategy.
     - A 28-page pensions PDF became a digital journey, cutting processing from over a week to under a day.
-    - Fidsafe was redesigned to serve 10 million+ users cost-effectively, with CD pipelines that took releases from monthly to daily and cut over $400k in the first year.
+    - Fidsafe was redesigned for a design capacity of 10 million+ users, cost-effectively, with CD pipelines that took releases from monthly to daily; costs fell by over $400k in its first year.
     - Environment provisioning was fully automated; one engineer could run the platform.
   capability_gained: >-
     Platform thinking. The unit of work stopped being the application and became the
@@ -104,8 +103,8 @@
   context: >-
     As Director of Software Architecture for Fidelity's APS division, and later
     Director of Architecture in Personal Investing, I inherited organisations at the
-    start of their cloud journey: tentative AWS experiments, deep on-prem habits, and a
-    digital transformation strategy that assumed engineering capability the org did not
+    start of their cloud journey: tentative AWS experiments, deep on-premises habits, and a
+    digital transformation strategy that assumed engineering capability the organisation did not
     yet have.
   constraint: >-
     Cloud adoption was gated on people, not technology. A strategy document does not
@@ -128,7 +127,7 @@
     - Tentative cloud experiments became a funded multi-year cloud strategy with multiple live cloud-native applications.
     - The learning dojo and cloud centre of excellence were adopted by multiple teams across global sites.
     - Reusable infrastructure patterns cut the time and cost of every subsequent project.
-    - Labs MVPs were evaluated fast enough that roughly one in five proofs of concept earned funding, with six-figure savings per funded project.
+    - Labs MVPs defined the return on investment for ideas and piloted them quickly, before funding decisions.
     - An event-driven platform became the backbone of the digital experience ecosystem.
   capability_gained: >-
     Developer enablement as a discipline: dojos, katas, reference architectures,
@@ -149,14 +148,14 @@
   era: "2021 – 2024"
   title: Building platforms, teams and companies
   summary: >-
-    HUB, joined as the founding technologist alongside the CTO and eighth employee.
+    HUB, joined as the eighth employee and first technical hire alongside the CTO.
     Architecture, engineering, hiring, security, operations and company building
     converged in one role.
   context: >-
     HUB was a fintech with a product vision, a CTO, and almost nothing else technical:
     no platform, no engineering organisation, no security posture, no hiring pipeline.
-    I joined in January 2021 as the first technical hire outside the CTO and the
-    company's eighth employee.
+    I joined in January 2021 as the eighth employee and first technical hire
+    alongside the CTO.
   constraint: >-
     Everything was the constraint, and everything competed for the same small team's
     attention. The company needed a product for regulated financial-services clients,
@@ -177,13 +176,10 @@
     readiness, and introducing event-driven automation and infrastructure-as-code as
     default practice. Towards the end of my time there we were exploring Azure OpenAI
     and retrieval-augmented generation workflows for the product.
-  notes_internal: >-
-    Titles and dates confirmed by Dermot 2026-07-15 (claims C16, C17 resolved).
-    Outcome metrics (C19, C20) remain pending confirmation.
   outcomes:
-    - The engineering organisation grew from one technologist to 60+ engineers across Ireland, the UK and India, inside a company that grew to roughly 70 people.
-    - Cloud running costs reduced by approximately 40 percent while live environments doubled.
-    - Environment provisioning time cut by approximately 80 percent.
+    - The engineering organisation grew from its first technical hires to 60+ engineers across Ireland, the UK and India, inside a company that grew to roughly 70 people.
+    - Cloud running costs reduced by approximately 40%.
+    - Environment provisioning approximately 80% faster, with environments automated from the first commit so a new one was a pipeline run rather than a project.
     - Led the SOC 2 Type I readiness programme that gave regulated clients the assurance evidence they needed.
     - Client-facing MVPs designed with clients and subject-matter experts and delivered by the teams the process had hired.
   capability_gained: >-
@@ -206,41 +202,64 @@
   era: "Since 2024"
   title: Shaping the technology organisation
   summary: >-
-    At Vanguard as Head of Architecture and CTO for Europe. The unit of design is now
-    the environment in which platforms, teams and investment decisions operate.
+    Vanguard Europe, leading architecture and the Chief Technology Office. The unit of
+    design is now the decision environment: decision rights, standards, governance
+    and investment cases across two European business lines.
   context: >-
     Vanguard's European business spans UK Personal Investing and European Financial
-    Adviser Services, operating under UK and European regulation while drawing on the
-    technology capabilities of a global firm. I joined in October 2024 as Head of
-    Architecture and was appointed Head of Architecture and CTO in February 2026.
-  notes_internal: >-
-    Formal title and dates confirmed by Dermot 2026-07-15 (claims C22, C23 resolved).
+    Adviser Services: regulated locally, and built on the platforms and technology
+    organisation of a global firm. I joined Vanguard in October 2024.
+    Today I lead four teams and 22 people across European Architecture and Chief
+    Technology Office capabilities, working closely with the European CIO, business
+    and product leadership, and Vanguard's global technology organisation.
   constraint: >-
-    In an organisation of this scale the binding constraint is rarely a missing
-    technology. It is coherence: keeping business strategy, architecture, engineering
-    practice, governance and investment pointed at the same outcomes, and doing it
-    within a regulatory environment where trust is the licence to operate.
+    At this scale the binding constraint is rarely a missing technology. It is
+    coherence. European business priorities, global platform roadmaps, architecture
+    standards, engineering practice and governance all move at once, each sensible on
+    its own terms and not always in the same direction. In a regulated business,
+    every gap between strategy and execution is a risk as well as a cost.
   intervention: >-
-    As Head of Architecture and CTO I lead architecture and the platform-engineering
-    function for the European business. The work is translation in both directions: turning technology strategy
-    into executable priorities for engineering teams, and shaping the operating model,
-    organisational design and platform investments so European needs connect cleanly
-    with global capabilities. That includes driving engineering excellence and clean
-    architecture across UK Personal Investing and European Financial Adviser Services,
-    and leading enterprise AI enablement with responsible AI governance appropriate to
-    a regulated financial-services firm.
+    I am accountable for architecture direction, engineering standards and the Chief
+    Technology Office capabilities for the European business, and for making sure
+    European priorities reach global platform and investment decisions well formed,
+    and that what comes back can be executed. That means setting architecture direction and engineering standards for the
+    European business; improving how architecture decisions get made, so they are
+    explicit, recorded and revisitable; balancing team autonomy against enterprise
+    consistency with governance a delivery team can act on without a meeting;
+    building architecture and platform-engineering capability in the team; and making
+    AI adoption practical and governed rather than performative. It also means making the
+    large technical calls. The most significant so far is the decision to move
+    backend systems towards a streaming architecture, for two horizons: reducing
+    the backend coupling that slows change today, so capabilities can evolve
+    independently, and establishing near-real-time operational and analytical data
+    foundations for future AI and agentic applications.
+  outcomes_label: Where it stands
   outcomes:
-    - Architecture, platform engineering and technology strategy for Vanguard Europe run as one connected function.
-    - Technology strategy translated into executable engineering priorities across two European business lines.
-    - Enterprise AI adoption progressed under governance designed into the system rather than bolted on.
+    - status: In place
+      text: Four teams and 22 people across European Architecture and Chief Technology Office capabilities, supporting UK Personal Investing and European Financial Adviser Services.
+    - status: Direction
+      text: Streaming architecture set as the backend direction; the reasoning is in the signature story.
+    - status: In progress
+      text: Migration has started. It is not complete, and its benefits are intended, not yet demonstrated.
+    - status: In progress
+      text: Architecture quality, engineering standards and architecture decision-making across both European business lines.
+    - status: In progress
+      text: Practical, governed AI enablement in a regulated environment.
+    - status: In progress
+      text: Developing technical leaders and the organisational capability around them.
+    - status: Direction
+      text: European priorities and global platform strategy shaped together, rather than reconciled afterwards.
+  outcomes_note: >-
+    This is the chapter I am still in, so it reports scope and direction rather than
+    results. Results get written up once they have happened.
   capability_gained: >-
-    Executive technology leadership at organisational scale: operating-model design,
-    investment shaping, and the discipline of making governance an enabler in a
-    regulated environment.
+    Technology leadership at organisational scale: operating-model design, shaping
+    investment across organisational boundaries, and making governance something teams use rather
+    than something done to them.
   unlocked: >-
     Working at this altitude makes the next shift visible early. Intelligent agents
-    are about to become active participants in how enterprises build and run
-    technology, and somebody has to design what that organisation looks like.
+    are starting to take part in how enterprises build and run technology, and
+    somebody has to design what that organisation looks like.
   next: agentic-enterprise
   capabilities: [platform-engineering, architecture, tech-strategy, org-design, governance-risk, ai-agentic, business-product]
   roles: [vanguard-current]
@@ -257,38 +276,46 @@
     agents become active participants in the enterprise.
   context: >-
     Every previous chapter automated friction at one scale and then met the same
-    friction one level up. Agentic AI is the first technology that can operate at all
-    of those levels at once: writing the code, running the pipeline, applying the
-    governance, even proposing the roadmap. That raises a question worth a research
-    programme rather than a hot take.
+    friction one level up. Agentic AI is the first technology that plausibly touches
+    all of those levels at once: writing the code, running the pipeline, applying the
+    governance, even proposing the roadmap. Whether it does so reliably is the open
+    question, and one worth a research programme rather than a hot take.
   constraint: >-
     Enterprises cannot adopt agents by bolting a chatbot onto the existing operating
     model. The constraints are structural: how work is decomposed, how governance is
     enforced, how cost is controlled, and how human and agent teams share
-    responsibility. Nobody has a proven design yet.
+    responsibility. Nobody has a proven design yet, including me.
   intervention: >-
-    I am building the answer empirically, as a connected body of work. Hekton is an
-    agentic software factory: a private lab where fleets of specialised agents
-    research, design, build, review and operate real software, this site included,
-    under governance-as-code, with claims registers, decision logs, risk registers and
-    human approval gates built into the workflow. Gremlins is the agent-first SDLC
-    concept underneath it, exploring tiered autonomy and deterministic review gates.
+    I am exploring it empirically, as a connected body of work. Hekton is an
+    experimental agentic software factory: a private lab where specialised agents
+    research, design, build and review real software, this site included, with a
+    human (me) approving what ships. Its governance is written into the workflow as
+    code and records: claims registers, decision logs, risk registers, agent review
+    passes and approval gates. Gremlins is the agent-first SDLC concept underneath it,
+    exploring tiered autonomy and where review gates should sit.
     The Agentic Tekton is the public thought-leadership platform where the patterns
     that survive contact with practice get written up: agentic operating models,
     invisible governance, AI FinOps, local and cloud model routing, context and
     dependency graphs, and human-agent team design.
+  outcomes_label: What exists so far
   outcomes:
-    - This website was researched, designed, built and reviewed inside the Hekton factory, under its governance model.
-    - A working multi-project factory with tiered agent autonomy, review panels and human approval gates operating on real production sites.
-    - A growing public body of work at The Agentic Tekton connecting agentic delivery to enterprise operating models.
+    - status: Demonstrated
+      text: This website was researched, designed, built and reviewed by agents in Hekton, with every production release approved by me.
+    - status: Demonstrated
+      text: A small multi-project factory in regular use on a handful of real sites, with agent review passes and human approval gates exercised on real changes.
+    - status: Experimental
+      text: Governance-as-code, tiered autonomy and automated review. Designed, documented and exercised; not independently audited, and not proven as enforceable controls. An agent reviewing an agent is useful. It is not assurance.
+    - status: Ongoing
+      text: Public writing at The Agentic Tekton connecting agentic delivery to enterprise operating models.
+    - status: Open question
+      text: Whether any of this transfers to an enterprise operating model at scale. That is the research question, not a result.
   capability_gained: >-
     First-hand, current, hands-on knowledge of what agentic delivery actually breaks
-    and what it makes possible. The executive perspective and the practitioner
-    perspective on the same frontier, at the same time.
+    and what it makes possible, including how often it needs a human to read the
+    output.
   unlocked: >-
-    This chapter is still being written. The pattern says the capability being built
-    here gets applied at the next scale up: the enterprise that designs humans,
-    platforms and agents as one system.
+    This chapter is still being written. The question it follows is the next scale
+    up: an enterprise that designs humans, platforms and agents as one system.
   next: null
   capabilities: [automation, platform-engineering, architecture, developer-enablement, org-design, tech-strategy, governance-risk, ai-agentic]
   roles: []
