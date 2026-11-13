@@ -49,3 +49,5 @@ jobs:
         run: python3 scripts/check-links.py public "${{ vars.SITE_BASE_URL || 'https://dermduncan.com' }}"
       - name: Check public/private boundary
         run: scripts/check-public-boundary.sh
+      - name: Test the deploy upload script (no AWS credentials, no network)
+        run: bash scripts/test-deploy-site.sh
