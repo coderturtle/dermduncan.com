@@ -21,8 +21,12 @@ CODEX.md
 .env.example
 
 # --- Private editorial evidence (boundary: never ship in a public repo) ---
-# Claims register, critique and assessment moved to a private location 2026-11-12.
+# Editorial working documents are kept privately (since 2026-11-12).
 docs/rebuild/
 docs/private/
 *.private.md
 .hugo_build.lock
+
+# Personal source documents are kept privately, outside this repository.
+old/docs/*.pdf
+data/experience.json

@@ -127,7 +127,7 @@
     - Tentative cloud experiments became a funded multi-year cloud strategy with multiple live cloud-native applications.
     - The learning dojo and cloud centre of excellence were adopted by multiple teams across global sites.
     - Reusable infrastructure patterns cut the time and cost of every subsequent project.
-    - Labs MVP experiments fed funding decisions, with six-figure savings per funded project.
+    - Labs MVPs defined the return on investment for ideas and piloted them quickly, before funding decisions.
     - An event-driven platform became the backbone of the digital experience ecosystem.
   capability_gained: >-
     Developer enablement as a discipline: dojos, katas, reference architectures,
@@ -219,10 +219,10 @@
     its own terms and not always in the same direction. In a regulated business,
     every gap between strategy and execution is a risk as well as a cost.
   intervention: >-
-    The work is connective rather than commanding. I do not own Vanguard's global
-    platforms or its investment decisions. My job is to make sure European priorities
-    arrive at those decisions well formed, and that what comes back can be executed.
-    That means setting architecture direction and engineering standards for the
+    I am accountable for architecture direction, engineering standards and the Chief
+    Technology Office capabilities for the European business, and for making sure
+    European priorities reach global platform and investment decisions well formed,
+    and that what comes back can be executed. That means setting architecture direction and engineering standards for the
     European business; improving how architecture decisions get made, so they are
     explicit, recorded and revisitable; balancing team autonomy against enterprise
     consistency with governance a delivery team can act on without a meeting;
@@ -253,8 +253,8 @@
     This is the chapter I am still in, so it reports scope and direction rather than
     results. Results get written up once they have happened.
   capability_gained: >-
-    Technology leadership at organisational scale: operating-model design, influencing
-    investment without owning it, and making governance something teams use rather
+    Technology leadership at organisational scale: operating-model design, shaping
+    investment across organisational boundaries, and making governance something teams use rather
     than something done to them.
   unlocked: >-
     Working at this altitude makes the next shift visible early. Intelligent agents
@@ -314,9 +314,8 @@
     and what it makes possible, including how often it needs a human to read the
     output.
   unlocked: >-
-    This chapter is still being written. The pattern says the capability being built
-    here gets applied at the next scale up: the enterprise that designs humans,
-    platforms and agents as one system.
+    This chapter is still being written. The question it follows is the next scale
+    up: an enterprise that designs humans, platforms and agents as one system.
   next: null
   capabilities: [automation, platform-engineering, architecture, developer-enablement, org-design, tech-strategy, governance-risk, ai-agentic]
   roles: []

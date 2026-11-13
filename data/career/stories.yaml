@@ -108,16 +108,18 @@
     capabilities.
   constraint: >-
     Nothing at this scale fails for lack of technology. It fails when sensible
-    decisions made in different rooms add up to a system nobody would have designed
-    on purpose: a European requirement the global roadmap has not reached yet, a
-    standard nobody can find, a platform choice that is right globally and awkward
-    locally. Regulation raises the stakes, because every gap between strategy and
+    decisions made in different rooms do not add up. Much of the challenge is making
+    enterprise platform strategy work for Europe's business and regulatory needs,
+    while ensuring that what we learn locally helps shape the wider technology
+    direction. Regulation raises the stakes, because every gap between strategy and
     execution is a risk as well as a cost.
   intervention: |-
     Earlier in my career the unit of design was an application, then a platform,
     then a company. Here it is the environment in which other people make design
-    decisions. I do not own Vanguard's global platforms or its investment decisions,
-    so the work is connective rather than commanding:
+    decisions. I am accountable for architecture direction, engineering standards
+    and the Chief Technology Office capabilities for the European business. Global
+    platforms and investment decisions sit with the wider firm, so much of the work
+    is connective:
 
     - **Strategy to execution.** Working with the European CIO, business and product leadership so priorities reach engineering as decisions teams can act on.
     - **Europe and global.** Representing European requirements in global platform strategy, and bringing back what can be built on rather than built around.
@@ -140,8 +142,9 @@
       their own time. The technology choice is the means; the decision is about
       which dependencies we are willing to keep. It is made for two horizons.
 
-      **Horizon one: independence today.** Parts of the backend estate depend on
-      each other more directly than they should. When services call one another
+      **Horizon one: independence today.** Like most estates that have grown over
+      decades, backend systems can depend on each other more directly than is
+      ideal. When services call one another
       point to point, changing one capability means coordinating with several
       others, so teams move at the speed of their most-connected neighbour. That is
       a business agility problem wearing a technical costume. Streaming replaces
@@ -166,12 +169,10 @@
       point-to-point dependencies get more expensive to unwind every year they are
       left alone.
 
-      **What it asks of the organisation.** Teams own the streams their capability
-      publishes as a product other teams can rely on, with shared standards for
-      event design and schema evolution and platform-engineering support behind
-      them. Migration has to coexist with today's integrations rather than arrive
-      as a big-bang cut-over. The organisational change is at least as large as
-      the technical one.
+      **What it asks of the organisation.** Teams treat what their capability
+      publishes as a product other teams can rely on, which takes shared standards
+      and platform-engineering support. The organisational change is at least as
+      large as the technical one.
     status:
       - status: Direction
         text: Streaming architecture set as the direction for backend systems.
@@ -252,9 +253,9 @@
     faster than a person can review it, so governance has to be built in from the
     first commit and still checked by someone who reads the output.
   reappeared: >-
-    This is the chapter where the pattern points forward: the capability being built
-    here is the one the next scale of role will need, designing enterprises where
-    humans, platforms and agents are one system.
+    This is the chapter where the pattern points forward, to a question rather than a
+    role: what enterprises will need as agents join them, when humans, platforms and
+    agents have to be designed as one system.
   evidence:
     - label: The Agentic Tekton
       url: https://theagentictekton.com

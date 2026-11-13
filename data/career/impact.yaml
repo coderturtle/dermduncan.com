@@ -1,15 +1,29 @@
-# Homepage "Selected impact": one editorial proof point per employer, in career order,
-# so the section reads as a progression. Each item is a different kind of evidence,
+# Homepage "Selected impact": one editorial proof point per employer: current role
+# first, then Fidelity, then HUB. Each item is a different kind of evidence,
 # not a KPI tile. Never merge results from different Fidelity roles into one period:
 # each context line carries its own role and era.
 
 heading: Selected impact
 lede: >-
-  In the order it happened: transforming enterprise engineering at Fidelity, building
-  and scaling a technology organisation at HUB, and shaping enterprise technology
-  direction at Vanguard.
+  One proof point per employer: shaping enterprise technology direction at Vanguard,
+  transforming enterprise engineering at Fidelity, and building and scaling a
+  technology organisation at HUB.
 
 items:
+  - org: Vanguard
+    era: Since 2024
+    kind: Shaping enterprise technology direction
+    current: true
+    headline: Four teams, 22 people, two European businesses
+    text: >-
+      Leading four teams and 22 people across European Architecture and Chief
+      Technology Office capabilities for UK Personal Investing and European
+      Financial Adviser Services. One concrete example: a streaming-architecture direction
+      for backend systems, with migration under way, to reduce coupling today and build
+      near-real-time data foundations for future AI and agentic applications.
+    url: /stories/shaping-vanguard-europe/#streaming-decision
+    link_label: The streaming-architecture decision
+
   - org: Fidelity Investments, XTRAC
     era: 2014 – 2016
     role: Principal Software Architect
@@ -26,7 +40,7 @@ items:
         text: Digitised a 28-page pension-change form into a web journey, cutting processing from over a week to under a day.
       - role: Director of Software Architecture, APS
         era: 2016 – 2018
-        text: Took the division from AWS experiments to a multi-year cloud strategy; six-figure savings per funded labs project.
+        text: Took the division from AWS experiments to a multi-year cloud strategy, with a labs group that piloted ideas as MVPs before funding.
       - role: Director of Architecture, Personal Investing
         era: 2019 – 2020
         text: Led a team of 15 building the event-driven platform behind the digital experience ecosystem, and a learning dojo adopted across global locations.
@@ -50,22 +64,3 @@ items:
       Cloud Engineering from 2022.
     url: /stories/building-hub/
     link_label: The HUB story
-
-  - org: Vanguard
-    era: Since 2024
-    kind: Shaping enterprise technology direction
-    current: true
-    headline: Four teams, 22 people, two European businesses
-    text: >-
-      Leading four teams and 22 people across European Architecture and Chief
-      Technology Office capabilities for UK Personal Investing and European
-      Financial Adviser Services. One concrete example: a streaming-architecture direction
-      for backend systems, with migration under way, to reduce coupling today and build
-      near-real-time data foundations for future AI and agentic applications.
-    url: /stories/shaping-vanguard-europe/#streaming-decision
-    link_label: The streaming-architecture decision
-
-hands_on: >-
-  Still an engineer underneath. I started by automating friction in code, and I
-  still build: currently an experimental agentic software factory, run in my own
-  time, that built this site.

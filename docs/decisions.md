@@ -44,14 +44,14 @@ Replaced the hugo-resume CV presentation with a data-driven career narrative per
 
 - **Stack preserved, theme presentation replaced.** Hugo + S3/CloudFront + GitHub Actions untouched. All templates are now root-level `layouts/` (which override the vendored theme); `theme` removed from `config.toml`. Verified the build against the production-pinned Hugo 0.123.7 as well as local 0.164.0. The theme directory is left in place for now (removal is a hygiene follow-up).
 - **Content model over hard-coded copy.** All narrative lives in `data/career/*.yaml` (chapters, roles, capabilities, stories, principles, now). Relationships (role→chapter, stage→chapter, story→chapter, capability links) are modelled as ids, giving the conceptual graph without a graph database.
-- **No invented facts.** No LinkedIn export exists locally, so brief-supplied claims (HUB progression/outcomes, Vanguard remit) are flagged `needs_confirmation` in `docs/rebuild/claims-register.md`; unverifiable dates render at year level with a visible footnote; no formal Vanguard title is asserted anywhere (remit description only). **This branch must not merge to main (= production deploy) until Dermot confirms the flagged claims.**
+- **No invented facts.** Claims are checked against owner-held evidence, which is kept privately; anything unconfirmed stayed off the site until the owner confirmed it.
 - **Privacy tightened.** Personal phone number and home address removed from `config.toml` (they rendered on the old CV page); placeholder Google Analytics ID dropped.
 - **Legacy URLs.** /projects/*, /awards/* preserved and restyled; /search/ aliased to /career/; theme demo blog post (/blog/force-ssl/) and tag pages dropped as theme demo/derived content with negligible inbound-link value. Award pages carried hugo-resume example body text (Liberty Mutual/"Eddie") — replaced with real summaries. Certification PDFs now published via `static/docs/` (fixes RISK-0005).
-- **Loop E critique** with six perspectives and scores recorded in `docs/rebuild/critique.md`; one refinement pass applied (WCAG contrast fix for meta text, chapter 3 tightening, SOC 2 wording). A second visual-polish pass was deliberately declined.
+- **Critique pass.** A multi-perspective critique informed one refinement pass (contrast fix for meta text, chapter tightening, SOC 2 wording); a second visual-polish pass was deliberately declined.
 
 ## 2026-07-15 - Confirmed titles and dates applied (rebuild branch)
 
-Dermot confirmed directly: HUB ended May 2024, with Managing Director & Head of Cloud Engineering held from May 2022; Vanguard began October 2024 as Head of Architecture, promoted to Head of Architecture & CTO in February 2026; the conflicted POC-savings metric stays as qualitative "six-figure savings". Applied across data/career/*, hero kicker, JSON-LD and the claims register. The career-page date footnote is now conditional and no longer renders (all displayed dates are confirmed). Remaining merge gate: HUB outcome metrics, SOC 2 wording, engineer-count wording and the Fidelity Labs framing (claims C13, C18–C21).
+Owner-confirmed titles and dates applied across `data/career/*`, the hero kicker and JSON-LD; the career-page date footnote became conditional. The current Vanguard title is recorded under 2026-11-12.
 
 ## 2026-07-16 - Doubt-driven-development pass on the interactive-features commit
 
@@ -72,12 +72,12 @@ Both cycles' fixes are committed together with the original feature commit's fol
 
 Content refresh for executive readers: corrected the current Vanguard title to "Head of Architecture & Chief Technology Office, Europe" across content, metadata and structured data; added a homepage "Selected impact" section; rewrote the Vanguard chapter and story; tied Fidelity results to their specific roles and periods; and labelled the agentic research as experimental. Templates gained optional status tags for chapter outcomes and story results, Markdown rendering for story fields, and career-record anchors and chapter links.
 
-Editorial working documents (claims register, critique, repo assessment) are now maintained privately rather than in this public repository. `scripts/check-public-boundary.sh` guards against their reintroduction. Published history was not rewritten.
+Editorial working documents are now maintained privately rather than in this public repository. `scripts/check-public-boundary.sh` guards against their reintroduction. Published history was not rewritten.
 
 ## 2026-11-13 - Vanguard architecture-decision vignette; visual identity
 
 - The Vanguard signature story gains an "architecture decision" vignette (a streaming-architecture direction for backend systems), rendered from an optional `decision` block in `data/career/stories.yaml`. It separates the decision and intended outcomes from demonstrated results. Chapter five and the homepage reference it briefly rather than repeating it.
-- Homepage "Selected impact" is now one proof point per employer, in career order: Fidelity (transforming enterprise engineering), HUB (building and scaling), Vanguard (shaping enterprise technology direction).
+- Homepage "Selected impact" is now one proof point per employer (order later revised; see below): Fidelity (transforming enterprise engineering), HUB (building and scaling), Vanguard (shaping enterprise technology direction).
 - New visual identity: a four-part symbol from the owner-supplied mark artwork (four rounded modules around an open centre, one copper module), recoloured to the brand palette with a horizontal "Dermot Duncan" wordmark. Palette: petrol `#102e35`, teal `#237875` (now the site accent, AA on all light surfaces), sea glass `#88afa5`, copper `#bd7953` (graphic accent only; it does not meet text contrast on light backgrounds). SVG sources and PNG exports in `static/brand/`; favicons drawn on a 16-pixel grid for crisp 16px and 32px rendering; adaptive `favicon.svg` for dark browser chrome; 1200×630 social card. Generator scripts in `scripts/brand/` (stdlib Python; the wordmark is outlined from the site's Georgia Bold).
 
 ## 2026-11-13 — Copy hygiene and accuracy pass
@@ -89,3 +89,10 @@ Editorial working documents (claims register, critique, repo assessment) are now
 - Streaming wording clarified: looser coupling through published event contracts, not the disappearance of dependencies. Direction, progress and outcomes remain separate.
 - Chapter six is presented as personal research within the six-part narrative, distinct from professional roles.
 - Older archive pages (awards, projects, certifications, education) given light factual and editorial corrections only.
+
+## 2026-11-13 — Final pre-publication cleanup
+
+- Selected impact ordered Vanguard, Fidelity, HUB (one proof point per employer). The homepage keeps two pointers to the personal research (the journey's sixth chapter and "Outside the day job"); the research story stays on /stories/.
+- Vanguard remit described by responsibilities first, with organisational boundaries stated once in the signature story.
+- The streaming-architecture narrative stays at the level of direction, intended benefits and status.
+- `old/docs/dermscv.pdf` and `data/experience.json` (legacy, unused by the site) removed from tracking and ignored. They remain in earlier published history.
